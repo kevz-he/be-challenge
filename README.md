@@ -312,6 +312,151 @@ See [`docs/ARCHITECTURE.md`](docs/ARCHITECTURE.md) for:
   not impact scores, why ingest is atomic, why `Clock` is injected)
 - tradeoffs and what would change for Postgres / streaming / multi-tenant
 
+## Roadmap & future improvements
+
+The MVP intentionally optimizes for a reviewer-friendly demo (deterministic
+seed, single SQLite file, sub-minute boot). The notes below outline the
+work I would prioritize next, grouped by intent. They are deliberately
+high-level; deeper plans live alongside the codebase as separate design
+documents.
+
+### Technical debt and polish
+
+Tracked candidates, ordered roughly by effort vs. impact:
+
+- **Tighten the HTTP/repository boundary.** `httpapi.Deps` currently takes a
+  concrete `*sqlite.Repo` so `/healthz` can call `DB().Ping`. A small
+  `Pinger` interface (or a `Health()` method on `repository.Repository`)
+  would restore the layering documented in `CLAUDE.md`.
+- **Sanitize error responses.** A few error paths still propagate raw
+  `err.Error()` into `application/problem+json` `detail`. All user-facing
+  details should be sanitized; internal context belongs only in logs.
+- **Validate `breakdown` consistently.** `AnomaliesService` rejects unknown
+  values with `400`; `HealthService.Compute` silently ignores them. Both
+  services should share the same validation contract.
+- **Honor `LOG_LEVEL`.** It is documented and set in `docker-compose.yml`,
+  but `cmd/server` hardcodes `slog.LevelInfo`. Wiring it through `config`
+  is a one-liner with high observability payoff.
+- **Reduce duplicated detection work.** `/v1/health?breakdown=…` and the
+  anomalies summary currently run the four detection queries twice (once
+  for totals, once for the breakdown). A single pass that aggregates by key
+  would roughly halve the cost of those endpoints.
+- **Use `COUNT(*)` instead of `len(slice)` for counters.** Some count paths
+  in `repository/sqlite` materialize full detail rows only to count them.
+  Cheap to fix and meaningful past ~100k rows.
+- **Tune SQLite PRAGMAs.** Add `busy_timeout`, `synchronous=NORMAL`, and a
+  larger `cache_size` next to the existing WAL setting. Drop the dead
+  `foreign_keys=ON` (no FKs in the schema).
+- **Bound batch ingest at the service layer.** Today only an 8 MiB body
+  cap protects the server. A row-count cap (e.g. 10 000) gives clearer
+  errors and predictable latency.
+- **Test hygiene.** Promote `t.Skipf` to `t.Fatalf` for fixtures committed
+  to the repo (the oracle is mandatory, not optional), extract the shared
+  `expectedOracle` / `repoRoot` helpers into `internal/testutil`, and add
+  coverage for `livenessHandler`'s 503 path and `MaxBytesReader` overflow.
+- **Move the in-memory `Fake` repository into its own subpackage** so
+  production binaries don't link test-only code.
+- **Logging granularity.** Differentiate log level by HTTP status (warn on
+  4xx, error on 5xx) and sample `/healthz` to reduce noise in production.
+
+### Scaling roadmap
+
+The `Repository` interface is deliberately the only seam that touches the
+database, which makes the storage swap below mechanical rather than
+invasive. The roadmap is organized by sustained throughput tier:
+
+| Tier    | Volume          | Sustained events/s | Strategy                                                   |
+|---------|-----------------|--------------------|------------------------------------------------------------|
+| MVP     | < 100k tx/day   | < 5/s              | current SQLite-backed service                              |
+| Mid     | 1M tx/day       | ~24/s              | Postgres + idempotency + async ingest                      |
+| Big     | 10M tx/day      | ~250/s             | + incremental detection and OLAP for reads                 |
+| Extreme | 1M tx/min (1.4B/day) | ~33k/s sustained, 100k+/s peak | + stream processing, cell-based, multi-region |
+
+**Wave 1 — Postgres without changing the architecture (up to ~200k/day).**
+Swap the SQLite implementation for Postgres behind the existing
+`Repository` interface. Range-partition by `occurred_at` (one partition per
+day, drop after retention), add partial indexes for hot predicates
+(`source='processor' AND status='approved'`, pending PIX/Boleto), enforce
+client-supplied `event_id` with `INSERT … ON CONFLICT DO NOTHING`, and
+split read/write pools (read replica for the analytics endpoints).
+
+**Wave 2 — Idempotency + async ingest (up to ~1M/day).** Put Redis in
+front of the writer for `SETNX event_id` idempotency, and Kafka (or
+Kinesis) between the ingest API and a new `cmd/persist-worker` that
+batches `COPY` into Postgres. The HTTP handler becomes a validator +
+publisher; ingest p99 collapses from tens of milliseconds to single
+digits. Add a DLQ with bounded retries and an alert on its depth.
+
+**Wave 3 — Incremental detection + materialized anomalies.** A new
+`cmd/detector-worker` consumes the same Kafka topic and maintains state
+in Redis with a grace window per payment method. It writes into an
+`anomalies` table (`detected_at`, `resolved_at`, `details JSONB`), which
+is what `/v1/anomalies` reads. Aggregate counters in Redis serve
+`/v1/health` and `/v1/alerts` in single-digit milliseconds, independent
+of dataset size. A retroactive reconciliation job reopens/closes
+anomalies when late events arrive.
+
+**Wave 4 — Resilience and multi-tenant.** Outbox pattern for external
+notifications, `tenant_id` propagated through the domain and used as part
+of the Kafka and Postgres partitioning keys, Aurora multi-AZ with
+automatic failover, HPA on the ingest API driven by CPU + Kafka lag, and
+feature flags per anomaly type so a buggy detector can be disabled
+without a redeploy.
+
+**Wave 5 — Analytics and reporting (>10M/day).** Debezium → ClickHouse
+(or Pinot/Snowflake) for historical reporting and trend dashboards
+without touching the OLTP path. Optional statistical anomaly detection on
+top of the rule-based engine.
+
+**Wave 6 — Extreme scale (1M tx/min).** At this tier the assumptions of
+the earlier waves break and the architecture changes shape:
+
+- **Event log:** Cassandra/ScyllaDB. Postgres demotes to "materialized
+  outputs + tenant metadata" only.
+- **Stream processing:** Apache Flink (RocksDB state, exactly-once,
+  windowed co-joins for orphaned/ghost, timer service for pending limbo).
+  A Go worker with Redis state stops scaling around tens of thousands of
+  events per second.
+- **OLAP serving:** Apache Pinot or Druid for sub-100ms `/v1/health` and
+  `/v1/anomalies` over billions of rows, with segment pruning by time.
+- **Kafka:** dedicated cluster per cell, tiered storage to S3,
+  Avro/Protobuf payloads via Schema Registry to cut wire size 5–10×.
+- **Cell-based architecture:** each cell is a self-contained stack
+  (Kafka + Flink + Scylla + Pinot + Postgres + Redis) serving a tenant
+  subset. Bounded blast radius and per-cell canaries.
+- **Multi-region active-active:** MirrorMaker2, Cassandra multi-DC,
+  CRDT-based global counters, anycast/DNS-based geo routing.
+- **Edge ingest:** Cloudflare Workers / API Gateway handling auth, rate
+  limiting and regional dedupe before the central pipeline.
+- **Cost & resilience:** Zstd everywhere, hot/warm/cold tiering,
+  per-tenant cost dashboards, formal SLOs with error budgets, chaos
+  engineering, shadow traffic, game days.
+
+### Cross-cutting work that pays off at every tier
+
+- **Observability:** Prometheus metrics (ingested tx/s, Kafka lag, detector
+  p50/p99, anomalies/min, HTTP latency by route) and OpenTelemetry tracing
+  with `trace_id` propagated through Kafka headers end-to-end.
+- **Resilience patterns:** end-to-end backpressure (429 before saturation),
+  bulkheads per tenant tier, replay from Kafka after a hot-fix, monitoring
+  of `ingested_at − occurred_at` for clock drift.
+- **Schema discipline:** binary payloads (Avro/Protobuf) with Schema
+  Registry compatibility checks once more than one producer or consumer
+  ships independently.
+
+### ROI summary (highest impact first)
+
+1. Idempotency + async ingest via Redis + Kafka (50 → 1 000 tx/s, low
+   effort).
+2. Incremental detection with a materialized `anomalies` table (constant
+   read latency, medium effort).
+3. Postgres partitioning + read replicas (covers 10M/day with low
+   incremental effort).
+4. Flink + Cassandra (only justified by the 1M tx/min target; high
+   effort).
+5. Cell-based architecture and multi-region active-active (blast radius
+   and DR; only for strong SLAs).
+
 ## Layout
 
 ```
