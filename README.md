@@ -176,7 +176,7 @@ curl -X POST http://localhost:8080/v1/transactions \
     "amount_cents":   1234,
     "currency":       "BRL",
     "payment_method": "pix",
-    "processor":      "stripe_br",
+    "processor":      "ProcessorA",
     "status":         "approved",
     "source":         "processor"
   }'
@@ -230,7 +230,9 @@ Liveness; if the DB answers `Ping` it returns `{"status": "ok"}`.
 ## Test data and oracle
 
 `make seed` generates `testdata/transactions.json` (>=500 transactions, 6h
-window, 60/30/10 mix of credit_card/pix/boleto, 4 processors) and
+window, 60/30/10 mix of credit_card/pix/boleto, 4 processors named
+`ProcessorA`..`ProcessorD`, healthy-pair status mix approximating
+processor 85/12/3 and merchant 87/10/3) and
 `testdata/expected_counts.json`. The oracle is **set-equality strong**:
 it commits both the counts and the exact `transaction_id`s injected per
 anomaly type, so tests can assert "exactly these IDs and no others":

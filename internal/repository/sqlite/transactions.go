@@ -202,16 +202,25 @@ func (r *Repo) FindGhostOrders(ctx context.Context, f repository.AnomalyFilter) 
 	if err := f.Validate(); err != nil {
 		return nil, err
 	}
+	// proc_latest exposes EXACTLY ONE row per processor-side transaction_id:
+	// the most recent occurrence by occurred_at, with id DESC as a stable
+	// tiebreak when two processor rows share the same timestamp. Without
+	// the tiebreak, a JOIN against MAX(occurred_at) would emit BOTH rows
+	// on a tie, and a single conflicting status (e.g. "approved" + "declined"
+	// at the same nanosecond) would silently be reported as ghost via the
+	// declined branch. ROW_NUMBER() collapses the tie deterministically.
 	q := `WITH proc_latest AS (
-            SELECT t.transaction_id, t.status
-            FROM transactions t
-            JOIN (
-              SELECT transaction_id, MAX(occurred_at) AS max_at
+            SELECT transaction_id, status
+            FROM (
+              SELECT transaction_id, status,
+                     ROW_NUMBER() OVER (
+                       PARTITION BY transaction_id
+                       ORDER BY occurred_at DESC, id DESC
+                     ) AS rn
               FROM transactions
               WHERE source = 'processor'
-              GROUP BY transaction_id
-            ) lx ON lx.transaction_id = t.transaction_id AND lx.max_at = t.occurred_at
-            WHERE t.source = 'processor'
+            )
+            WHERE rn = 1
           )
           SELECT m.transaction_id, m.processor, m.payment_method, m.amount_cents,
                  m.currency, m.status, m.source, MIN(m.occurred_at) AS occurred_at,

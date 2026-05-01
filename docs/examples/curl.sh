@@ -95,7 +95,7 @@ curl -fsS -X POST -H 'Content-Type: application/json' \
   "amount_cents":   1234,
   "currency":       "BRL",
   "payment_method": "pix",
-  "processor":      "stripe_br",
+  "processor":      "ProcessorA",
   "status":         "approved",
   "source":         "processor"
 }
@@ -112,7 +112,7 @@ curl -fsS -X POST -H 'Content-Type: application/json' \
   "amount_cents":   1234,
   "currency":       "BRL",
   "payment_method": "pix",
-  "processor":      "stripe_br",
+  "processor":      "ProcessorA",
   "status":         "approved",
   "source":         "merchant_order_system"
 }

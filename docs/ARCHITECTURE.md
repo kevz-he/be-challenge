@@ -110,15 +110,17 @@ events. `MIN(occurred_at)` gives a stable representation.
 
 ```sql
 WITH proc_latest AS (
-  SELECT t.transaction_id, t.status
-  FROM transactions t
-  JOIN (
-    SELECT transaction_id, MAX(occurred_at) AS max_at
+  SELECT transaction_id, status
+  FROM (
+    SELECT transaction_id, status,
+           ROW_NUMBER() OVER (
+             PARTITION BY transaction_id
+             ORDER BY occurred_at DESC, id DESC
+           ) AS rn
     FROM transactions
     WHERE source = 'processor'
-    GROUP BY transaction_id
-  ) lx ON lx.transaction_id = t.transaction_id AND lx.max_at = t.occurred_at
-  WHERE t.source = 'processor'
+  )
+  WHERE rn = 1
 )
 SELECT m.transaction_id, ..., COALESCE(p.status, '') AS proc_status
 FROM transactions m
@@ -129,10 +131,17 @@ WHERE m.source = 'merchant_order_system' AND m.status = 'approved'
 GROUP BY m.transaction_id;
 ```
 
-`proc_latest` is a materialized subquery with the latest processor status
-per `transaction_id`. This covers the case "processor declined ->
-approved" (latest status = approved -> not ghost) and "approved ->
-declined" (latest status = declined -> IS ghost).
+`proc_latest` exposes exactly one row per processor-side `transaction_id`
+— the most recent occurrence by `occurred_at`, with `id DESC` as a stable
+tiebreak when two processor rows share the same nanosecond. This covers
+the case "processor declined -> approved" (latest status = approved -> not
+ghost) and "approved -> declined" (latest status = declined -> IS ghost),
+and the timestamp-tie case "approved + declined at the same nanosecond"
+(the row inserted last wins, and the test
+`TestRepository_Ghost_TimestampTieResolvedDeterministically` pins the
+behavior). Without the tiebreak, a JOIN against `MAX(occurred_at)`
+would emit both rows on a tie and a single `declined` branch would
+silently mark the merchant as ghost.
 
 ### Duplicate Submissions
 

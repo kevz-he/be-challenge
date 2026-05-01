@@ -385,6 +385,86 @@ func TestRepository_SameTxIdDifferentAmountsNotAnomaly(t *testing.T) {
 	}
 }
 
+// Edge cases from CLAUDE.md §11 ---------------------------------------
+
+// processor approved THEN refunded with no merchant counterpart still
+// counts as orphaned: orphan detection cares about "any processor approved
+// row in the window AND no merchant row across the entire dataset", not
+// about the latest processor status. Documented in CLAUDE.md §11.
+func TestRepository_OrphanedSurvivesLaterRefund(t *testing.T) {
+	repo := openMem(t)
+	from := time.Date(2026, 4, 15, 0, 0, 0, 0, time.UTC)
+	to := time.Date(2026, 4, 15, 6, 0, 0, 0, time.UTC)
+	insert(t, repo,
+		tx("ORPH-REF", domain.SourceProcessor, domain.StatusApproved, domain.PaymentMethodCreditCard, from.Add(time.Hour)),
+		tx("ORPH-REF", domain.SourceProcessor, domain.StatusRefunded, domain.PaymentMethodCreditCard, from.Add(2*time.Hour)),
+	)
+	w := repository.Window{From: &from, To: &to}
+	res, err := repo.FindOrphanedApprovals(context.Background(), repository.AnomalyFilter{Window: w})
+	if err != nil {
+		t.Fatal(err)
+	}
+	if len(res) != 1 || res[0].TransactionID != "ORPH-REF" {
+		t.Fatalf("approved -> refunded with no merchant must remain orphaned, got %+v", res)
+	}
+}
+
+// Same transaction_id with different payment_method between processor
+// and merchant must NOT be flagged as anomaly: it's still a healthy
+// pair (one processor + one merchant, both approved). The MVP
+// intentionally does not enforce cross-source field equality.
+func TestRepository_DifferentPaymentMethodAcrossSourcesNoAnomaly(t *testing.T) {
+	repo := openMem(t)
+	base := time.Date(2026, 4, 15, 1, 0, 0, 0, time.UTC)
+	insert(t, repo,
+		tx("PM-DIFF", domain.SourceProcessor, domain.StatusApproved, domain.PaymentMethodPix, base),
+		tx("PM-DIFF", domain.SourceMerchantOrderSystem, domain.StatusApproved, domain.PaymentMethodCreditCard, base.Add(time.Second)),
+	)
+	c, err := repo.CountsByWindow(context.Background(), repository.Window{}, time.Now(), limboTh())
+	if err != nil {
+		t.Fatal(err)
+	}
+	if c.Orphaned != 0 || c.Ghost != 0 || c.DuplicateGroups != 0 || c.PendingLimbo != 0 {
+		t.Errorf("differing payment_method across sources must not raise anomaly, got %+v", c)
+	}
+}
+
+// Two processor rows sharing the SAME occurred_at with conflicting
+// statuses (approved vs declined) must resolve deterministically by
+// id DESC: the latest row written wins. Without the id-desc tiebreak,
+// the JOIN against MAX(occurred_at) emits both rows and the merchant
+// is incorrectly reported as ghost via the declined branch.
+func TestRepository_Ghost_TimestampTieResolvedDeterministically(t *testing.T) {
+	repo := openMem(t)
+	at := time.Date(2026, 4, 15, 1, 0, 0, 0, time.UTC)
+	insert(t, repo,
+		tx("G-TIE", domain.SourceProcessor, domain.StatusDeclined, domain.PaymentMethodCreditCard, at),
+		tx("G-TIE", domain.SourceProcessor, domain.StatusApproved, domain.PaymentMethodCreditCard, at),
+		tx("G-TIE", domain.SourceMerchantOrderSystem, domain.StatusApproved, domain.PaymentMethodCreditCard, at.Add(time.Second)),
+	)
+	ghost, err := repo.FindGhostOrders(context.Background(), repository.AnomalyFilter{})
+	if err != nil {
+		t.Fatal(err)
+	}
+	if len(ghost) != 0 {
+		t.Errorf("ghost on timestamp tie must not double-report; got %+v", ghost)
+	}
+
+	repo2 := openMem(t)
+	insert(t, repo2,
+		tx("G-TIE2", domain.SourceProcessor, domain.StatusApproved, domain.PaymentMethodCreditCard, at),
+		tx("G-TIE2", domain.SourceProcessor, domain.StatusDeclined, domain.PaymentMethodCreditCard, at),
+		tx("G-TIE2", domain.SourceMerchantOrderSystem, domain.StatusApproved, domain.PaymentMethodCreditCard, at.Add(time.Second)),
+	)
+	ghost2, err := repo2.FindGhostOrders(context.Background(), repository.AnomalyFilter{})
+	if err != nil {
+		t.Fatal(err)
+	}
+	if len(ghost2) != 1 || ghost2[0].TransactionID != "G-TIE2" {
+		t.Errorf("ghost via id-desc tiebreak (declined wins): got %+v", ghost2)
+	}
+}
+
 // HealthScore matches oracle ------------------------------------------
 
 func TestRepository_HealthScoreMatchesOracle(t *testing.T) {

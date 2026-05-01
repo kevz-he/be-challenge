@@ -39,7 +39,56 @@ const (
 		NumPendingLimbo
 )
 
-var Processors = []string{"stripe_br", "cielo", "rede", "getnet"}
+// Processors are the four canonical processors used by the seed.
+// Names are kept generic (ProcessorA..D) to mirror the challenge brief
+// rather than leaking specific real-world brand names.
+var Processors = []string{"ProcessorA", "ProcessorB", "ProcessorC", "ProcessorD"}
+
+// healthyPairOutcome describes one of the joint (processor, merchant)
+// status combinations used for the HEALTHY-* pairs. The weights below
+// approximate the realism targets called out in the brief — processor
+// ~85/12/3 and merchant ~87/10/3 (approved/declined/pending) — without
+// ever crossing into a status combination that would create a new
+// anomaly for HEALTHY-* IDs.
+//
+// Why this matters: turning a healthy pair into "processor declined +
+// merchant approved" or "processor pending pix/boleto with old enough
+// occurred_at" would silently inflate ghost / pending_limbo counts and
+// drift away from the oracle. Every entry below has been hand-checked
+// against §6 and §8 of CLAUDE.md to guarantee no anomaly is produced.
+type healthyPairOutcome struct {
+	weight      int
+	proc, merch domain.Status
+	// forceCC is true when the joint status combination is only safe
+	// for credit_card payment methods (e.g. processor pending must be
+	// CC, otherwise PIX/Boleto would trip pending_limbo with the seed's
+	// 7-day-old `now`).
+	forceCC bool
+}
+
+var healthyPairOutcomes = []healthyPairOutcome{
+	{weight: 84, proc: domain.StatusApproved, merch: domain.StatusApproved},
+	{weight: 1, proc: domain.StatusApproved, merch: domain.StatusDeclined},
+	{weight: 9, proc: domain.StatusDeclined, merch: domain.StatusDeclined},
+	{weight: 3, proc: domain.StatusDeclined, merch: domain.StatusPending},
+	{weight: 3, proc: domain.StatusPending, merch: domain.StatusApproved, forceCC: true},
+}
+
+func pickHealthyOutcome(rng *rand.Rand) healthyPairOutcome {
+	total := 0
+	for _, o := range healthyPairOutcomes {
+		total += o.weight
+	}
+	r := rng.Intn(total)
+	acc := 0
+	for _, o := range healthyPairOutcomes {
+		acc += o.weight
+		if r < acc {
+			return o
+		}
+	}
+	return healthyPairOutcomes[0]
+}
 
 // AnomalyIDs holds the deterministic transaction_id sets per anomaly type
 // produced by the seed. Tests use these to assert set equality, not just
@@ -173,7 +222,11 @@ func generate(rng *rand.Rand, healthyPairs int, windowStart, windowEnd time.Time
 		txID := fmt.Sprintf("HEALTHY-%05d", i)
 		ts := randTimeIn(rng, windowStart, windowEnd)
 		amount := randAmount(rng)
+		outcome := pickHealthyOutcome(rng)
 		method := randMethod(rng)
+		if outcome.forceCC {
+			method = domain.PaymentMethodCreditCard
+		}
 		proc := Processors[rng.Intn(len(Processors))]
 
 		txs = append(txs, domain.Transaction{
@@ -183,7 +236,7 @@ func generate(rng *rand.Rand, healthyPairs int, windowStart, windowEnd time.Time
 			Currency:      domain.CurrencyBRL,
 			PaymentMethod: method,
 			Processor:     proc,
-			Status:        domain.StatusApproved,
+			Status:        outcome.proc,
 			Source:        domain.SourceProcessor,
 		})
 
@@ -198,7 +251,7 @@ func generate(rng *rand.Rand, healthyPairs int, windowStart, windowEnd time.Time
 			Currency:      domain.CurrencyBRL,
 			PaymentMethod: method,
 			Processor:     proc,
-			Status:        domain.StatusApproved,
+			Status:        outcome.merch,
 			Source:        domain.SourceMerchantOrderSystem,
 		})
 	}

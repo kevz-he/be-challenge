@@ -5,7 +5,10 @@
 //
 //	seed → POST /v1/transactions/batch → query /v1/health and /v1/anomalies
 //	→ assert counts + ID sets + health score against testdata/expected_counts.json
-//	→ assert response shape against testdata/golden/*.json
+//
+// Golden response-shape comparisons live in
+// internal/httpapi/golden_test.go (TestHTTP_GoldenResponses) so they can
+// run without the e2e build tag and reuse the same fixtures.
 //
 // Run with:
 //
@@ -89,7 +92,9 @@ func loadFixtures(t *testing.T) ([]domain.Transaction, expectedOracle) {
 //   - counts match the oracle
 //   - the EXACT set of transaction_id matches the oracle (set equality)
 //   - the health_score matches the oracle
-//   - the body shapes match the goldens
+//
+// Body shape (golden) comparisons live in
+// internal/httpapi/golden_test.go.
 func TestE2E_FullFlow_SeedIngestQueryCounts(t *testing.T) {
 	txs, exp := loadFixtures(t)
 

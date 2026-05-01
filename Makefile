@@ -118,6 +118,7 @@ acceptance:
 	$(MAKE) docker-reset
 	docker compose up -d --build
 	bash scripts/wait-healthy.sh
+	bash scripts/wait-seeder.sh
 	$(MAKE) verify
 
 # --- housekeeping ------------------------------------------------------
