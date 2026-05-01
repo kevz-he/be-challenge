@@ -1,0 +1,5002 @@
+[
+  {
+    "transaction_id": "HEALTHY-00043",
+    "occurred_at": "2026-04-15T00:43:47.028835405Z",
+    "amount_cents": 20746,
+    "currency": "BRL",
+    "payment_method": "pix",
+    "processor": "stripe_br",
+    "status": "approved",
+    "source": "merchant_order_system"
+  },
+  {
+    "transaction_id": "HEALTHY-00108",
+    "occurred_at": "2026-04-15T00:03:00.904028808Z",
+    "amount_cents": 45116,
+    "currency": "BRL",
+    "payment_method": "pix",
+    "processor": "stripe_br",
+    "status": "approved",
+    "source": "processor"
+  },
+  {
+    "transaction_id": "HEALTHY-00090",
+    "occurred_at": "2026-04-15T05:55:24.936698069Z",
+    "amount_cents": 5146,
+    "currency": "BRL",
+    "payment_method": "pix",
+    "processor": "getnet",
+    "status": "approved",
+    "source": "processor"
+  },
+  {
+    "transaction_id": "HEALTHY-00055",
+    "occurred_at": "2026-04-15T01:47:13.419352239Z",
+    "amount_cents": 30160,
+    "currency": "BRL",
+    "payment_method": "boleto",
+    "processor": "getnet",
+    "status": "approved",
+    "source": "processor"
+  },
+  {
+    "transaction_id": "HEALTHY-00145",
+    "occurred_at": "2026-04-15T05:30:09.993233304Z",
+    "amount_cents": 46746,
+    "currency": "BRL",
+    "payment_method": "pix",
+    "processor": "rede",
+    "status": "approved",
+    "source": "processor"
+  },
+  {
+    "transaction_id": "HEALTHY-00208",
+    "occurred_at": "2026-04-15T00:54:30.270243162Z",
+    "amount_cents": 4124,
+    "currency": "BRL",
+    "payment_method": "credit_card",
+    "processor": "rede",
+    "status": "approved",
+    "source": "processor"
+  },
+  {
+    "transaction_id": "HEALTHY-00204",
+    "occurred_at": "2026-04-15T03:12:01.671916113Z",
+    "amount_cents": 36033,
+    "currency": "BRL",
+    "payment_method": "pix",
+    "processor": "getnet",
+    "status": "approved",
+    "source": "processor"
+  },
+  {
+    "transaction_id": "HEALTHY-00066",
+    "occurred_at": "2026-04-15T05:26:36.689043836Z",
+    "amount_cents": 20367,
+    "currency": "BRL",
+    "payment_method": "credit_card",
+    "processor": "getnet",
+    "status": "approved",
+    "source": "merchant_order_system"
+  },
+  {
+    "transaction_id": "HEALTHY-00106",
+    "occurred_at": "2026-04-15T02:59:09.751417765Z",
+    "amount_cents": 16662,
+    "currency": "BRL",
+    "payment_method": "boleto",
+    "processor": "getnet",
+    "status": "approved",
+    "source": "merchant_order_system"
+  },
+  {
+    "transaction_id": "HEALTHY-00065",
+    "occurred_at": "2026-04-15T04:44:42.863252228Z",
+    "amount_cents": 49539,
+    "currency": "BRL",
+    "payment_method": "credit_card",
+    "processor": "stripe_br",
+    "status": "approved",
+    "source": "merchant_order_system"
+  },
+  {
+    "transaction_id": "HEALTHY-00031",
+    "occurred_at": "2026-04-15T05:46:46.762344739Z",
+    "amount_cents": 8942,
+    "currency": "BRL",
+    "payment_method": "pix",
+    "processor": "getnet",
+    "status": "approved",
+    "source": "processor"
+  },
+  {
+    "transaction_id": "LIMBO-006",
+    "occurred_at": "2026-04-15T05:58:37.872855198Z",
+    "amount_cents": 7689,
+    "currency": "BRL",
+    "payment_method": "boleto",
+    "processor": "stripe_br",
+    "status": "pending",
+    "source": "processor"
+  },
+  {
+    "transaction_id": "HEALTHY-00181",
+    "occurred_at": "2026-04-15T02:47:41.544567824Z",
+    "amount_cents": 9614,
+    "currency": "BRL",
+    "payment_method": "credit_card",
+    "processor": "rede",
+    "status": "approved",
+    "source": "processor"
+  },
+  {
+    "transaction_id": "ORPHAN-004",
+    "occurred_at": "2026-04-15T04:22:17.329922378Z",
+    "amount_cents": 8183,
+    "currency": "BRL",
+    "payment_method": "boleto",
+    "processor": "getnet",
+    "status": "approved",
+    "source": "processor"
+  },
+  {
+    "transaction_id": "HEALTHY-00084",
+    "occurred_at": "2026-04-15T03:25:52.732700351Z",
+    "amount_cents": 38128,
+    "currency": "BRL",
+    "payment_method": "pix",
+    "processor": "getnet",
+    "status": "approved",
+    "source": "processor"
+  },
+  {
+    "transaction_id": "HEALTHY-00192",
+    "occurred_at": "2026-04-15T05:15:26.123276068Z",
+    "amount_cents": 552,
+    "currency": "BRL",
+    "payment_method": "boleto",
+    "processor": "stripe_br",
+    "status": "approved",
+    "source": "processor"
+  },
+  {
+    "transaction_id": "HEALTHY-00170",
+    "occurred_at": "2026-04-15T00:38:51.721699017Z",
+    "amount_cents": 14435,
+    "currency": "BRL",
+    "payment_method": "boleto",
+    "processor": "rede",
+    "status": "approved",
+    "source": "merchant_order_system"
+  },
+  {
+    "transaction_id": "HEALTHY-00199",
+    "occurred_at": "2026-04-15T00:45:17.149089808Z",
+    "amount_cents": 30124,
+    "currency": "BRL",
+    "payment_method": "pix",
+    "processor": "getnet",
+    "status": "approved",
+    "source": "processor"
+  },
+  {
+    "transaction_id": "HEALTHY-00033",
+    "occurred_at": "2026-04-15T02:10:50.370225666Z",
+    "amount_cents": 28093,
+    "currency": "BRL",
+    "payment_method": "credit_card",
+    "processor": "getnet",
+    "status": "approved",
+    "source": "processor"
+  },
+  {
+    "transaction_id": "HEALTHY-00044",
+    "occurred_at": "2026-04-15T00:38:21.748851792Z",
+    "amount_cents": 3224,
+    "currency": "BRL",
+    "payment_method": "credit_card",
+    "processor": "rede",
+    "status": "approved",
+    "source": "merchant_order_system"
+  },
+  {
+    "transaction_id": "HEALTHY-00120",
+    "occurred_at": "2026-04-15T00:39:32.260868061Z",
+    "amount_cents": 31990,
+    "currency": "BRL",
+    "payment_method": "pix",
+    "processor": "cielo",
+    "status": "approved",
+    "source": "merchant_order_system"
+  },
+  {
+    "transaction_id": "HEALTHY-00036",
+    "occurred_at": "2026-04-15T05:32:16.549054984Z",
+    "amount_cents": 5153,
+    "currency": "BRL",
+    "payment_method": "credit_card",
+    "processor": "stripe_br",
+    "status": "approved",
+    "source": "processor"
+  },
+  {
+    "transaction_id": "HEALTHY-00063",
+    "occurred_at": "2026-04-15T01:02:12.514902297Z",
+    "amount_cents": 1153,
+    "currency": "BRL",
+    "payment_method": "credit_card",
+    "processor": "cielo",
+    "status": "approved",
+    "source": "processor"
+  },
+  {
+    "transaction_id": "ORPHAN-008",
+    "occurred_at": "2026-04-15T05:30:16.34516583Z",
+    "amount_cents": 16681,
+    "currency": "BRL",
+    "payment_method": "credit_card",
+    "processor": "rede",
+    "status": "approved",
+    "source": "processor"
+  },
+  {
+    "transaction_id": "HEALTHY-00147",
+    "occurred_at": "2026-04-15T01:39:29.044076271Z",
+    "amount_cents": 1002,
+    "currency": "BRL",
+    "payment_method": "boleto",
+    "processor": "rede",
+    "status": "approved",
+    "source": "merchant_order_system"
+  },
+  {
+    "transaction_id": "HEALTHY-00006",
+    "occurred_at": "2026-04-15T02:10:15.735054281Z",
+    "amount_cents": 15602,
+    "currency": "BRL",
+    "payment_method": "credit_card",
+    "processor": "rede",
+    "status": "approved",
+    "source": "merchant_order_system"
+  },
+  {
+    "transaction_id": "HEALTHY-00080",
+    "occurred_at": "2026-04-15T05:30:27.720405208Z",
+    "amount_cents": 38788,
+    "currency": "BRL",
+    "payment_method": "credit_card",
+    "processor": "stripe_br",
+    "status": "approved",
+    "source": "processor"
+  },
+  {
+    "transaction_id": "HEALTHY-00190",
+    "occurred_at": "2026-04-15T02:17:46.138880738Z",
+    "amount_cents": 11542,
+    "currency": "BRL",
+    "payment_method": "boleto",
+    "processor": "getnet",
+    "status": "approved",
+    "source": "merchant_order_system"
+  },
+  {
+    "transaction_id": "HEALTHY-00164",
+    "occurred_at": "2026-04-15T00:19:14.679854112Z",
+    "amount_cents": 35267,
+    "currency": "BRL",
+    "payment_method": "credit_card",
+    "processor": "stripe_br",
+    "status": "approved",
+    "source": "processor"
+  },
+  {
+    "transaction_id": "HEALTHY-00060",
+    "occurred_at": "2026-04-15T05:39:36.90018386Z",
+    "amount_cents": 17017,
+    "currency": "BRL",
+    "payment_method": "credit_card",
+    "processor": "getnet",
+    "status": "approved",
+    "source": "processor"
+  },
+  {
+    "transaction_id": "HEALTHY-00209",
+    "occurred_at": "2026-04-15T00:37:27.957093576Z",
+    "amount_cents": 1705,
+    "currency": "BRL",
+    "payment_method": "credit_card",
+    "processor": "cielo",
+    "status": "approved",
+    "source": "merchant_order_system"
+  },
+  {
+    "transaction_id": "HEALTHY-00076",
+    "occurred_at": "2026-04-15T00:27:32.136841933Z",
+    "amount_cents": 9679,
+    "currency": "BRL",
+    "payment_method": "credit_card",
+    "processor": "stripe_br",
+    "status": "approved",
+    "source": "merchant_order_system"
+  },
+  {
+    "transaction_id": "HEALTHY-00109",
+    "occurred_at": "2026-04-15T04:29:48.225083814Z",
+    "amount_cents": 39780,
+    "currency": "BRL",
+    "payment_method": "pix",
+    "processor": "cielo",
+    "status": "approved",
+    "source": "processor"
+  },
+  {
+    "transaction_id": "HEALTHY-00138",
+    "occurred_at": "2026-04-15T03:28:47.715171953Z",
+    "amount_cents": 39980,
+    "currency": "BRL",
+    "payment_method": "pix",
+    "processor": "rede",
+    "status": "approved",
+    "source": "merchant_order_system"
+  },
+  {
+    "transaction_id": "HEALTHY-00196",
+    "occurred_at": "2026-04-15T03:43:00.486833108Z",
+    "amount_cents": 41397,
+    "currency": "BRL",
+    "payment_method": "pix",
+    "processor": "stripe_br",
+    "status": "approved",
+    "source": "merchant_order_system"
+  },
+  {
+    "transaction_id": "HEALTHY-00163",
+    "occurred_at": "2026-04-15T00:43:09.880310092Z",
+    "amount_cents": 25039,
+    "currency": "BRL",
+    "payment_method": "credit_card",
+    "processor": "getnet",
+    "status": "approved",
+    "source": "merchant_order_system"
+  },
+  {
+    "transaction_id": "HEALTHY-00091",
+    "occurred_at": "2026-04-15T04:59:48.301076099Z",
+    "amount_cents": 10644,
+    "currency": "BRL",
+    "payment_method": "pix",
+    "processor": "stripe_br",
+    "status": "approved",
+    "source": "merchant_order_system"
+  },
+  {
+    "transaction_id": "HEALTHY-00057",
+    "occurred_at": "2026-04-15T03:03:31.380740422Z",
+    "amount_cents": 24762,
+    "currency": "BRL",
+    "payment_method": "credit_card",
+    "processor": "stripe_br",
+    "status": "approved",
+    "source": "merchant_order_system"
+  },
+  {
+    "transaction_id": "HEALTHY-00173",
+    "occurred_at": "2026-04-15T03:20:53.02238322Z",
+    "amount_cents": 43013,
+    "currency": "BRL",
+    "payment_method": "credit_card",
+    "processor": "stripe_br",
+    "status": "approved",
+    "source": "merchant_order_system"
+  },
+  {
+    "transaction_id": "LIMBO-005",
+    "occurred_at": "2026-04-15T02:44:21.557106507Z",
+    "amount_cents": 3415,
+    "currency": "BRL",
+    "payment_method": "boleto",
+    "processor": "rede",
+    "status": "pending",
+    "source": "processor"
+  },
+  {
+    "transaction_id": "HEALTHY-00158",
+    "occurred_at": "2026-04-15T05:58:08.595154902Z",
+    "amount_cents": 7264,
+    "currency": "BRL",
+    "payment_method": "credit_card",
+    "processor": "stripe_br",
+    "status": "approved",
+    "source": "processor"
+  },
+  {
+    "transaction_id": "HEALTHY-00012",
+    "occurred_at": "2026-04-15T00:02:37.80450099Z",
+    "amount_cents": 6678,
+    "currency": "BRL",
+    "payment_method": "credit_card",
+    "processor": "stripe_br",
+    "status": "approved",
+    "source": "merchant_order_system"
+  },
+  {
+    "transaction_id": "HEALTHY-00062",
+    "occurred_at": "2026-04-15T03:23:53.162216098Z",
+    "amount_cents": 37973,
+    "currency": "BRL",
+    "payment_method": "credit_card",
+    "processor": "cielo",
+    "status": "approved",
+    "source": "processor"
+  },
+  {
+    "transaction_id": "HEALTHY-00077",
+    "occurred_at": "2026-04-15T05:09:01.043704065Z",
+    "amount_cents": 41692,
+    "currency": "BRL",
+    "payment_method": "pix",
+    "processor": "stripe_br",
+    "status": "approved",
+    "source": "processor"
+  },
+  {
+    "transaction_id": "HEALTHY-00165",
+    "occurred_at": "2026-04-15T01:51:51.049651576Z",
+    "amount_cents": 35732,
+    "currency": "BRL",
+    "payment_method": "credit_card",
+    "processor": "stripe_br",
+    "status": "approved",
+    "source": "merchant_order_system"
+  },
+  {
+    "transaction_id": "HEALTHY-00059",
+    "occurred_at": "2026-04-15T00:45:34.353173172Z",
+    "amount_cents": 3191,
+    "currency": "BRL",
+    "payment_method": "credit_card",
+    "processor": "stripe_br",
+    "status": "approved",
+    "source": "processor"
+  },
+  {
+    "transaction_id": "HEALTHY-00058",
+    "occurred_at": "2026-04-15T03:33:57.958568335Z",
+    "amount_cents": 26459,
+    "currency": "BRL",
+    "payment_method": "pix",
+    "processor": "stripe_br",
+    "status": "approved",
+    "source": "processor"
+  },
+  {
+    "transaction_id": "ORPHAN-011",
+    "occurred_at": "2026-04-15T00:24:29.075604887Z",
+    "amount_cents": 20231,
+    "currency": "BRL",
+    "payment_method": "credit_card",
+    "processor": "rede",
+    "status": "approved",
+    "source": "processor"
+  },
+  {
+    "transaction_id": "HEALTHY-00154",
+    "occurred_at": "2026-04-15T04:56:20.783634291Z",
+    "amount_cents": 40245,
+    "currency": "BRL",
+    "payment_method": "credit_card",
+    "processor": "stripe_br",
+    "status": "approved",
+    "source": "processor"
+  },
+  {
+    "transaction_id": "HEALTHY-00177",
+    "occurred_at": "2026-04-15T02:38:34.909002612Z",
+    "amount_cents": 4028,
+    "currency": "BRL",
+    "payment_method": "credit_card",
+    "processor": "rede",
+    "status": "approved",
+    "source": "processor"
+  },
+  {
+    "transaction_id": "DUP-MERCH-003",
+    "occurred_at": "2026-04-15T00:53:19.459550324Z",
+    "amount_cents": 20811,
+    "currency": "BRL",
+    "payment_method": "pix",
+    "processor": "rede",
+    "status": "approved",
+    "source": "merchant_order_system"
+  },
+  {
+    "transaction_id": "HEALTHY-00040",
+    "occurred_at": "2026-04-15T03:52:57.457766959Z",
+    "amount_cents": 42630,
+    "currency": "BRL",
+    "payment_method": "credit_card",
+    "processor": "stripe_br",
+    "status": "approved",
+    "source": "processor"
+  },
+  {
+    "transaction_id": "HEALTHY-00048",
+    "occurred_at": "2026-04-15T01:33:30.254419903Z",
+    "amount_cents": 10727,
+    "currency": "BRL",
+    "payment_method": "credit_card",
+    "processor": "cielo",
+    "status": "approved",
+    "source": "processor"
+  },
+  {
+    "transaction_id": "HEALTHY-00015",
+    "occurred_at": "2026-04-15T04:53:07.584303978Z",
+    "amount_cents": 24601,
+    "currency": "BRL",
+    "payment_method": "pix",
+    "processor": "getnet",
+    "status": "approved",
+    "source": "processor"
+  },
+  {
+    "transaction_id": "HEALTHY-00179",
+    "occurred_at": "2026-04-15T05:06:04.97266479Z",
+    "amount_cents": 34310,
+    "currency": "BRL",
+    "payment_method": "pix",
+    "processor": "stripe_br",
+    "status": "approved",
+    "source": "merchant_order_system"
+  },
+  {
+    "transaction_id": "HEALTHY-00076",
+    "occurred_at": "2026-04-15T00:26:30.136841933Z",
+    "amount_cents": 9679,
+    "currency": "BRL",
+    "payment_method": "credit_card",
+    "processor": "stripe_br",
+    "status": "approved",
+    "source": "processor"
+  },
+  {
+    "transaction_id": "HEALTHY-00176",
+    "occurred_at": "2026-04-15T00:59:10.882142908Z",
+    "amount_cents": 46831,
+    "currency": "BRL",
+    "payment_method": "boleto",
+    "processor": "getnet",
+    "status": "approved",
+    "source": "processor"
+  },
+  {
+    "transaction_id": "HEALTHY-00041",
+    "occurred_at": "2026-04-15T04:22:53.903597786Z",
+    "amount_cents": 45301,
+    "currency": "BRL",
+    "payment_method": "pix",
+    "processor": "cielo",
+    "status": "approved",
+    "source": "processor"
+  },
+  {
+    "transaction_id": "HEALTHY-00116",
+    "occurred_at": "2026-04-15T03:39:15.905201417Z",
+    "amount_cents": 27580,
+    "currency": "BRL",
+    "payment_method": "credit_card",
+    "processor": "getnet",
+    "status": "approved",
+    "source": "merchant_order_system"
+  },
+  {
+    "transaction_id": "HEALTHY-00038",
+    "occurred_at": "2026-04-15T04:17:45.75336683Z",
+    "amount_cents": 20442,
+    "currency": "BRL",
+    "payment_method": "pix",
+    "processor": "stripe_br",
+    "status": "approved",
+    "source": "processor"
+  },
+  {
+    "transaction_id": "HEALTHY-00202",
+    "occurred_at": "2026-04-15T05:40:41.167030628Z",
+    "amount_cents": 48757,
+    "currency": "BRL",
+    "payment_method": "pix",
+    "processor": "getnet",
+    "status": "approved",
+    "source": "processor"
+  },
+  {
+    "transaction_id": "HEALTHY-00070",
+    "occurred_at": "2026-04-15T03:24:49.688366171Z",
+    "amount_cents": 17120,
+    "currency": "BRL",
+    "payment_method": "pix",
+    "processor": "cielo",
+    "status": "approved",
+    "source": "processor"
+  },
+  {
+    "transaction_id": "HEALTHY-00099",
+    "occurred_at": "2026-04-15T00:32:43.503923524Z",
+    "amount_cents": 6687,
+    "currency": "BRL",
+    "payment_method": "pix",
+    "processor": "stripe_br",
+    "status": "approved",
+    "source": "processor"
+  },
+  {
+    "transaction_id": "HEALTHY-00118",
+    "occurred_at": "2026-04-15T03:02:17.669928564Z",
+    "amount_cents": 6616,
+    "currency": "BRL",
+    "payment_method": "credit_card",
+    "processor": "cielo",
+    "status": "approved",
+    "source": "merchant_order_system"
+  },
+  {
+    "transaction_id": "HEALTHY-00190",
+    "occurred_at": "2026-04-15T02:16:24.138880738Z",
+    "amount_cents": 11542,
+    "currency": "BRL",
+    "payment_method": "boleto",
+    "processor": "getnet",
+    "status": "approved",
+    "source": "processor"
+  },
+  {
+    "transaction_id": "HEALTHY-00182",
+    "occurred_at": "2026-04-15T02:13:26.157797438Z",
+    "amount_cents": 28482,
+    "currency": "BRL",
+    "payment_method": "credit_card",
+    "processor": "stripe_br",
+    "status": "approved",
+    "source": "merchant_order_system"
+  },
+  {
+    "transaction_id": "HEALTHY-00008",
+    "occurred_at": "2026-04-15T05:51:14.665436954Z",
+    "amount_cents": 9887,
+    "currency": "BRL",
+    "payment_method": "credit_card",
+    "processor": "stripe_br",
+    "status": "approved",
+    "source": "processor"
+  },
+  {
+    "transaction_id": "ORPHAN-016",
+    "occurred_at": "2026-04-15T03:03:40.07962107Z",
+    "amount_cents": 13506,
+    "currency": "BRL",
+    "payment_method": "credit_card",
+    "processor": "getnet",
+    "status": "approved",
+    "source": "processor"
+  },
+  {
+    "transaction_id": "ORPHAN-003",
+    "occurred_at": "2026-04-15T00:34:35.949459679Z",
+    "amount_cents": 12802,
+    "currency": "BRL",
+    "payment_method": "credit_card",
+    "processor": "stripe_br",
+    "status": "approved",
+    "source": "processor"
+  },
+  {
+    "transaction_id": "DUP-MERCH-001",
+    "occurred_at": "2026-04-15T04:21:43.842412216Z",
+    "amount_cents": 44179,
+    "currency": "BRL",
+    "payment_method": "pix",
+    "processor": "rede",
+    "status": "approved",
+    "source": "merchant_order_system"
+  },
+  {
+    "transaction_id": "HEALTHY-00093",
+    "occurred_at": "2026-04-15T02:16:43.084694619Z",
+    "amount_cents": 17124,
+    "currency": "BRL",
+    "payment_method": "credit_card",
+    "processor": "getnet",
+    "status": "approved",
+    "source": "processor"
+  },
+  {
+    "transaction_id": "HEALTHY-00049",
+    "occurred_at": "2026-04-15T04:24:20.729633759Z",
+    "amount_cents": 24748,
+    "currency": "BRL",
+    "payment_method": "credit_card",
+    "processor": "getnet",
+    "status": "approved",
+    "source": "merchant_order_system"
+  },
+  {
+    "transaction_id": "HEALTHY-00077",
+    "occurred_at": "2026-04-15T05:10:45.043704065Z",
+    "amount_cents": 41692,
+    "currency": "BRL",
+    "payment_method": "pix",
+    "processor": "stripe_br",
+    "status": "approved",
+    "source": "merchant_order_system"
+  },
+  {
+    "transaction_id": "HEALTHY-00192",
+    "occurred_at": "2026-04-15T05:17:18.123276068Z",
+    "amount_cents": 552,
+    "currency": "BRL",
+    "payment_method": "boleto",
+    "processor": "stripe_br",
+    "status": "approved",
+    "source": "merchant_order_system"
+  },
+  {
+    "transaction_id": "HEALTHY-00148",
+    "occurred_at": "2026-04-15T05:10:37.430035729Z",
+    "amount_cents": 13825,
+    "currency": "BRL",
+    "payment_method": "credit_card",
+    "processor": "rede",
+    "status": "approved",
+    "source": "processor"
+  },
+  {
+    "transaction_id": "HEALTHY-00114",
+    "occurred_at": "2026-04-15T05:44:25.40492652Z",
+    "amount_cents": 49447,
+    "currency": "BRL",
+    "payment_method": "credit_card",
+    "processor": "stripe_br",
+    "status": "approved",
+    "source": "merchant_order_system"
+  },
+  {
+    "transaction_id": "HEALTHY-00139",
+    "occurred_at": "2026-04-15T04:41:21.746490246Z",
+    "amount_cents": 31821,
+    "currency": "BRL",
+    "payment_method": "boleto",
+    "processor": "cielo",
+    "status": "approved",
+    "source": "processor"
+  },
+  {
+    "transaction_id": "GHOST-BADPROC-001",
+    "occurred_at": "2026-04-15T02:53:09.186044209Z",
+    "amount_cents": 44998,
+    "currency": "BRL",
+    "payment_method": "credit_card",
+    "processor": "stripe_br",
+    "status": "approved",
+    "source": "merchant_order_system"
+  },
+  {
+    "transaction_id": "HEALTHY-00027",
+    "occurred_at": "2026-04-15T03:03:59.332401303Z",
+    "amount_cents": 41399,
+    "currency": "BRL",
+    "payment_method": "pix",
+    "processor": "getnet",
+    "status": "approved",
+    "source": "processor"
+  },
+  {
+    "transaction_id": "GHOST-BADPROC-006",
+    "occurred_at": "2026-04-15T00:56:19.528067226Z",
+    "amount_cents": 8418,
+    "currency": "BRL",
+    "payment_method": "pix",
+    "processor": "rede",
+    "status": "failed",
+    "source": "processor"
+  },
+  {
+    "transaction_id": "HEALTHY-00090",
+    "occurred_at": "2026-04-15T05:57:19.936698069Z",
+    "amount_cents": 5146,
+    "currency": "BRL",
+    "payment_method": "pix",
+    "processor": "getnet",
+    "status": "approved",
+    "source": "merchant_order_system"
+  },
+  {
+    "transaction_id": "DUP-PROC-003",
+    "occurred_at": "2026-04-15T04:36:50.459226803Z",
+    "amount_cents": 31836,
+    "currency": "BRL",
+    "payment_method": "credit_card",
+    "processor": "cielo",
+    "status": "approved",
+    "source": "merchant_order_system"
+  },
+  {
+    "transaction_id": "HEALTHY-00087",
+    "occurred_at": "2026-04-15T05:40:37.255639013Z",
+    "amount_cents": 9370,
+    "currency": "BRL",
+    "payment_method": "credit_card",
+    "processor": "cielo",
+    "status": "approved",
+    "source": "merchant_order_system"
+  },
+  {
+    "transaction_id": "GHOST-BADPROC-002",
+    "occurred_at": "2026-04-15T00:38:43.428255054Z",
+    "amount_cents": 27649,
+    "currency": "BRL",
+    "payment_method": "credit_card",
+    "processor": "cielo",
+    "status": "approved",
+    "source": "merchant_order_system"
+  },
+  {
+    "transaction_id": "HEALTHY-00151",
+    "occurred_at": "2026-04-15T05:12:29.210787901Z",
+    "amount_cents": 22745,
+    "currency": "BRL",
+    "payment_method": "credit_card",
+    "processor": "rede",
+    "status": "approved",
+    "source": "merchant_order_system"
+  },
+  {
+    "transaction_id": "HEALTHY-00005",
+    "occurred_at": "2026-04-15T05:25:43.285674209Z",
+    "amount_cents": 13502,
+    "currency": "BRL",
+    "payment_method": "credit_card",
+    "processor": "getnet",
+    "status": "approved",
+    "source": "merchant_order_system"
+  },
+  {
+    "transaction_id": "HEALTHY-00119",
+    "occurred_at": "2026-04-15T00:57:46.491385996Z",
+    "amount_cents": 49075,
+    "currency": "BRL",
+    "payment_method": "pix",
+    "processor": "stripe_br",
+    "status": "approved",
+    "source": "processor"
+  },
+  {
+    "transaction_id": "HEALTHY-00101",
+    "occurred_at": "2026-04-15T02:35:11.249998124Z",
+    "amount_cents": 11963,
+    "currency": "BRL",
+    "payment_method": "credit_card",
+    "processor": "cielo",
+    "status": "approved",
+    "source": "processor"
+  },
+  {
+    "transaction_id": "HEALTHY-00164",
+    "occurred_at": "2026-04-15T00:20:30.679854112Z",
+    "amount_cents": 35267,
+    "currency": "BRL",
+    "payment_method": "credit_card",
+    "processor": "stripe_br",
+    "status": "approved",
+    "source": "merchant_order_system"
+  },
+  {
+    "transaction_id": "HEALTHY-00129",
+    "occurred_at": "2026-04-15T02:52:47.632674556Z",
+    "amount_cents": 3939,
+    "currency": "BRL",
+    "payment_method": "pix",
+    "processor": "rede",
+    "status": "approved",
+    "source": "processor"
+  },
+  {
+    "transaction_id": "HEALTHY-00010",
+    "occurred_at": "2026-04-15T02:10:24.088869434Z",
+    "amount_cents": 41892,
+    "currency": "BRL",
+    "payment_method": "credit_card",
+    "processor": "getnet",
+    "status": "approved",
+    "source": "merchant_order_system"
+  },
+  {
+    "transaction_id": "HEALTHY-00094",
+    "occurred_at": "2026-04-15T00:53:43.229645195Z",
+    "amount_cents": 17497,
+    "currency": "BRL",
+    "payment_method": "credit_card",
+    "processor": "stripe_br",
+    "status": "approved",
+    "source": "processor"
+  },
+  {
+    "transaction_id": "HEALTHY-00001",
+    "occurred_at": "2026-04-15T03:33:31.214237261Z",
+    "amount_cents": 40857,
+    "currency": "BRL",
+    "payment_method": "pix",
+    "processor": "stripe_br",
+    "status": "approved",
+    "source": "merchant_order_system"
+  },
+  {
+    "transaction_id": "HEALTHY-00133",
+    "occurred_at": "2026-04-15T05:39:59.890126413Z",
+    "amount_cents": 37604,
+    "currency": "BRL",
+    "payment_method": "boleto",
+    "processor": "cielo",
+    "status": "approved",
+    "source": "processor"
+  },
+  {
+    "transaction_id": "GHOST-BADPROC-002",
+    "occurred_at": "2026-04-15T00:38:13.428255054Z",
+    "amount_cents": 27649,
+    "currency": "BRL",
+    "payment_method": "credit_card",
+    "processor": "cielo",
+    "status": "failed",
+    "source": "processor"
+  },
+  {
+    "transaction_id": "DUP-MERCH-003",
+    "occurred_at": "2026-04-15T00:53:17.459550324Z",
+    "amount_cents": 20811,
+    "currency": "BRL",
+    "payment_method": "pix",
+    "processor": "rede",
+    "status": "approved",
+    "source": "processor"
+  },
+  {
+    "transaction_id": "DUP-MERCH-002",
+    "occurred_at": "2026-04-15T04:10:11.043470177Z",
+    "amount_cents": 27314,
+    "currency": "BRL",
+    "payment_method": "credit_card",
+    "processor": "stripe_br",
+    "status": "approved",
+    "source": "processor"
+  },
+  {
+    "transaction_id": "HEALTHY-00026",
+    "occurred_at": "2026-04-15T02:06:05.374263081Z",
+    "amount_cents": 9029,
+    "currency": "BRL",
+    "payment_method": "credit_card",
+    "processor": "cielo",
+    "status": "approved",
+    "source": "merchant_order_system"
+  },
+  {
+    "transaction_id": "DUP-MERCH-000",
+    "occurred_at": "2026-04-15T05:40:54.267976308Z",
+    "amount_cents": 5150,
+    "currency": "BRL",
+    "payment_method": "pix",
+    "processor": "rede",
+    "status": "approved",
+    "source": "merchant_order_system"
+  },
+  {
+    "transaction_id": "HEALTHY-00057",
+    "occurred_at": "2026-04-15T03:02:38.380740422Z",
+    "amount_cents": 24762,
+    "currency": "BRL",
+    "payment_method": "credit_card",
+    "processor": "stripe_br",
+    "status": "approved",
+    "source": "processor"
+  },
+  {
+    "transaction_id": "DUP-PROC-001",
+    "occurred_at": "2026-04-15T01:35:21.445909034Z",
+    "amount_cents": 23429,
+    "currency": "BRL",
+    "payment_method": "credit_card",
+    "processor": "getnet",
+    "status": "approved",
+    "source": "processor"
+  },
+  {
+    "transaction_id": "HEALTHY-00081",
+    "occurred_at": "2026-04-15T00:39:11.210012289Z",
+    "amount_cents": 8466,
+    "currency": "BRL",
+    "payment_method": "credit_card",
+    "processor": "stripe_br",
+    "status": "approved",
+    "source": "merchant_order_system"
+  },
+  {
+    "transaction_id": "HEALTHY-00197",
+    "occurred_at": "2026-04-15T03:23:50.221660458Z",
+    "amount_cents": 25264,
+    "currency": "BRL",
+    "payment_method": "credit_card",
+    "processor": "getnet",
+    "status": "approved",
+    "source": "merchant_order_system"
+  },
+  {
+    "transaction_id": "HEALTHY-00051",
+    "occurred_at": "2026-04-15T06:00:00Z",
+    "amount_cents": 47953,
+    "currency": "BRL",
+    "payment_method": "credit_card",
+    "processor": "rede",
+    "status": "approved",
+    "source": "merchant_order_system"
+  },
+  {
+    "transaction_id": "HEALTHY-00099",
+    "occurred_at": "2026-04-15T00:33:00.503923524Z",
+    "amount_cents": 6687,
+    "currency": "BRL",
+    "payment_method": "pix",
+    "processor": "stripe_br",
+    "status": "approved",
+    "source": "merchant_order_system"
+  },
+  {
+    "transaction_id": "HEALTHY-00089",
+    "occurred_at": "2026-04-15T04:57:21.629131713Z",
+    "amount_cents": 46373,
+    "currency": "BRL",
+    "payment_method": "pix",
+    "processor": "cielo",
+    "status": "approved",
+    "source": "processor"
+  },
+  {
+    "transaction_id": "HEALTHY-00148",
+    "occurred_at": "2026-04-15T05:12:18.430035729Z",
+    "amount_cents": 13825,
+    "currency": "BRL",
+    "payment_method": "credit_card",
+    "processor": "rede",
+    "status": "approved",
+    "source": "merchant_order_system"
+  },
+  {
+    "transaction_id": "HEALTHY-00150",
+    "occurred_at": "2026-04-15T03:34:08.135253343Z",
+    "amount_cents": 14370,
+    "currency": "BRL",
+    "payment_method": "credit_card",
+    "processor": "rede",
+    "status": "approved",
+    "source": "processor"
+  },
+  {
+    "transaction_id": "HEALTHY-00110",
+    "occurred_at": "2026-04-15T05:01:28.477259842Z",
+    "amount_cents": 4656,
+    "currency": "BRL",
+    "payment_method": "credit_card",
+    "processor": "cielo",
+    "status": "approved",
+    "source": "merchant_order_system"
+  },
+  {
+    "transaction_id": "HEALTHY-00115",
+    "occurred_at": "2026-04-15T00:56:49.019266972Z",
+    "amount_cents": 11251,
+    "currency": "BRL",
+    "payment_method": "pix",
+    "processor": "rede",
+    "status": "approved",
+    "source": "merchant_order_system"
+  },
+  {
+    "transaction_id": "HEALTHY-00172",
+    "occurred_at": "2026-04-15T01:01:16.750576234Z",
+    "amount_cents": 19554,
+    "currency": "BRL",
+    "payment_method": "credit_card",
+    "processor": "rede",
+    "status": "approved",
+    "source": "merchant_order_system"
+  },
+  {
+    "transaction_id": "HEALTHY-00063",
+    "occurred_at": "2026-04-15T01:02:41.514902297Z",
+    "amount_cents": 1153,
+    "currency": "BRL",
+    "payment_method": "credit_card",
+    "processor": "cielo",
+    "status": "approved",
+    "source": "merchant_order_system"
+  },
+  {
+    "transaction_id": "HEALTHY-00140",
+    "occurred_at": "2026-04-15T05:21:55.402175313Z",
+    "amount_cents": 6778,
+    "currency": "BRL",
+    "payment_method": "pix",
+    "processor": "cielo",
+    "status": "approved",
+    "source": "merchant_order_system"
+  },
+  {
+    "transaction_id": "HEALTHY-00157",
+    "occurred_at": "2026-04-15T01:07:04.233171429Z",
+    "amount_cents": 1958,
+    "currency": "BRL",
+    "payment_method": "boleto",
+    "processor": "stripe_br",
+    "status": "approved",
+    "source": "merchant_order_system"
+  },
+  {
+    "transaction_id": "HEALTHY-00029",
+    "occurred_at": "2026-04-15T03:12:31.083679814Z",
+    "amount_cents": 14494,
+    "currency": "BRL",
+    "payment_method": "pix",
+    "processor": "rede",
+    "status": "approved",
+    "source": "merchant_order_system"
+  },
+  {
+    "transaction_id": "HEALTHY-00191",
+    "occurred_at": "2026-04-15T02:45:33.591153655Z",
+    "amount_cents": 37902,
+    "currency": "BRL",
+    "payment_method": "credit_card",
+    "processor": "rede",
+    "status": "approved",
+    "source": "processor"
+  },
+  {
+    "transaction_id": "ORPHAN-001",
+    "occurred_at": "2026-04-15T04:34:37.128925612Z",
+    "amount_cents": 29062,
+    "currency": "BRL",
+    "payment_method": "credit_card",
+    "processor": "cielo",
+    "status": "approved",
+    "source": "processor"
+  },
+  {
+    "transaction_id": "HEALTHY-00133",
+    "occurred_at": "2026-04-15T05:40:33.890126413Z",
+    "amount_cents": 37604,
+    "currency": "BRL",
+    "payment_method": "boleto",
+    "processor": "cielo",
+    "status": "approved",
+    "source": "merchant_order_system"
+  },
+  {
+    "transaction_id": "HEALTHY-00134",
+    "occurred_at": "2026-04-15T02:48:22.574308884Z",
+    "amount_cents": 6850,
+    "currency": "BRL",
+    "payment_method": "credit_card",
+    "processor": "stripe_br",
+    "status": "approved",
+    "source": "merchant_order_system"
+  },
+  {
+    "transaction_id": "HEALTHY-00160",
+    "occurred_at": "2026-04-15T02:26:30.12055323Z",
+    "amount_cents": 18271,
+    "currency": "BRL",
+    "payment_method": "pix",
+    "processor": "rede",
+    "status": "approved",
+    "source": "processor"
+  },
+  {
+    "transaction_id": "HEALTHY-00027",
+    "occurred_at": "2026-04-15T03:05:59.332401303Z",
+    "amount_cents": 41399,
+    "currency": "BRL",
+    "payment_method": "pix",
+    "processor": "getnet",
+    "status": "approved",
+    "source": "merchant_order_system"
+  },
+  {
+    "transaction_id": "HEALTHY-00183",
+    "occurred_at": "2026-04-15T03:50:51.681765397Z",
+    "amount_cents": 12207,
+    "currency": "BRL",
+    "payment_method": "pix",
+    "processor": "getnet",
+    "status": "approved",
+    "source": "processor"
+  },
+  {
+    "transaction_id": "HEALTHY-00110",
+    "occurred_at": "2026-04-15T05:00:23.477259842Z",
+    "amount_cents": 4656,
+    "currency": "BRL",
+    "payment_method": "credit_card",
+    "processor": "cielo",
+    "status": "approved",
+    "source": "processor"
+  },
+  {
+    "transaction_id": "DUP-PROC-000",
+    "occurred_at": "2026-04-15T01:04:06.893198232Z",
+    "amount_cents": 48556,
+    "currency": "BRL",
+    "payment_method": "credit_card",
+    "processor": "cielo",
+    "status": "approved",
+    "source": "processor"
+  },
+  {
+    "transaction_id": "HEALTHY-00170",
+    "occurred_at": "2026-04-15T00:38:44.721699017Z",
+    "amount_cents": 14435,
+    "currency": "BRL",
+    "payment_method": "boleto",
+    "processor": "rede",
+    "status": "approved",
+    "source": "processor"
+  },
+  {
+    "transaction_id": "HEALTHY-00052",
+    "occurred_at": "2026-04-15T01:33:09.972748925Z",
+    "amount_cents": 28192,
+    "currency": "BRL",
+    "payment_method": "credit_card",
+    "processor": "rede",
+    "status": "approved",
+    "source": "processor"
+  },
+  {
+    "transaction_id": "HEALTHY-00051",
+    "occurred_at": "2026-04-15T05:59:59.882737597Z",
+    "amount_cents": 47953,
+    "currency": "BRL",
+    "payment_method": "credit_card",
+    "processor": "rede",
+    "status": "approved",
+    "source": "processor"
+  },
+  {
+    "transaction_id": "HEALTHY-00000",
+    "occurred_at": "2026-04-15T00:29:14.231278675Z",
+    "amount_cents": 35487,
+    "currency": "BRL",
+    "payment_method": "pix",
+    "processor": "rede",
+    "status": "approved",
+    "source": "processor"
+  },
+  {
+    "transaction_id": "HEALTHY-00069",
+    "occurred_at": "2026-04-15T01:40:19.232783701Z",
+    "amount_cents": 39247,
+    "currency": "BRL",
+    "payment_method": "boleto",
+    "processor": "rede",
+    "status": "approved",
+    "source": "merchant_order_system"
+  },
+  {
+    "transaction_id": "HEALTHY-00056",
+    "occurred_at": "2026-04-15T00:57:23.541496186Z",
+    "amount_cents": 14977,
+    "currency": "BRL",
+    "payment_method": "credit_card",
+    "processor": "rede",
+    "status": "approved",
+    "source": "merchant_order_system"
+  },
+  {
+    "transaction_id": "GHOST-NOPROC-005",
+    "occurred_at": "2026-04-15T02:35:32.314920754Z",
+    "amount_cents": 20506,
+    "currency": "BRL",
+    "payment_method": "credit_card",
+    "processor": "rede",
+    "status": "approved",
+    "source": "merchant_order_system"
+  },
+  {
+    "transaction_id": "GHOST-BADPROC-004",
+    "occurred_at": "2026-04-15T05:55:17.00967231Z",
+    "amount_cents": 20485,
+    "currency": "BRL",
+    "payment_method": "boleto",
+    "processor": "rede",
+    "status": "approved",
+    "source": "merchant_order_system"
+  },
+  {
+    "transaction_id": "HEALTHY-00123",
+    "occurred_at": "2026-04-15T05:09:11.147921115Z",
+    "amount_cents": 4147,
+    "currency": "BRL",
+    "payment_method": "credit_card",
+    "processor": "getnet",
+    "status": "approved",
+    "source": "merchant_order_system"
+  },
+  {
+    "transaction_id": "GHOST-BADPROC-003",
+    "occurred_at": "2026-04-15T00:42:49.781186891Z",
+    "amount_cents": 11938,
+    "currency": "BRL",
+    "payment_method": "pix",
+    "processor": "rede",
+    "status": "declined",
+    "source": "processor"
+  },
+  {
+    "transaction_id": "HEALTHY-00160",
+    "occurred_at": "2026-04-15T02:26:54.12055323Z",
+    "amount_cents": 18271,
+    "currency": "BRL",
+    "payment_method": "pix",
+    "processor": "rede",
+    "status": "approved",
+    "source": "merchant_order_system"
+  },
+  {
+    "transaction_id": "HEALTHY-00193",
+    "occurred_at": "2026-04-15T04:27:31.75805023Z",
+    "amount_cents": 16681,
+    "currency": "BRL",
+    "payment_method": "credit_card",
+    "processor": "cielo",
+    "status": "approved",
+    "source": "merchant_order_system"
+  },
+  {
+    "transaction_id": "HEALTHY-00006",
+    "occurred_at": "2026-04-15T02:09:45.735054281Z",
+    "amount_cents": 15602,
+    "currency": "BRL",
+    "payment_method": "credit_card",
+    "processor": "rede",
+    "status": "approved",
+    "source": "processor"
+  },
+  {
+    "transaction_id": "HEALTHY-00186",
+    "occurred_at": "2026-04-15T05:38:56.011934036Z",
+    "amount_cents": 8386,
+    "currency": "BRL",
+    "payment_method": "credit_card",
+    "processor": "cielo",
+    "status": "approved",
+    "source": "processor"
+  },
+  {
+    "transaction_id": "HEALTHY-00023",
+    "occurred_at": "2026-04-15T02:32:29.905021995Z",
+    "amount_cents": 39877,
+    "currency": "BRL",
+    "payment_method": "credit_card",
+    "processor": "cielo",
+    "status": "approved",
+    "source": "processor"
+  },
+  {
+    "transaction_id": "DUP-MERCH-003",
+    "occurred_at": "2026-04-15T00:53:18.459550324Z",
+    "amount_cents": 20811,
+    "currency": "BRL",
+    "payment_method": "pix",
+    "processor": "rede",
+    "status": "approved",
+    "source": "merchant_order_system"
+  },
+  {
+    "transaction_id": "HEALTHY-00009",
+    "occurred_at": "2026-04-15T01:49:52.544653919Z",
+    "amount_cents": 12694,
+    "currency": "BRL",
+    "payment_method": "credit_card",
+    "processor": "cielo",
+    "status": "approved",
+    "source": "merchant_order_system"
+  },
+  {
+    "transaction_id": "HEALTHY-00108",
+    "occurred_at": "2026-04-15T00:03:55.904028808Z",
+    "amount_cents": 45116,
+    "currency": "BRL",
+    "payment_method": "pix",
+    "processor": "stripe_br",
+    "status": "approved",
+    "source": "merchant_order_system"
+  },
+  {
+    "transaction_id": "HEALTHY-00017",
+    "occurred_at": "2026-04-15T04:41:36.59730855Z",
+    "amount_cents": 13435,
+    "currency": "BRL",
+    "payment_method": "credit_card",
+    "processor": "getnet",
+    "status": "approved",
+    "source": "processor"
+  },
+  {
+    "transaction_id": "LIMBO-009",
+    "occurred_at": "2026-04-15T03:33:38.576938689Z",
+    "amount_cents": 12015,
+    "currency": "BRL",
+    "payment_method": "boleto",
+    "processor": "getnet",
+    "status": "pending",
+    "source": "processor"
+  },
+  {
+    "transaction_id": "HEALTHY-00130",
+    "occurred_at": "2026-04-15T00:43:12.017197243Z",
+    "amount_cents": 43694,
+    "currency": "BRL",
+    "payment_method": "credit_card",
+    "processor": "rede",
+    "status": "approved",
+    "source": "merchant_order_system"
+  },
+  {
+    "transaction_id": "HEALTHY-00045",
+    "occurred_at": "2026-04-15T01:28:38.162544252Z",
+    "amount_cents": 15298,
+    "currency": "BRL",
+    "payment_method": "boleto",
+    "processor": "getnet",
+    "status": "approved",
+    "source": "processor"
+  },
+  {
+    "transaction_id": "HEALTHY-00203",
+    "occurred_at": "2026-04-15T04:21:46.865914336Z",
+    "amount_cents": 43895,
+    "currency": "BRL",
+    "payment_method": "credit_card",
+    "processor": "stripe_br",
+    "status": "approved",
+    "source": "merchant_order_system"
+  },
+  {
+    "transaction_id": "ORPHAN-014",
+    "occurred_at": "2026-04-15T00:42:07.780130873Z",
+    "amount_cents": 8402,
+    "currency": "BRL",
+    "payment_method": "boleto",
+    "processor": "getnet",
+    "status": "approved",
+    "source": "processor"
+  },
+  {
+    "transaction_id": "HEALTHY-00186",
+    "occurred_at": "2026-04-15T05:39:38.011934036Z",
+    "amount_cents": 8386,
+    "currency": "BRL",
+    "payment_method": "credit_card",
+    "processor": "cielo",
+    "status": "approved",
+    "source": "merchant_order_system"
+  },
+  {
+    "transaction_id": "HEALTHY-00040",
+    "occurred_at": "2026-04-15T03:54:16.457766959Z",
+    "amount_cents": 42630,
+    "currency": "BRL",
+    "payment_method": "credit_card",
+    "processor": "stripe_br",
+    "status": "approved",
+    "source": "merchant_order_system"
+  },
+  {
+    "transaction_id": "HEALTHY-00093",
+    "occurred_at": "2026-04-15T02:16:49.084694619Z",
+    "amount_cents": 17124,
+    "currency": "BRL",
+    "payment_method": "credit_card",
+    "processor": "getnet",
+    "status": "approved",
+    "source": "merchant_order_system"
+  },
+  {
+    "transaction_id": "HEALTHY-00017",
+    "occurred_at": "2026-04-15T04:42:35.59730855Z",
+    "amount_cents": 13435,
+    "currency": "BRL",
+    "payment_method": "credit_card",
+    "processor": "getnet",
+    "status": "approved",
+    "source": "merchant_order_system"
+  },
+  {
+    "transaction_id": "HEALTHY-00037",
+    "occurred_at": "2026-04-15T00:41:33.884175475Z",
+    "amount_cents": 35569,
+    "currency": "BRL",
+    "payment_method": "boleto",
+    "processor": "rede",
+    "status": "approved",
+    "source": "merchant_order_system"
+  },
+  {
+    "transaction_id": "HEALTHY-00194",
+    "occurred_at": "2026-04-15T03:23:20.76854688Z",
+    "amount_cents": 40788,
+    "currency": "BRL",
+    "payment_method": "pix",
+    "processor": "getnet",
+    "status": "approved",
+    "source": "processor"
+  },
+  {
+    "transaction_id": "HEALTHY-00149",
+    "occurred_at": "2026-04-15T03:24:20.567112686Z",
+    "amount_cents": 33999,
+    "currency": "BRL",
+    "payment_method": "credit_card",
+    "processor": "rede",
+    "status": "approved",
+    "source": "processor"
+  },
+  {
+    "transaction_id": "HEALTHY-00136",
+    "occurred_at": "2026-04-15T00:23:54.352761449Z",
+    "amount_cents": 5745,
+    "currency": "BRL",
+    "payment_method": "credit_card",
+    "processor": "cielo",
+    "status": "approved",
+    "source": "merchant_order_system"
+  },
+  {
+    "transaction_id": "HEALTHY-00115",
+    "occurred_at": "2026-04-15T00:55:13.019266972Z",
+    "amount_cents": 11251,
+    "currency": "BRL",
+    "payment_method": "pix",
+    "processor": "rede",
+    "status": "approved",
+    "source": "processor"
+  },
+  {
+    "transaction_id": "ORPHAN-002",
+    "occurred_at": "2026-04-15T04:39:31.861298657Z",
+    "amount_cents": 23087,
+    "currency": "BRL",
+    "payment_method": "pix",
+    "processor": "rede",
+    "status": "approved",
+    "source": "processor"
+  },
+  {
+    "transaction_id": "HEALTHY-00023",
+    "occurred_at": "2026-04-15T02:34:08.905021995Z",
+    "amount_cents": 39877,
+    "currency": "BRL",
+    "payment_method": "credit_card",
+    "processor": "cielo",
+    "status": "approved",
+    "source": "merchant_order_system"
+  },
+  {
+    "transaction_id": "HEALTHY-00031",
+    "occurred_at": "2026-04-15T05:48:40.762344739Z",
+    "amount_cents": 8942,
+    "currency": "BRL",
+    "payment_method": "pix",
+    "processor": "getnet",
+    "status": "approved",
+    "source": "merchant_order_system"
+  },
+  {
+    "transaction_id": "HEALTHY-00193",
+    "occurred_at": "2026-04-15T04:25:39.75805023Z",
+    "amount_cents": 16681,
+    "currency": "BRL",
+    "payment_method": "credit_card",
+    "processor": "cielo",
+    "status": "approved",
+    "source": "processor"
+  },
+  {
+    "transaction_id": "HEALTHY-00086",
+    "occurred_at": "2026-04-15T04:43:35.592305111Z",
+    "amount_cents": 42553,
+    "currency": "BRL",
+    "payment_method": "credit_card",
+    "processor": "cielo",
+    "status": "approved",
+    "source": "merchant_order_system"
+  },
+  {
+    "transaction_id": "GHOST-BADPROC-000",
+    "occurred_at": "2026-04-15T00:03:18.833602484Z",
+    "amount_cents": 44983,
+    "currency": "BRL",
+    "payment_method": "credit_card",
+    "processor": "stripe_br",
+    "status": "failed",
+    "source": "processor"
+  },
+  {
+    "transaction_id": "HEALTHY-00126",
+    "occurred_at": "2026-04-15T03:52:16.535586876Z",
+    "amount_cents": 11948,
+    "currency": "BRL",
+    "payment_method": "credit_card",
+    "processor": "cielo",
+    "status": "approved",
+    "source": "merchant_order_system"
+  },
+  {
+    "transaction_id": "HEALTHY-00197",
+    "occurred_at": "2026-04-15T03:23:23.221660458Z",
+    "amount_cents": 25264,
+    "currency": "BRL",
+    "payment_method": "credit_card",
+    "processor": "getnet",
+    "status": "approved",
+    "source": "processor"
+  },
+  {
+    "transaction_id": "HEALTHY-00139",
+    "occurred_at": "2026-04-15T04:42:05.746490246Z",
+    "amount_cents": 31821,
+    "currency": "BRL",
+    "payment_method": "boleto",
+    "processor": "cielo",
+    "status": "approved",
+    "source": "merchant_order_system"
+  },
+  {
+    "transaction_id": "ORPHAN-012",
+    "occurred_at": "2026-04-15T00:11:49.474588052Z",
+    "amount_cents": 29330,
+    "currency": "BRL",
+    "payment_method": "boleto",
+    "processor": "stripe_br",
+    "status": "approved",
+    "source": "processor"
+  },
+  {
+    "transaction_id": "HEALTHY-00163",
+    "occurred_at": "2026-04-15T00:42:18.880310092Z",
+    "amount_cents": 25039,
+    "currency": "BRL",
+    "payment_method": "credit_card",
+    "processor": "getnet",
+    "status": "approved",
+    "source": "processor"
+  },
+  {
+    "transaction_id": "GHOST-NOPROC-007",
+    "occurred_at": "2026-04-15T05:06:19.142689499Z",
+    "amount_cents": 34037,
+    "currency": "BRL",
+    "payment_method": "boleto",
+    "processor": "rede",
+    "status": "approved",
+    "source": "merchant_order_system"
+  },
+  {
+    "transaction_id": "HEALTHY-00189",
+    "occurred_at": "2026-04-15T00:40:54.166741009Z",
+    "amount_cents": 18264,
+    "currency": "BRL",
+    "payment_method": "credit_card",
+    "processor": "rede",
+    "status": "approved",
+    "source": "processor"
+  },
+  {
+    "transaction_id": "HEALTHY-00117",
+    "occurred_at": "2026-04-15T02:23:55.062325923Z",
+    "amount_cents": 2329,
+    "currency": "BRL",
+    "payment_method": "credit_card",
+    "processor": "cielo",
+    "status": "approved",
+    "source": "processor"
+  },
+  {
+    "transaction_id": "HEALTHY-00179",
+    "occurred_at": "2026-04-15T05:05:58.97266479Z",
+    "amount_cents": 34310,
+    "currency": "BRL",
+    "payment_method": "pix",
+    "processor": "stripe_br",
+    "status": "approved",
+    "source": "processor"
+  },
+  {
+    "transaction_id": "HEALTHY-00091",
+    "occurred_at": "2026-04-15T04:59:07.301076099Z",
+    "amount_cents": 10644,
+    "currency": "BRL",
+    "payment_method": "pix",
+    "processor": "stripe_br",
+    "status": "approved",
+    "source": "processor"
+  },
+  {
+    "transaction_id": "HEALTHY-00207",
+    "occurred_at": "2026-04-15T00:50:45.448144847Z",
+    "amount_cents": 15963,
+    "currency": "BRL",
+    "payment_method": "pix",
+    "processor": "rede",
+    "status": "approved",
+    "source": "merchant_order_system"
+  },
+  {
+    "transaction_id": "HEALTHY-00087",
+    "occurred_at": "2026-04-15T05:39:20.255639013Z",
+    "amount_cents": 9370,
+    "currency": "BRL",
+    "payment_method": "credit_card",
+    "processor": "cielo",
+    "status": "approved",
+    "source": "processor"
+  },
+  {
+    "transaction_id": "HEALTHY-00123",
+    "occurred_at": "2026-04-15T05:07:55.147921115Z",
+    "amount_cents": 4147,
+    "currency": "BRL",
+    "payment_method": "credit_card",
+    "processor": "getnet",
+    "status": "approved",
+    "source": "processor"
+  },
+  {
+    "transaction_id": "HEALTHY-00159",
+    "occurred_at": "2026-04-15T01:37:58.01584112Z",
+    "amount_cents": 10822,
+    "currency": "BRL",
+    "payment_method": "pix",
+    "processor": "getnet",
+    "status": "approved",
+    "source": "processor"
+  },
+  {
+    "transaction_id": "HEALTHY-00166",
+    "occurred_at": "2026-04-15T04:23:07.035981626Z",
+    "amount_cents": 30062,
+    "currency": "BRL",
+    "payment_method": "credit_card",
+    "processor": "getnet",
+    "status": "approved",
+    "source": "merchant_order_system"
+  },
+  {
+    "transaction_id": "HEALTHY-00011",
+    "occurred_at": "2026-04-15T05:45:35.366150544Z",
+    "amount_cents": 50438,
+    "currency": "BRL",
+    "payment_method": "credit_card",
+    "processor": "rede",
+    "status": "approved",
+    "source": "merchant_order_system"
+  },
+  {
+    "transaction_id": "HEALTHY-00178",
+    "occurred_at": "2026-04-15T02:25:14.358644159Z",
+    "amount_cents": 34821,
+    "currency": "BRL",
+    "payment_method": "pix",
+    "processor": "getnet",
+    "status": "approved",
+    "source": "merchant_order_system"
+  },
+  {
+    "transaction_id": "HEALTHY-00166",
+    "occurred_at": "2026-04-15T04:21:08.035981626Z",
+    "amount_cents": 30062,
+    "currency": "BRL",
+    "payment_method": "credit_card",
+    "processor": "getnet",
+    "status": "approved",
+    "source": "processor"
+  },
+  {
+    "transaction_id": "HEALTHY-00003",
+    "occurred_at": "2026-04-15T03:59:08.970870044Z",
+    "amount_cents": 44552,
+    "currency": "BRL",
+    "payment_method": "credit_card",
+    "processor": "getnet",
+    "status": "approved",
+    "source": "merchant_order_system"
+  },
+  {
+    "transaction_id": "ORPHAN-019",
+    "occurred_at": "2026-04-15T02:17:09.494968648Z",
+    "amount_cents": 49276,
+    "currency": "BRL",
+    "payment_method": "credit_card",
+    "processor": "rede",
+    "status": "approved",
+    "source": "processor"
+  },
+  {
+    "transaction_id": "HEALTHY-00092",
+    "occurred_at": "2026-04-15T02:47:22.896505148Z",
+    "amount_cents": 6550,
+    "currency": "BRL",
+    "payment_method": "pix",
+    "processor": "getnet",
+    "status": "approved",
+    "source": "processor"
+  },
+  {
+    "transaction_id": "DUP-PROC-003",
+    "occurred_at": "2026-04-15T04:36:42.459226803Z",
+    "amount_cents": 31836,
+    "currency": "BRL",
+    "payment_method": "credit_card",
+    "processor": "cielo",
+    "status": "approved",
+    "source": "processor"
+  },
+  {
+    "transaction_id": "HEALTHY-00024",
+    "occurred_at": "2026-04-15T01:01:52.298761579Z",
+    "amount_cents": 36422,
+    "currency": "BRL",
+    "payment_method": "credit_card",
+    "processor": "stripe_br",
+    "status": "approved",
+    "source": "processor"
+  },
+  {
+    "transaction_id": "HEALTHY-00158",
+    "occurred_at": "2026-04-15T05:58:36.595154902Z",
+    "amount_cents": 7264,
+    "currency": "BRL",
+    "payment_method": "credit_card",
+    "processor": "stripe_br",
+    "status": "approved",
+    "source": "merchant_order_system"
+  },
+  {
+    "transaction_id": "HEALTHY-00167",
+    "occurred_at": "2026-04-15T02:13:57.557645243Z",
+    "amount_cents": 44735,
+    "currency": "BRL",
+    "payment_method": "pix",
+    "processor": "stripe_br",
+    "status": "approved",
+    "source": "merchant_order_system"
+  },
+  {
+    "transaction_id": "HEALTHY-00097",
+    "occurred_at": "2026-04-15T03:01:42.043800448Z",
+    "amount_cents": 45398,
+    "currency": "BRL",
+    "payment_method": "boleto",
+    "processor": "getnet",
+    "status": "approved",
+    "source": "processor"
+  },
+  {
+    "transaction_id": "HEALTHY-00067",
+    "occurred_at": "2026-04-15T00:43:23.679361067Z",
+    "amount_cents": 635,
+    "currency": "BRL",
+    "payment_method": "credit_card",
+    "processor": "getnet",
+    "status": "approved",
+    "source": "processor"
+  },
+  {
+    "transaction_id": "HEALTHY-00095",
+    "occurred_at": "2026-04-15T02:20:08.380118972Z",
+    "amount_cents": 41295,
+    "currency": "BRL",
+    "payment_method": "credit_card",
+    "processor": "getnet",
+    "status": "approved",
+    "source": "processor"
+  },
+  {
+    "transaction_id": "HEALTHY-00184",
+    "occurred_at": "2026-04-15T02:38:57.607232604Z",
+    "amount_cents": 46129,
+    "currency": "BRL",
+    "payment_method": "credit_card",
+    "processor": "rede",
+    "status": "approved",
+    "source": "merchant_order_system"
+  },
+  {
+    "transaction_id": "HEALTHY-00147",
+    "occurred_at": "2026-04-15T01:38:09.044076271Z",
+    "amount_cents": 1002,
+    "currency": "BRL",
+    "payment_method": "boleto",
+    "processor": "rede",
+    "status": "approved",
+    "source": "processor"
+  },
+  {
+    "transaction_id": "HEALTHY-00043",
+    "occurred_at": "2026-04-15T00:41:52.028835405Z",
+    "amount_cents": 20746,
+    "currency": "BRL",
+    "payment_method": "pix",
+    "processor": "stripe_br",
+    "status": "approved",
+    "source": "processor"
+  },
+  {
+    "transaction_id": "HEALTHY-00100",
+    "occurred_at": "2026-04-15T01:34:57.758043967Z",
+    "amount_cents": 35159,
+    "currency": "BRL",
+    "payment_method": "credit_card",
+    "processor": "cielo",
+    "status": "approved",
+    "source": "processor"
+  },
+  {
+    "transaction_id": "HEALTHY-00098",
+    "occurred_at": "2026-04-15T02:03:37.322993159Z",
+    "amount_cents": 40710,
+    "currency": "BRL",
+    "payment_method": "boleto",
+    "processor": "stripe_br",
+    "status": "approved",
+    "source": "processor"
+  },
+  {
+    "transaction_id": "HEALTHY-00124",
+    "occurred_at": "2026-04-15T03:05:05.05171351Z",
+    "amount_cents": 3118,
+    "currency": "BRL",
+    "payment_method": "credit_card",
+    "processor": "cielo",
+    "status": "approved",
+    "source": "processor"
+  },
+  {
+    "transaction_id": "HEALTHY-00161",
+    "occurred_at": "2026-04-15T04:18:00.646918571Z",
+    "amount_cents": 5428,
+    "currency": "BRL",
+    "payment_method": "credit_card",
+    "processor": "getnet",
+    "status": "approved",
+    "source": "merchant_order_system"
+  },
+  {
+    "transaction_id": "DUP-PROC-003",
+    "occurred_at": "2026-04-15T04:36:40.459226803Z",
+    "amount_cents": 31836,
+    "currency": "BRL",
+    "payment_method": "credit_card",
+    "processor": "cielo",
+    "status": "approved",
+    "source": "processor"
+  },
+  {
+    "transaction_id": "HEALTHY-00097",
+    "occurred_at": "2026-04-15T03:02:00.043800448Z",
+    "amount_cents": 45398,
+    "currency": "BRL",
+    "payment_method": "boleto",
+    "processor": "getnet",
+    "status": "approved",
+    "source": "merchant_order_system"
+  },
+  {
+    "transaction_id": "HEALTHY-00054",
+    "occurred_at": "2026-04-15T03:23:33.458985751Z",
+    "amount_cents": 8583,
+    "currency": "BRL",
+    "payment_method": "credit_card",
+    "processor": "stripe_br",
+    "status": "approved",
+    "source": "processor"
+  },
+  {
+    "transaction_id": "HEALTHY-00205",
+    "occurred_at": "2026-04-15T05:27:10.732369089Z",
+    "amount_cents": 13119,
+    "currency": "BRL",
+    "payment_method": "pix",
+    "processor": "cielo",
+    "status": "approved",
+    "source": "processor"
+  },
+  {
+    "transaction_id": "HEALTHY-00035",
+    "occurred_at": "2026-04-15T03:20:46.221835421Z",
+    "amount_cents": 21559,
+    "currency": "BRL",
+    "payment_method": "pix",
+    "processor": "stripe_br",
+    "status": "approved",
+    "source": "merchant_order_system"
+  },
+  {
+    "transaction_id": "HEALTHY-00122",
+    "occurred_at": "2026-04-15T00:37:24.516614024Z",
+    "amount_cents": 5438,
+    "currency": "BRL",
+    "payment_method": "credit_card",
+    "processor": "cielo",
+    "status": "approved",
+    "source": "processor"
+  },
+  {
+    "transaction_id": "HEALTHY-00120",
+    "occurred_at": "2026-04-15T00:38:05.260868061Z",
+    "amount_cents": 31990,
+    "currency": "BRL",
+    "payment_method": "pix",
+    "processor": "cielo",
+    "status": "approved",
+    "source": "processor"
+  },
+  {
+    "transaction_id": "HEALTHY-00185",
+    "occurred_at": "2026-04-15T00:43:37.288396201Z",
+    "amount_cents": 26663,
+    "currency": "BRL",
+    "payment_method": "credit_card",
+    "processor": "rede",
+    "status": "approved",
+    "source": "merchant_order_system"
+  },
+  {
+    "transaction_id": "LIMBO-003",
+    "occurred_at": "2026-04-15T01:30:56.528146255Z",
+    "amount_cents": 36966,
+    "currency": "BRL",
+    "payment_method": "pix",
+    "processor": "stripe_br",
+    "status": "pending",
+    "source": "processor"
+  },
+  {
+    "transaction_id": "DUP-PROC-000",
+    "occurred_at": "2026-04-15T01:04:14.893198232Z",
+    "amount_cents": 48556,
+    "currency": "BRL",
+    "payment_method": "credit_card",
+    "processor": "cielo",
+    "status": "approved",
+    "source": "merchant_order_system"
+  },
+  {
+    "transaction_id": "HEALTHY-00206",
+    "occurred_at": "2026-04-15T03:26:23.108190396Z",
+    "amount_cents": 12038,
+    "currency": "BRL",
+    "payment_method": "credit_card",
+    "processor": "rede",
+    "status": "approved",
+    "source": "merchant_order_system"
+  },
+  {
+    "transaction_id": "ORPHAN-013",
+    "occurred_at": "2026-04-15T00:26:12.224329501Z",
+    "amount_cents": 46737,
+    "currency": "BRL",
+    "payment_method": "credit_card",
+    "processor": "cielo",
+    "status": "approved",
+    "source": "processor"
+  },
+  {
+    "transaction_id": "HEALTHY-00124",
+    "occurred_at": "2026-04-15T03:05:27.05171351Z",
+    "amount_cents": 3118,
+    "currency": "BRL",
+    "payment_method": "credit_card",
+    "processor": "cielo",
+    "status": "approved",
+    "source": "merchant_order_system"
+  },
+  {
+    "transaction_id": "HEALTHY-00070",
+    "occurred_at": "2026-04-15T03:24:54.688366171Z",
+    "amount_cents": 17120,
+    "currency": "BRL",
+    "payment_method": "pix",
+    "processor": "cielo",
+    "status": "approved",
+    "source": "merchant_order_system"
+  },
+  {
+    "transaction_id": "HEALTHY-00141",
+    "occurred_at": "2026-04-15T00:55:28.703694612Z",
+    "amount_cents": 12463,
+    "currency": "BRL",
+    "payment_method": "credit_card",
+    "processor": "stripe_br",
+    "status": "approved",
+    "source": "merchant_order_system"
+  },
+  {
+    "transaction_id": "HEALTHY-00046",
+    "occurred_at": "2026-04-15T04:37:39.364713523Z",
+    "amount_cents": 5100,
+    "currency": "BRL",
+    "payment_method": "credit_card",
+    "processor": "stripe_br",
+    "status": "approved",
+    "source": "merchant_order_system"
+  },
+  {
+    "transaction_id": "HEALTHY-00175",
+    "occurred_at": "2026-04-15T00:56:39.998104482Z",
+    "amount_cents": 16907,
+    "currency": "BRL",
+    "payment_method": "credit_card",
+    "processor": "stripe_br",
+    "status": "approved",
+    "source": "processor"
+  },
+  {
+    "transaction_id": "HEALTHY-00019",
+    "occurred_at": "2026-04-15T01:34:53.625823277Z",
+    "amount_cents": 4640,
+    "currency": "BRL",
+    "payment_method": "pix",
+    "processor": "stripe_br",
+    "status": "approved",
+    "source": "processor"
+  },
+  {
+    "transaction_id": "HEALTHY-00137",
+    "occurred_at": "2026-04-15T00:31:03.395494827Z",
+    "amount_cents": 27299,
+    "currency": "BRL",
+    "payment_method": "pix",
+    "processor": "getnet",
+    "status": "approved",
+    "source": "processor"
+  },
+  {
+    "transaction_id": "HEALTHY-00198",
+    "occurred_at": "2026-04-15T05:52:55.230449388Z",
+    "amount_cents": 30026,
+    "currency": "BRL",
+    "payment_method": "pix",
+    "processor": "stripe_br",
+    "status": "approved",
+    "source": "merchant_order_system"
+  },
+  {
+    "transaction_id": "HEALTHY-00004",
+    "occurred_at": "2026-04-15T03:47:02.378252013Z",
+    "amount_cents": 3434,
+    "currency": "BRL",
+    "payment_method": "credit_card",
+    "processor": "getnet",
+    "status": "approved",
+    "source": "merchant_order_system"
+  },
+  {
+    "transaction_id": "HEALTHY-00156",
+    "occurred_at": "2026-04-15T00:49:28.512810874Z",
+    "amount_cents": 38662,
+    "currency": "BRL",
+    "payment_method": "credit_card",
+    "processor": "getnet",
+    "status": "approved",
+    "source": "processor"
+  },
+  {
+    "transaction_id": "HEALTHY-00182",
+    "occurred_at": "2026-04-15T02:12:58.157797438Z",
+    "amount_cents": 28482,
+    "currency": "BRL",
+    "payment_method": "credit_card",
+    "processor": "stripe_br",
+    "status": "approved",
+    "source": "processor"
+  },
+  {
+    "transaction_id": "HEALTHY-00157",
+    "occurred_at": "2026-04-15T01:06:19.233171429Z",
+    "amount_cents": 1958,
+    "currency": "BRL",
+    "payment_method": "boleto",
+    "processor": "stripe_br",
+    "status": "approved",
+    "source": "processor"
+  },
+  {
+    "transaction_id": "HEALTHY-00176",
+    "occurred_at": "2026-04-15T01:00:57.882142908Z",
+    "amount_cents": 46831,
+    "currency": "BRL",
+    "payment_method": "boleto",
+    "processor": "getnet",
+    "status": "approved",
+    "source": "merchant_order_system"
+  },
+  {
+    "transaction_id": "HEALTHY-00013",
+    "occurred_at": "2026-04-15T02:10:16.549965649Z",
+    "amount_cents": 43996,
+    "currency": "BRL",
+    "payment_method": "credit_card",
+    "processor": "stripe_br",
+    "status": "approved",
+    "source": "processor"
+  },
+  {
+    "transaction_id": "HEALTHY-00162",
+    "occurred_at": "2026-04-15T00:49:57.853885887Z",
+    "amount_cents": 23936,
+    "currency": "BRL",
+    "payment_method": "credit_card",
+    "processor": "rede",
+    "status": "approved",
+    "source": "merchant_order_system"
+  },
+  {
+    "transaction_id": "HEALTHY-00121",
+    "occurred_at": "2026-04-15T03:58:47.06590752Z",
+    "amount_cents": 12996,
+    "currency": "BRL",
+    "payment_method": "pix",
+    "processor": "getnet",
+    "status": "approved",
+    "source": "processor"
+  },
+  {
+    "transaction_id": "HEALTHY-00202",
+    "occurred_at": "2026-04-15T05:42:28.167030628Z",
+    "amount_cents": 48757,
+    "currency": "BRL",
+    "payment_method": "pix",
+    "processor": "getnet",
+    "status": "approved",
+    "source": "merchant_order_system"
+  },
+  {
+    "transaction_id": "DUP-MERCH-002",
+    "occurred_at": "2026-04-15T04:10:13.043470177Z",
+    "amount_cents": 27314,
+    "currency": "BRL",
+    "payment_method": "credit_card",
+    "processor": "stripe_br",
+    "status": "approved",
+    "source": "merchant_order_system"
+  },
+  {
+    "transaction_id": "LIMBO-007",
+    "occurred_at": "2026-04-15T03:17:46.27791928Z",
+    "amount_cents": 10502,
+    "currency": "BRL",
+    "payment_method": "boleto",
+    "processor": "stripe_br",
+    "status": "pending",
+    "source": "processor"
+  },
+  {
+    "transaction_id": "HEALTHY-00116",
+    "occurred_at": "2026-04-15T03:38:37.905201417Z",
+    "amount_cents": 27580,
+    "currency": "BRL",
+    "payment_method": "credit_card",
+    "processor": "getnet",
+    "status": "approved",
+    "source": "processor"
+  },
+  {
+    "transaction_id": "ORPHAN-018",
+    "occurred_at": "2026-04-15T01:34:09.868833301Z",
+    "amount_cents": 24774,
+    "currency": "BRL",
+    "payment_method": "credit_card",
+    "processor": "rede",
+    "status": "approved",
+    "source": "processor"
+  },
+  {
+    "transaction_id": "HEALTHY-00162",
+    "occurred_at": "2026-04-15T00:48:59.853885887Z",
+    "amount_cents": 23936,
+    "currency": "BRL",
+    "payment_method": "credit_card",
+    "processor": "rede",
+    "status": "approved",
+    "source": "processor"
+  },
+  {
+    "transaction_id": "HEALTHY-00068",
+    "occurred_at": "2026-04-15T05:01:21.426199654Z",
+    "amount_cents": 37092,
+    "currency": "BRL",
+    "payment_method": "credit_card",
+    "processor": "getnet",
+    "status": "approved",
+    "source": "processor"
+  },
+  {
+    "transaction_id": "HEALTHY-00152",
+    "occurred_at": "2026-04-15T05:49:45.060596988Z",
+    "amount_cents": 36111,
+    "currency": "BRL",
+    "payment_method": "credit_card",
+    "processor": "cielo",
+    "status": "approved",
+    "source": "processor"
+  },
+  {
+    "transaction_id": "HEALTHY-00054",
+    "occurred_at": "2026-04-15T03:23:54.458985751Z",
+    "amount_cents": 8583,
+    "currency": "BRL",
+    "payment_method": "credit_card",
+    "processor": "stripe_br",
+    "status": "approved",
+    "source": "merchant_order_system"
+  },
+  {
+    "transaction_id": "HEALTHY-00153",
+    "occurred_at": "2026-04-15T05:37:13.012626706Z",
+    "amount_cents": 39022,
+    "currency": "BRL",
+    "payment_method": "credit_card",
+    "processor": "cielo",
+    "status": "approved",
+    "source": "merchant_order_system"
+  },
+  {
+    "transaction_id": "DUP-PROC-002",
+    "occurred_at": "2026-04-15T04:22:56.047377831Z",
+    "amount_cents": 9868,
+    "currency": "BRL",
+    "payment_method": "pix",
+    "processor": "stripe_br",
+    "status": "approved",
+    "source": "merchant_order_system"
+  },
+  {
+    "transaction_id": "HEALTHY-00004",
+    "occurred_at": "2026-04-15T03:45:57.378252013Z",
+    "amount_cents": 3434,
+    "currency": "BRL",
+    "payment_method": "credit_card",
+    "processor": "getnet",
+    "status": "approved",
+    "source": "processor"
+  },
+  {
+    "transaction_id": "HEALTHY-00012",
+    "occurred_at": "2026-04-15T00:02:21.80450099Z",
+    "amount_cents": 6678,
+    "currency": "BRL",
+    "payment_method": "credit_card",
+    "processor": "stripe_br",
+    "status": "approved",
+    "source": "processor"
+  },
+  {
+    "transaction_id": "HEALTHY-00127",
+    "occurred_at": "2026-04-15T03:04:40.586156506Z",
+    "amount_cents": 2194,
+    "currency": "BRL",
+    "payment_method": "credit_card",
+    "processor": "getnet",
+    "status": "approved",
+    "source": "merchant_order_system"
+  },
+  {
+    "transaction_id": "HEALTHY-00082",
+    "occurred_at": "2026-04-15T02:02:53.832334207Z",
+    "amount_cents": 9806,
+    "currency": "BRL",
+    "payment_method": "boleto",
+    "processor": "stripe_br",
+    "status": "approved",
+    "source": "processor"
+  },
+  {
+    "transaction_id": "HEALTHY-00100",
+    "occurred_at": "2026-04-15T01:36:52.758043967Z",
+    "amount_cents": 35159,
+    "currency": "BRL",
+    "payment_method": "credit_card",
+    "processor": "cielo",
+    "status": "approved",
+    "source": "merchant_order_system"
+  },
+  {
+    "transaction_id": "DUP-PROC-001",
+    "occurred_at": "2026-04-15T01:35:30.445909034Z",
+    "amount_cents": 23429,
+    "currency": "BRL",
+    "payment_method": "credit_card",
+    "processor": "getnet",
+    "status": "approved",
+    "source": "merchant_order_system"
+  },
+  {
+    "transaction_id": "HEALTHY-00020",
+    "occurred_at": "2026-04-15T03:21:16.51212461Z",
+    "amount_cents": 8004,
+    "currency": "BRL",
+    "payment_method": "credit_card",
+    "processor": "getnet",
+    "status": "approved",
+    "source": "processor"
+  },
+  {
+    "transaction_id": "HEALTHY-00165",
+    "occurred_at": "2026-04-15T01:51:15.049651576Z",
+    "amount_cents": 35732,
+    "currency": "BRL",
+    "payment_method": "credit_card",
+    "processor": "stripe_br",
+    "status": "approved",
+    "source": "processor"
+  },
+  {
+    "transaction_id": "HEALTHY-00096",
+    "occurred_at": "2026-04-15T03:28:11.749912908Z",
+    "amount_cents": 46987,
+    "currency": "BRL",
+    "payment_method": "credit_card",
+    "processor": "cielo",
+    "status": "approved",
+    "source": "processor"
+  },
+  {
+    "transaction_id": "HEALTHY-00032",
+    "occurred_at": "2026-04-15T02:57:03.849876766Z",
+    "amount_cents": 2071,
+    "currency": "BRL",
+    "payment_method": "credit_card",
+    "processor": "stripe_br",
+    "status": "approved",
+    "source": "processor"
+  },
+  {
+    "transaction_id": "HEALTHY-00107",
+    "occurred_at": "2026-04-15T04:44:59.224448732Z",
+    "amount_cents": 8842,
+    "currency": "BRL",
+    "payment_method": "pix",
+    "processor": "cielo",
+    "status": "approved",
+    "source": "processor"
+  },
+  {
+    "transaction_id": "HEALTHY-00022",
+    "occurred_at": "2026-04-15T04:46:29.975049714Z",
+    "amount_cents": 15531,
+    "currency": "BRL",
+    "payment_method": "credit_card",
+    "processor": "getnet",
+    "status": "approved",
+    "source": "merchant_order_system"
+  },
+  {
+    "transaction_id": "HEALTHY-00065",
+    "occurred_at": "2026-04-15T04:43:08.863252228Z",
+    "amount_cents": 49539,
+    "currency": "BRL",
+    "payment_method": "credit_card",
+    "processor": "stripe_br",
+    "status": "approved",
+    "source": "processor"
+  },
+  {
+    "transaction_id": "HEALTHY-00067",
+    "occurred_at": "2026-04-15T00:43:43.679361067Z",
+    "amount_cents": 635,
+    "currency": "BRL",
+    "payment_method": "credit_card",
+    "processor": "getnet",
+    "status": "approved",
+    "source": "merchant_order_system"
+  },
+  {
+    "transaction_id": "HEALTHY-00144",
+    "occurred_at": "2026-04-15T04:11:17.992662596Z",
+    "amount_cents": 45124,
+    "currency": "BRL",
+    "payment_method": "boleto",
+    "processor": "cielo",
+    "status": "approved",
+    "source": "merchant_order_system"
+  },
+  {
+    "transaction_id": "HEALTHY-00151",
+    "occurred_at": "2026-04-15T05:10:46.210787901Z",
+    "amount_cents": 22745,
+    "currency": "BRL",
+    "payment_method": "credit_card",
+    "processor": "rede",
+    "status": "approved",
+    "source": "processor"
+  },
+  {
+    "transaction_id": "HEALTHY-00111",
+    "occurred_at": "2026-04-15T05:19:11.442055612Z",
+    "amount_cents": 36920,
+    "currency": "BRL",
+    "payment_method": "credit_card",
+    "processor": "stripe_br",
+    "status": "approved",
+    "source": "processor"
+  },
+  {
+    "transaction_id": "HEALTHY-00082",
+    "occurred_at": "2026-04-15T02:03:20.832334207Z",
+    "amount_cents": 9806,
+    "currency": "BRL",
+    "payment_method": "boleto",
+    "processor": "stripe_br",
+    "status": "approved",
+    "source": "merchant_order_system"
+  },
+  {
+    "transaction_id": "HEALTHY-00206",
+    "occurred_at": "2026-04-15T03:24:38.108190396Z",
+    "amount_cents": 12038,
+    "currency": "BRL",
+    "payment_method": "credit_card",
+    "processor": "rede",
+    "status": "approved",
+    "source": "processor"
+  },
+  {
+    "transaction_id": "HEALTHY-00103",
+    "occurred_at": "2026-04-15T02:27:50.454243817Z",
+    "amount_cents": 28565,
+    "currency": "BRL",
+    "payment_method": "pix",
+    "processor": "cielo",
+    "status": "approved",
+    "source": "merchant_order_system"
+  },
+  {
+    "transaction_id": "HEALTHY-00146",
+    "occurred_at": "2026-04-15T02:39:50.547125289Z",
+    "amount_cents": 11515,
+    "currency": "BRL",
+    "payment_method": "pix",
+    "processor": "cielo",
+    "status": "approved",
+    "source": "processor"
+  },
+  {
+    "transaction_id": "HEALTHY-00039",
+    "occurred_at": "2026-04-15T03:40:06.260098255Z",
+    "amount_cents": 22075,
+    "currency": "BRL",
+    "payment_method": "credit_card",
+    "processor": "stripe_br",
+    "status": "approved",
+    "source": "merchant_order_system"
+  },
+  {
+    "transaction_id": "HEALTHY-00066",
+    "occurred_at": "2026-04-15T05:24:55.689043836Z",
+    "amount_cents": 20367,
+    "currency": "BRL",
+    "payment_method": "credit_card",
+    "processor": "getnet",
+    "status": "approved",
+    "source": "processor"
+  },
+  {
+    "transaction_id": "HEALTHY-00199",
+    "occurred_at": "2026-04-15T00:46:36.149089808Z",
+    "amount_cents": 30124,
+    "currency": "BRL",
+    "payment_method": "pix",
+    "processor": "getnet",
+    "status": "approved",
+    "source": "merchant_order_system"
+  },
+  {
+    "transaction_id": "HEALTHY-00167",
+    "occurred_at": "2026-04-15T02:13:47.557645243Z",
+    "amount_cents": 44735,
+    "currency": "BRL",
+    "payment_method": "pix",
+    "processor": "stripe_br",
+    "status": "approved",
+    "source": "processor"
+  },
+  {
+    "transaction_id": "HEALTHY-00203",
+    "occurred_at": "2026-04-15T04:21:31.865914336Z",
+    "amount_cents": 43895,
+    "currency": "BRL",
+    "payment_method": "credit_card",
+    "processor": "stripe_br",
+    "status": "approved",
+    "source": "processor"
+  },
+  {
+    "transaction_id": "ORPHAN-005",
+    "occurred_at": "2026-04-15T01:49:53.425671216Z",
+    "amount_cents": 38153,
+    "currency": "BRL",
+    "payment_method": "credit_card",
+    "processor": "stripe_br",
+    "status": "approved",
+    "source": "processor"
+  },
+  {
+    "transaction_id": "ORPHAN-017",
+    "occurred_at": "2026-04-15T03:41:53.147895187Z",
+    "amount_cents": 23582,
+    "currency": "BRL",
+    "payment_method": "credit_card",
+    "processor": "stripe_br",
+    "status": "approved",
+    "source": "processor"
+  },
+  {
+    "transaction_id": "DUP-PROC-001",
+    "occurred_at": "2026-04-15T01:35:20.445909034Z",
+    "amount_cents": 23429,
+    "currency": "BRL",
+    "payment_method": "credit_card",
+    "processor": "getnet",
+    "status": "approved",
+    "source": "processor"
+  },
+  {
+    "transaction_id": "HEALTHY-00150",
+    "occurred_at": "2026-04-15T03:34:22.135253343Z",
+    "amount_cents": 14370,
+    "currency": "BRL",
+    "payment_method": "credit_card",
+    "processor": "rede",
+    "status": "approved",
+    "source": "merchant_order_system"
+  },
+  {
+    "transaction_id": "HEALTHY-00033",
+    "occurred_at": "2026-04-15T02:11:36.370225666Z",
+    "amount_cents": 28093,
+    "currency": "BRL",
+    "payment_method": "credit_card",
+    "processor": "getnet",
+    "status": "approved",
+    "source": "merchant_order_system"
+  },
+  {
+    "transaction_id": "HEALTHY-00024",
+    "occurred_at": "2026-04-15T01:03:36.298761579Z",
+    "amount_cents": 36422,
+    "currency": "BRL",
+    "payment_method": "credit_card",
+    "processor": "stripe_br",
+    "status": "approved",
+    "source": "merchant_order_system"
+  },
+  {
+    "transaction_id": "HEALTHY-00086",
+    "occurred_at": "2026-04-15T04:43:24.592305111Z",
+    "amount_cents": 42553,
+    "currency": "BRL",
+    "payment_method": "credit_card",
+    "processor": "cielo",
+    "status": "approved",
+    "source": "processor"
+  },
+  {
+    "transaction_id": "LIMBO-000",
+    "occurred_at": "2026-04-15T02:22:39.962983904Z",
+    "amount_cents": 29144,
+    "currency": "BRL",
+    "payment_method": "pix",
+    "processor": "rede",
+    "status": "pending",
+    "source": "processor"
+  },
+  {
+    "transaction_id": "HEALTHY-00104",
+    "occurred_at": "2026-04-15T01:29:01.43063728Z",
+    "amount_cents": 12614,
+    "currency": "BRL",
+    "payment_method": "pix",
+    "processor": "rede",
+    "status": "approved",
+    "source": "merchant_order_system"
+  },
+  {
+    "transaction_id": "HEALTHY-00125",
+    "occurred_at": "2026-04-15T02:56:06.29706962Z",
+    "amount_cents": 40845,
+    "currency": "BRL",
+    "payment_method": "credit_card",
+    "processor": "rede",
+    "status": "approved",
+    "source": "processor"
+  },
+  {
+    "transaction_id": "GHOST-NOPROC-000",
+    "occurred_at": "2026-04-15T01:46:57.052591035Z",
+    "amount_cents": 2907,
+    "currency": "BRL",
+    "payment_method": "credit_card",
+    "processor": "cielo",
+    "status": "approved",
+    "source": "merchant_order_system"
+  },
+  {
+    "transaction_id": "GHOST-NOPROC-002",
+    "occurred_at": "2026-04-15T03:29:51.702721883Z",
+    "amount_cents": 27459,
+    "currency": "BRL",
+    "payment_method": "pix",
+    "processor": "rede",
+    "status": "approved",
+    "source": "merchant_order_system"
+  },
+  {
+    "transaction_id": "HEALTHY-00085",
+    "occurred_at": "2026-04-15T02:33:17.132159727Z",
+    "amount_cents": 23480,
+    "currency": "BRL",
+    "payment_method": "credit_card",
+    "processor": "getnet",
+    "status": "approved",
+    "source": "processor"
+  },
+  {
+    "transaction_id": "HEALTHY-00078",
+    "occurred_at": "2026-04-15T04:31:59.112754063Z",
+    "amount_cents": 13280,
+    "currency": "BRL",
+    "payment_method": "credit_card",
+    "processor": "stripe_br",
+    "status": "approved",
+    "source": "processor"
+  },
+  {
+    "transaction_id": "HEALTHY-00030",
+    "occurred_at": "2026-04-15T05:50:59.774607409Z",
+    "amount_cents": 1676,
+    "currency": "BRL",
+    "payment_method": "pix",
+    "processor": "getnet",
+    "status": "approved",
+    "source": "merchant_order_system"
+  },
+  {
+    "transaction_id": "HEALTHY-00156",
+    "occurred_at": "2026-04-15T00:50:14.512810874Z",
+    "amount_cents": 38662,
+    "currency": "BRL",
+    "payment_method": "credit_card",
+    "processor": "getnet",
+    "status": "approved",
+    "source": "merchant_order_system"
+  },
+  {
+    "transaction_id": "HEALTHY-00068",
+    "occurred_at": "2026-04-15T05:01:28.426199654Z",
+    "amount_cents": 37092,
+    "currency": "BRL",
+    "payment_method": "credit_card",
+    "processor": "getnet",
+    "status": "approved",
+    "source": "merchant_order_system"
+  },
+  {
+    "transaction_id": "HEALTHY-00013",
+    "occurred_at": "2026-04-15T02:11:12.549965649Z",
+    "amount_cents": 43996,
+    "currency": "BRL",
+    "payment_method": "credit_card",
+    "processor": "stripe_br",
+    "status": "approved",
+    "source": "merchant_order_system"
+  },
+  {
+    "transaction_id": "HEALTHY-00078",
+    "occurred_at": "2026-04-15T04:32:19.112754063Z",
+    "amount_cents": 13280,
+    "currency": "BRL",
+    "payment_method": "credit_card",
+    "processor": "stripe_br",
+    "status": "approved",
+    "source": "merchant_order_system"
+  },
+  {
+    "transaction_id": "HEALTHY-00080",
+    "occurred_at": "2026-04-15T05:31:34.720405208Z",
+    "amount_cents": 38788,
+    "currency": "BRL",
+    "payment_method": "credit_card",
+    "processor": "stripe_br",
+    "status": "approved",
+    "source": "merchant_order_system"
+  },
+  {
+    "transaction_id": "HEALTHY-00207",
+    "occurred_at": "2026-04-15T00:50:18.448144847Z",
+    "amount_cents": 15963,
+    "currency": "BRL",
+    "payment_method": "pix",
+    "processor": "rede",
+    "status": "approved",
+    "source": "processor"
+  },
+  {
+    "transaction_id": "LIMBO-002",
+    "occurred_at": "2026-04-15T04:59:17.134647103Z",
+    "amount_cents": 20361,
+    "currency": "BRL",
+    "payment_method": "pix",
+    "processor": "cielo",
+    "status": "pending",
+    "source": "processor"
+  },
+  {
+    "transaction_id": "HEALTHY-00046",
+    "occurred_at": "2026-04-15T04:37:31.364713523Z",
+    "amount_cents": 5100,
+    "currency": "BRL",
+    "payment_method": "credit_card",
+    "processor": "stripe_br",
+    "status": "approved",
+    "source": "processor"
+  },
+  {
+    "transaction_id": "HEALTHY-00007",
+    "occurred_at": "2026-04-15T04:10:54.375171209Z",
+    "amount_cents": 34474,
+    "currency": "BRL",
+    "payment_method": "pix",
+    "processor": "stripe_br",
+    "status": "approved",
+    "source": "processor"
+  },
+  {
+    "transaction_id": "HEALTHY-00152",
+    "occurred_at": "2026-04-15T05:51:21.060596988Z",
+    "amount_cents": 36111,
+    "currency": "BRL",
+    "payment_method": "credit_card",
+    "processor": "cielo",
+    "status": "approved",
+    "source": "merchant_order_system"
+  },
+  {
+    "transaction_id": "ORPHAN-009",
+    "occurred_at": "2026-04-15T01:51:18.836316077Z",
+    "amount_cents": 35713,
+    "currency": "BRL",
+    "payment_method": "credit_card",
+    "processor": "cielo",
+    "status": "approved",
+    "source": "processor"
+  },
+  {
+    "transaction_id": "HEALTHY-00064",
+    "occurred_at": "2026-04-15T01:45:55.680354555Z",
+    "amount_cents": 8415,
+    "currency": "BRL",
+    "payment_method": "credit_card",
+    "processor": "rede",
+    "status": "approved",
+    "source": "processor"
+  },
+  {
+    "transaction_id": "HEALTHY-00135",
+    "occurred_at": "2026-04-15T05:29:41.273479468Z",
+    "amount_cents": 6900,
+    "currency": "BRL",
+    "payment_method": "boleto",
+    "processor": "stripe_br",
+    "status": "approved",
+    "source": "merchant_order_system"
+  },
+  {
+    "transaction_id": "HEALTHY-00073",
+    "occurred_at": "2026-04-15T01:37:43.33297532Z",
+    "amount_cents": 36699,
+    "currency": "BRL",
+    "payment_method": "credit_card",
+    "processor": "cielo",
+    "status": "approved",
+    "source": "processor"
+  },
+  {
+    "transaction_id": "HEALTHY-00096",
+    "occurred_at": "2026-04-15T03:29:06.749912908Z",
+    "amount_cents": 46987,
+    "currency": "BRL",
+    "payment_method": "credit_card",
+    "processor": "cielo",
+    "status": "approved",
+    "source": "merchant_order_system"
+  },
+  {
+    "transaction_id": "HEALTHY-00049",
+    "occurred_at": "2026-04-15T04:23:51.729633759Z",
+    "amount_cents": 24748,
+    "currency": "BRL",
+    "payment_method": "credit_card",
+    "processor": "getnet",
+    "status": "approved",
+    "source": "processor"
+  },
+  {
+    "transaction_id": "HEALTHY-00136",
+    "occurred_at": "2026-04-15T00:23:03.352761449Z",
+    "amount_cents": 5745,
+    "currency": "BRL",
+    "payment_method": "credit_card",
+    "processor": "cielo",
+    "status": "approved",
+    "source": "processor"
+  },
+  {
+    "transaction_id": "HEALTHY-00130",
+    "occurred_at": "2026-04-15T00:42:48.017197243Z",
+    "amount_cents": 43694,
+    "currency": "BRL",
+    "payment_method": "credit_card",
+    "processor": "rede",
+    "status": "approved",
+    "source": "processor"
+  },
+  {
+    "transaction_id": "HEALTHY-00137",
+    "occurred_at": "2026-04-15T00:32:54.395494827Z",
+    "amount_cents": 27299,
+    "currency": "BRL",
+    "payment_method": "pix",
+    "processor": "getnet",
+    "status": "approved",
+    "source": "merchant_order_system"
+  },
+  {
+    "transaction_id": "HEALTHY-00081",
+    "occurred_at": "2026-04-15T00:37:46.210012289Z",
+    "amount_cents": 8466,
+    "currency": "BRL",
+    "payment_method": "credit_card",
+    "processor": "stripe_br",
+    "status": "approved",
+    "source": "processor"
+  },
+  {
+    "transaction_id": "HEALTHY-00171",
+    "occurred_at": "2026-04-15T01:44:57.163657679Z",
+    "amount_cents": 43796,
+    "currency": "BRL",
+    "payment_method": "credit_card",
+    "processor": "rede",
+    "status": "approved",
+    "source": "merchant_order_system"
+  },
+  {
+    "transaction_id": "HEALTHY-00135",
+    "occurred_at": "2026-04-15T05:27:44.273479468Z",
+    "amount_cents": 6900,
+    "currency": "BRL",
+    "payment_method": "boleto",
+    "processor": "stripe_br",
+    "status": "approved",
+    "source": "processor"
+  },
+  {
+    "transaction_id": "HEALTHY-00174",
+    "occurred_at": "2026-04-15T01:33:08.02346438Z",
+    "amount_cents": 4061,
+    "currency": "BRL",
+    "payment_method": "credit_card",
+    "processor": "getnet",
+    "status": "approved",
+    "source": "merchant_order_system"
+  },
+  {
+    "transaction_id": "HEALTHY-00007",
+    "occurred_at": "2026-04-15T04:12:42.375171209Z",
+    "amount_cents": 34474,
+    "currency": "BRL",
+    "payment_method": "pix",
+    "processor": "stripe_br",
+    "status": "approved",
+    "source": "merchant_order_system"
+  },
+  {
+    "transaction_id": "GHOST-NOPROC-004",
+    "occurred_at": "2026-04-15T03:03:10.048303695Z",
+    "amount_cents": 12796,
+    "currency": "BRL",
+    "payment_method": "credit_card",
+    "processor": "getnet",
+    "status": "approved",
+    "source": "merchant_order_system"
+  },
+  {
+    "transaction_id": "HEALTHY-00020",
+    "occurred_at": "2026-04-15T03:21:55.51212461Z",
+    "amount_cents": 8004,
+    "currency": "BRL",
+    "payment_method": "credit_card",
+    "processor": "getnet",
+    "status": "approved",
+    "source": "merchant_order_system"
+  },
+  {
+    "transaction_id": "DUP-MERCH-000",
+    "occurred_at": "2026-04-15T05:40:52.267976308Z",
+    "amount_cents": 5150,
+    "currency": "BRL",
+    "payment_method": "pix",
+    "processor": "rede",
+    "status": "approved",
+    "source": "processor"
+  },
+  {
+    "transaction_id": "HEALTHY-00132",
+    "occurred_at": "2026-04-15T01:22:07.660952131Z",
+    "amount_cents": 16040,
+    "currency": "BRL",
+    "payment_method": "credit_card",
+    "processor": "stripe_br",
+    "status": "approved",
+    "source": "processor"
+  },
+  {
+    "transaction_id": "HEALTHY-00128",
+    "occurred_at": "2026-04-15T01:18:53.176657404Z",
+    "amount_cents": 8254,
+    "currency": "BRL",
+    "payment_method": "pix",
+    "processor": "rede",
+    "status": "approved",
+    "source": "merchant_order_system"
+  },
+  {
+    "transaction_id": "HEALTHY-00048",
+    "occurred_at": "2026-04-15T01:34:00.254419903Z",
+    "amount_cents": 10727,
+    "currency": "BRL",
+    "payment_method": "credit_card",
+    "processor": "cielo",
+    "status": "approved",
+    "source": "merchant_order_system"
+  },
+  {
+    "transaction_id": "HEALTHY-00187",
+    "occurred_at": "2026-04-15T00:08:10.429364689Z",
+    "amount_cents": 21986,
+    "currency": "BRL",
+    "payment_method": "credit_card",
+    "processor": "cielo",
+    "status": "approved",
+    "source": "merchant_order_system"
+  },
+  {
+    "transaction_id": "HEALTHY-00102",
+    "occurred_at": "2026-04-15T02:55:49.848732031Z",
+    "amount_cents": 32697,
+    "currency": "BRL",
+    "payment_method": "pix",
+    "processor": "stripe_br",
+    "status": "approved",
+    "source": "processor"
+  },
+  {
+    "transaction_id": "HEALTHY-00022",
+    "occurred_at": "2026-04-15T04:44:49.975049714Z",
+    "amount_cents": 15531,
+    "currency": "BRL",
+    "payment_method": "credit_card",
+    "processor": "getnet",
+    "status": "approved",
+    "source": "processor"
+  },
+  {
+    "transaction_id": "HEALTHY-00196",
+    "occurred_at": "2026-04-15T03:42:47.486833108Z",
+    "amount_cents": 41397,
+    "currency": "BRL",
+    "payment_method": "pix",
+    "processor": "stripe_br",
+    "status": "approved",
+    "source": "processor"
+  },
+  {
+    "transaction_id": "ORPHAN-015",
+    "occurred_at": "2026-04-15T04:41:06.973328763Z",
+    "amount_cents": 29046,
+    "currency": "BRL",
+    "payment_method": "credit_card",
+    "processor": "cielo",
+    "status": "approved",
+    "source": "processor"
+  },
+  {
+    "transaction_id": "HEALTHY-00064",
+    "occurred_at": "2026-04-15T01:46:56.680354555Z",
+    "amount_cents": 8415,
+    "currency": "BRL",
+    "payment_method": "credit_card",
+    "processor": "rede",
+    "status": "approved",
+    "source": "merchant_order_system"
+  },
+  {
+    "transaction_id": "HEALTHY-00008",
+    "occurred_at": "2026-04-15T05:52:11.665436954Z",
+    "amount_cents": 9887,
+    "currency": "BRL",
+    "payment_method": "credit_card",
+    "processor": "stripe_br",
+    "status": "approved",
+    "source": "merchant_order_system"
+  },
+  {
+    "transaction_id": "HEALTHY-00028",
+    "occurred_at": "2026-04-15T04:31:01.610840853Z",
+    "amount_cents": 23655,
+    "currency": "BRL",
+    "payment_method": "credit_card",
+    "processor": "getnet",
+    "status": "approved",
+    "source": "processor"
+  },
+  {
+    "transaction_id": "HEALTHY-00026",
+    "occurred_at": "2026-04-15T02:04:30.374263081Z",
+    "amount_cents": 9029,
+    "currency": "BRL",
+    "payment_method": "credit_card",
+    "processor": "cielo",
+    "status": "approved",
+    "source": "processor"
+  },
+  {
+    "transaction_id": "HEALTHY-00010",
+    "occurred_at": "2026-04-15T02:09:51.088869434Z",
+    "amount_cents": 41892,
+    "currency": "BRL",
+    "payment_method": "credit_card",
+    "processor": "getnet",
+    "status": "approved",
+    "source": "processor"
+  },
+  {
+    "transaction_id": "HEALTHY-00102",
+    "occurred_at": "2026-04-15T02:56:39.848732031Z",
+    "amount_cents": 32697,
+    "currency": "BRL",
+    "payment_method": "pix",
+    "processor": "stripe_br",
+    "status": "approved",
+    "source": "merchant_order_system"
+  },
+  {
+    "transaction_id": "HEALTHY-00208",
+    "occurred_at": "2026-04-15T00:55:08.270243162Z",
+    "amount_cents": 4124,
+    "currency": "BRL",
+    "payment_method": "credit_card",
+    "processor": "rede",
+    "status": "approved",
+    "source": "merchant_order_system"
+  },
+  {
+    "transaction_id": "HEALTHY-00034",
+    "occurred_at": "2026-04-15T03:21:34.8731145Z",
+    "amount_cents": 42453,
+    "currency": "BRL",
+    "payment_method": "credit_card",
+    "processor": "cielo",
+    "status": "approved",
+    "source": "processor"
+  },
+  {
+    "transaction_id": "HEALTHY-00011",
+    "occurred_at": "2026-04-15T05:44:47.366150544Z",
+    "amount_cents": 50438,
+    "currency": "BRL",
+    "payment_method": "credit_card",
+    "processor": "rede",
+    "status": "approved",
+    "source": "processor"
+  },
+  {
+    "transaction_id": "HEALTHY-00111",
+    "occurred_at": "2026-04-15T05:19:58.442055612Z",
+    "amount_cents": 36920,
+    "currency": "BRL",
+    "payment_method": "credit_card",
+    "processor": "stripe_br",
+    "status": "approved",
+    "source": "merchant_order_system"
+  },
+  {
+    "transaction_id": "HEALTHY-00014",
+    "occurred_at": "2026-04-15T03:55:30.383394983Z",
+    "amount_cents": 50487,
+    "currency": "BRL",
+    "payment_method": "pix",
+    "processor": "getnet",
+    "status": "approved",
+    "source": "processor"
+  },
+  {
+    "transaction_id": "HEALTHY-00047",
+    "occurred_at": "2026-04-15T00:46:25.506285086Z",
+    "amount_cents": 32807,
+    "currency": "BRL",
+    "payment_method": "credit_card",
+    "processor": "stripe_br",
+    "status": "approved",
+    "source": "merchant_order_system"
+  },
+  {
+    "transaction_id": "HEALTHY-00073",
+    "occurred_at": "2026-04-15T01:38:04.33297532Z",
+    "amount_cents": 36699,
+    "currency": "BRL",
+    "payment_method": "credit_card",
+    "processor": "cielo",
+    "status": "approved",
+    "source": "merchant_order_system"
+  },
+  {
+    "transaction_id": "HEALTHY-00161",
+    "occurred_at": "2026-04-15T04:17:30.646918571Z",
+    "amount_cents": 5428,
+    "currency": "BRL",
+    "payment_method": "credit_card",
+    "processor": "getnet",
+    "status": "approved",
+    "source": "processor"
+  },
+  {
+    "transaction_id": "HEALTHY-00104",
+    "occurred_at": "2026-04-15T01:27:19.43063728Z",
+    "amount_cents": 12614,
+    "currency": "BRL",
+    "payment_method": "pix",
+    "processor": "rede",
+    "status": "approved",
+    "source": "processor"
+  },
+  {
+    "transaction_id": "HEALTHY-00200",
+    "occurred_at": "2026-04-15T04:04:15.067000974Z",
+    "amount_cents": 22518,
+    "currency": "BRL",
+    "payment_method": "credit_card",
+    "processor": "cielo",
+    "status": "approved",
+    "source": "processor"
+  },
+  {
+    "transaction_id": "HEALTHY-00114",
+    "occurred_at": "2026-04-15T05:44:14.40492652Z",
+    "amount_cents": 49447,
+    "currency": "BRL",
+    "payment_method": "credit_card",
+    "processor": "stripe_br",
+    "status": "approved",
+    "source": "processor"
+  },
+  {
+    "transaction_id": "HEALTHY-00021",
+    "occurred_at": "2026-04-15T00:55:35.989325344Z",
+    "amount_cents": 21362,
+    "currency": "BRL",
+    "payment_method": "credit_card",
+    "processor": "stripe_br",
+    "status": "approved",
+    "source": "processor"
+  },
+  {
+    "transaction_id": "HEALTHY-00069",
+    "occurred_at": "2026-04-15T01:38:45.232783701Z",
+    "amount_cents": 39247,
+    "currency": "BRL",
+    "payment_method": "boleto",
+    "processor": "rede",
+    "status": "approved",
+    "source": "processor"
+  },
+  {
+    "transaction_id": "DUP-MERCH-001",
+    "occurred_at": "2026-04-15T04:21:42.842412216Z",
+    "amount_cents": 44179,
+    "currency": "BRL",
+    "payment_method": "pix",
+    "processor": "rede",
+    "status": "approved",
+    "source": "merchant_order_system"
+  },
+  {
+    "transaction_id": "HEALTHY-00118",
+    "occurred_at": "2026-04-15T03:00:19.669928564Z",
+    "amount_cents": 6616,
+    "currency": "BRL",
+    "payment_method": "credit_card",
+    "processor": "cielo",
+    "status": "approved",
+    "source": "processor"
+  },
+  {
+    "transaction_id": "HEALTHY-00079",
+    "occurred_at": "2026-04-15T01:18:42.059717399Z",
+    "amount_cents": 24361,
+    "currency": "BRL",
+    "payment_method": "credit_card",
+    "processor": "rede",
+    "status": "approved",
+    "source": "merchant_order_system"
+  },
+  {
+    "transaction_id": "HEALTHY-00079",
+    "occurred_at": "2026-04-15T01:17:43.059717399Z",
+    "amount_cents": 24361,
+    "currency": "BRL",
+    "payment_method": "credit_card",
+    "processor": "rede",
+    "status": "approved",
+    "source": "processor"
+  },
+  {
+    "transaction_id": "GHOST-NOPROC-006",
+    "occurred_at": "2026-04-15T05:02:34.29693168Z",
+    "amount_cents": 33155,
+    "currency": "BRL",
+    "payment_method": "pix",
+    "processor": "cielo",
+    "status": "approved",
+    "source": "merchant_order_system"
+  },
+  {
+    "transaction_id": "GHOST-BADPROC-001",
+    "occurred_at": "2026-04-15T02:52:39.186044209Z",
+    "amount_cents": 44998,
+    "currency": "BRL",
+    "payment_method": "credit_card",
+    "processor": "stripe_br",
+    "status": "declined",
+    "source": "processor"
+  },
+  {
+    "transaction_id": "HEALTHY-00019",
+    "occurred_at": "2026-04-15T01:35:36.625823277Z",
+    "amount_cents": 4640,
+    "currency": "BRL",
+    "payment_method": "pix",
+    "processor": "stripe_br",
+    "status": "approved",
+    "source": "merchant_order_system"
+  },
+  {
+    "transaction_id": "HEALTHY-00095",
+    "occurred_at": "2026-04-15T02:21:03.380118972Z",
+    "amount_cents": 41295,
+    "currency": "BRL",
+    "payment_method": "credit_card",
+    "processor": "getnet",
+    "status": "approved",
+    "source": "merchant_order_system"
+  },
+  {
+    "transaction_id": "HEALTHY-00178",
+    "occurred_at": "2026-04-15T02:23:26.358644159Z",
+    "amount_cents": 34821,
+    "currency": "BRL",
+    "payment_method": "pix",
+    "processor": "getnet",
+    "status": "approved",
+    "source": "processor"
+  },
+  {
+    "transaction_id": "HEALTHY-00071",
+    "occurred_at": "2026-04-15T02:20:03.27037797Z",
+    "amount_cents": 17952,
+    "currency": "BRL",
+    "payment_method": "credit_card",
+    "processor": "stripe_br",
+    "status": "approved",
+    "source": "merchant_order_system"
+  },
+  {
+    "transaction_id": "DUP-PROC-001",
+    "occurred_at": "2026-04-15T01:35:22.445909034Z",
+    "amount_cents": 23429,
+    "currency": "BRL",
+    "payment_method": "credit_card",
+    "processor": "getnet",
+    "status": "approved",
+    "source": "processor"
+  },
+  {
+    "transaction_id": "HEALTHY-00058",
+    "occurred_at": "2026-04-15T03:35:35.958568335Z",
+    "amount_cents": 26459,
+    "currency": "BRL",
+    "payment_method": "pix",
+    "processor": "stripe_br",
+    "status": "approved",
+    "source": "merchant_order_system"
+  },
+  {
+    "transaction_id": "ORPHAN-000",
+    "occurred_at": "2026-04-15T01:10:36.774884573Z",
+    "amount_cents": 40154,
+    "currency": "BRL",
+    "payment_method": "credit_card",
+    "processor": "stripe_br",
+    "status": "approved",
+    "source": "processor"
+  },
+  {
+    "transaction_id": "HEALTHY-00149",
+    "occurred_at": "2026-04-15T03:24:47.567112686Z",
+    "amount_cents": 33999,
+    "currency": "BRL",
+    "payment_method": "credit_card",
+    "processor": "rede",
+    "status": "approved",
+    "source": "merchant_order_system"
+  },
+  {
+    "transaction_id": "HEALTHY-00089",
+    "occurred_at": "2026-04-15T04:58:47.629131713Z",
+    "amount_cents": 46373,
+    "currency": "BRL",
+    "payment_method": "pix",
+    "processor": "cielo",
+    "status": "approved",
+    "source": "merchant_order_system"
+  },
+  {
+    "transaction_id": "HEALTHY-00038",
+    "occurred_at": "2026-04-15T04:19:23.75336683Z",
+    "amount_cents": 20442,
+    "currency": "BRL",
+    "payment_method": "pix",
+    "processor": "stripe_br",
+    "status": "approved",
+    "source": "merchant_order_system"
+  },
+  {
+    "transaction_id": "HEALTHY-00047",
+    "occurred_at": "2026-04-15T00:45:16.506285086Z",
+    "amount_cents": 32807,
+    "currency": "BRL",
+    "payment_method": "credit_card",
+    "processor": "stripe_br",
+    "status": "approved",
+    "source": "processor"
+  },
+  {
+    "transaction_id": "HEALTHY-00125",
+    "occurred_at": "2026-04-15T02:57:04.29706962Z",
+    "amount_cents": 40845,
+    "currency": "BRL",
+    "payment_method": "credit_card",
+    "processor": "rede",
+    "status": "approved",
+    "source": "merchant_order_system"
+  },
+  {
+    "transaction_id": "HEALTHY-00198",
+    "occurred_at": "2026-04-15T05:52:07.230449388Z",
+    "amount_cents": 30026,
+    "currency": "BRL",
+    "payment_method": "pix",
+    "processor": "stripe_br",
+    "status": "approved",
+    "source": "processor"
+  },
+  {
+    "transaction_id": "HEALTHY-00180",
+    "occurred_at": "2026-04-15T02:54:07.851789435Z",
+    "amount_cents": 49279,
+    "currency": "BRL",
+    "payment_method": "pix",
+    "processor": "cielo",
+    "status": "approved",
+    "source": "merchant_order_system"
+  },
+  {
+    "transaction_id": "HEALTHY-00172",
+    "occurred_at": "2026-04-15T01:00:02.750576234Z",
+    "amount_cents": 19554,
+    "currency": "BRL",
+    "payment_method": "credit_card",
+    "processor": "rede",
+    "status": "approved",
+    "source": "processor"
+  },
+  {
+    "transaction_id": "HEALTHY-00034",
+    "occurred_at": "2026-04-15T03:23:12.8731145Z",
+    "amount_cents": 42453,
+    "currency": "BRL",
+    "payment_method": "credit_card",
+    "processor": "cielo",
+    "status": "approved",
+    "source": "merchant_order_system"
+  },
+  {
+    "transaction_id": "HEALTHY-00005",
+    "occurred_at": "2026-04-15T05:23:43.285674209Z",
+    "amount_cents": 13502,
+    "currency": "BRL",
+    "payment_method": "credit_card",
+    "processor": "getnet",
+    "status": "approved",
+    "source": "processor"
+  },
+  {
+    "transaction_id": "HEALTHY-00042",
+    "occurred_at": "2026-04-15T00:48:59.588023718Z",
+    "amount_cents": 43483,
+    "currency": "BRL",
+    "payment_method": "boleto",
+    "processor": "cielo",
+    "status": "approved",
+    "source": "processor"
+  },
+  {
+    "transaction_id": "HEALTHY-00143",
+    "occurred_at": "2026-04-15T04:15:35.174105442Z",
+    "amount_cents": 40644,
+    "currency": "BRL",
+    "payment_method": "credit_card",
+    "processor": "stripe_br",
+    "status": "approved",
+    "source": "merchant_order_system"
+  },
+  {
+    "transaction_id": "GHOST-BADPROC-000",
+    "occurred_at": "2026-04-15T00:03:48.833602484Z",
+    "amount_cents": 44983,
+    "currency": "BRL",
+    "payment_method": "credit_card",
+    "processor": "stripe_br",
+    "status": "approved",
+    "source": "merchant_order_system"
+  },
+  {
+    "transaction_id": "HEALTHY-00131",
+    "occurred_at": "2026-04-15T02:26:53.942329047Z",
+    "amount_cents": 17835,
+    "currency": "BRL",
+    "payment_method": "credit_card",
+    "processor": "rede",
+    "status": "approved",
+    "source": "processor"
+  },
+  {
+    "transaction_id": "HEALTHY-00209",
+    "occurred_at": "2026-04-15T00:35:28.957093576Z",
+    "amount_cents": 1705,
+    "currency": "BRL",
+    "payment_method": "credit_card",
+    "processor": "cielo",
+    "status": "approved",
+    "source": "processor"
+  },
+  {
+    "transaction_id": "HEALTHY-00083",
+    "occurred_at": "2026-04-15T00:26:35.81748275Z",
+    "amount_cents": 5237,
+    "currency": "BRL",
+    "payment_method": "credit_card",
+    "processor": "rede",
+    "status": "approved",
+    "source": "merchant_order_system"
+  },
+  {
+    "transaction_id": "HEALTHY-00201",
+    "occurred_at": "2026-04-15T04:28:08.650344842Z",
+    "amount_cents": 35180,
+    "currency": "BRL",
+    "payment_method": "credit_card",
+    "processor": "stripe_br",
+    "status": "approved",
+    "source": "merchant_order_system"
+  },
+  {
+    "transaction_id": "HEALTHY-00050",
+    "occurred_at": "2026-04-15T00:56:56.106383062Z",
+    "amount_cents": 45812,
+    "currency": "BRL",
+    "payment_method": "boleto",
+    "processor": "rede",
+    "status": "approved",
+    "source": "merchant_order_system"
+  },
+  {
+    "transaction_id": "HEALTHY-00041",
+    "occurred_at": "2026-04-15T04:23:24.903597786Z",
+    "amount_cents": 45301,
+    "currency": "BRL",
+    "payment_method": "pix",
+    "processor": "cielo",
+    "status": "approved",
+    "source": "merchant_order_system"
+  },
+  {
+    "transaction_id": "HEALTHY-00018",
+    "occurred_at": "2026-04-15T05:44:41.059334249Z",
+    "amount_cents": 46698,
+    "currency": "BRL",
+    "payment_method": "credit_card",
+    "processor": "getnet",
+    "status": "approved",
+    "source": "processor"
+  },
+  {
+    "transaction_id": "HEALTHY-00021",
+    "occurred_at": "2026-04-15T00:55:43.989325344Z",
+    "amount_cents": 21362,
+    "currency": "BRL",
+    "payment_method": "credit_card",
+    "processor": "stripe_br",
+    "status": "approved",
+    "source": "merchant_order_system"
+  },
+  {
+    "transaction_id": "HEALTHY-00055",
+    "occurred_at": "2026-04-15T01:47:25.419352239Z",
+    "amount_cents": 30160,
+    "currency": "BRL",
+    "payment_method": "boleto",
+    "processor": "getnet",
+    "status": "approved",
+    "source": "merchant_order_system"
+  },
+  {
+    "transaction_id": "HEALTHY-00121",
+    "occurred_at": "2026-04-15T04:00:43.06590752Z",
+    "amount_cents": 12996,
+    "currency": "BRL",
+    "payment_method": "pix",
+    "processor": "getnet",
+    "status": "approved",
+    "source": "merchant_order_system"
+  },
+  {
+    "transaction_id": "HEALTHY-00154",
+    "occurred_at": "2026-04-15T04:57:02.783634291Z",
+    "amount_cents": 40245,
+    "currency": "BRL",
+    "payment_method": "credit_card",
+    "processor": "stripe_br",
+    "status": "approved",
+    "source": "merchant_order_system"
+  },
+  {
+    "transaction_id": "HEALTHY-00062",
+    "occurred_at": "2026-04-15T03:24:13.162216098Z",
+    "amount_cents": 37973,
+    "currency": "BRL",
+    "payment_method": "credit_card",
+    "processor": "cielo",
+    "status": "approved",
+    "source": "merchant_order_system"
+  },
+  {
+    "transaction_id": "DUP-PROC-002",
+    "occurred_at": "2026-04-15T04:22:48.047377831Z",
+    "amount_cents": 9868,
+    "currency": "BRL",
+    "payment_method": "pix",
+    "processor": "stripe_br",
+    "status": "approved",
+    "source": "processor"
+  },
+  {
+    "transaction_id": "HEALTHY-00122",
+    "occurred_at": "2026-04-15T00:37:33.516614024Z",
+    "amount_cents": 5438,
+    "currency": "BRL",
+    "payment_method": "credit_card",
+    "processor": "cielo",
+    "status": "approved",
+    "source": "merchant_order_system"
+  },
+  {
+    "transaction_id": "HEALTHY-00195",
+    "occurred_at": "2026-04-15T04:52:49.048527539Z",
+    "amount_cents": 23926,
+    "currency": "BRL",
+    "payment_method": "pix",
+    "processor": "stripe_br",
+    "status": "approved",
+    "source": "merchant_order_system"
+  },
+  {
+    "transaction_id": "HEALTHY-00052",
+    "occurred_at": "2026-04-15T01:33:55.972748925Z",
+    "amount_cents": 28192,
+    "currency": "BRL",
+    "payment_method": "credit_card",
+    "processor": "rede",
+    "status": "approved",
+    "source": "merchant_order_system"
+  },
+  {
+    "transaction_id": "HEALTHY-00188",
+    "occurred_at": "2026-04-15T04:49:35.014419869Z",
+    "amount_cents": 17029,
+    "currency": "BRL",
+    "payment_method": "pix",
+    "processor": "cielo",
+    "status": "approved",
+    "source": "processor"
+  },
+  {
+    "transaction_id": "DUP-PROC-003",
+    "occurred_at": "2026-04-15T04:36:41.459226803Z",
+    "amount_cents": 31836,
+    "currency": "BRL",
+    "payment_method": "credit_card",
+    "processor": "cielo",
+    "status": "approved",
+    "source": "processor"
+  },
+  {
+    "transaction_id": "HEALTHY-00003",
+    "occurred_at": "2026-04-15T03:57:23.970870044Z",
+    "amount_cents": 44552,
+    "currency": "BRL",
+    "payment_method": "credit_card",
+    "processor": "getnet",
+    "status": "approved",
+    "source": "processor"
+  },
+  {
+    "transaction_id": "HEALTHY-00015",
+    "occurred_at": "2026-04-15T04:54:34.584303978Z",
+    "amount_cents": 24601,
+    "currency": "BRL",
+    "payment_method": "pix",
+    "processor": "getnet",
+    "status": "approved",
+    "source": "merchant_order_system"
+  },
+  {
+    "transaction_id": "HEALTHY-00105",
+    "occurred_at": "2026-04-15T03:06:04.666203506Z",
+    "amount_cents": 17566,
+    "currency": "BRL",
+    "payment_method": "pix",
+    "processor": "rede",
+    "status": "approved",
+    "source": "merchant_order_system"
+  },
+  {
+    "transaction_id": "HEALTHY-00141",
+    "occurred_at": "2026-04-15T00:54:09.703694612Z",
+    "amount_cents": 12463,
+    "currency": "BRL",
+    "payment_method": "credit_card",
+    "processor": "stripe_br",
+    "status": "approved",
+    "source": "processor"
+  },
+  {
+    "transaction_id": "HEALTHY-00181",
+    "occurred_at": "2026-04-15T02:48:50.544567824Z",
+    "amount_cents": 9614,
+    "currency": "BRL",
+    "payment_method": "credit_card",
+    "processor": "rede",
+    "status": "approved",
+    "source": "merchant_order_system"
+  },
+  {
+    "transaction_id": "GHOST-BADPROC-005",
+    "occurred_at": "2026-04-15T00:04:37.395463389Z",
+    "amount_cents": 22450,
+    "currency": "BRL",
+    "payment_method": "credit_card",
+    "processor": "cielo",
+    "status": "approved",
+    "source": "merchant_order_system"
+  },
+  {
+    "transaction_id": "HEALTHY-00074",
+    "occurred_at": "2026-04-15T00:04:06.271134316Z",
+    "amount_cents": 27819,
+    "currency": "BRL",
+    "payment_method": "credit_card",
+    "processor": "stripe_br",
+    "status": "approved",
+    "source": "merchant_order_system"
+  },
+  {
+    "transaction_id": "HEALTHY-00029",
+    "occurred_at": "2026-04-15T03:12:03.083679814Z",
+    "amount_cents": 14494,
+    "currency": "BRL",
+    "payment_method": "pix",
+    "processor": "rede",
+    "status": "approved",
+    "source": "processor"
+  },
+  {
+    "transaction_id": "HEALTHY-00028",
+    "occurred_at": "2026-04-15T04:31:13.610840853Z",
+    "amount_cents": 23655,
+    "currency": "BRL",
+    "payment_method": "credit_card",
+    "processor": "getnet",
+    "status": "approved",
+    "source": "merchant_order_system"
+  },
+  {
+    "transaction_id": "HEALTHY-00143",
+    "occurred_at": "2026-04-15T04:13:42.174105442Z",
+    "amount_cents": 40644,
+    "currency": "BRL",
+    "payment_method": "credit_card",
+    "processor": "stripe_br",
+    "status": "approved",
+    "source": "processor"
+  },
+  {
+    "transaction_id": "HEALTHY-00126",
+    "occurred_at": "2026-04-15T03:50:16.535586876Z",
+    "amount_cents": 11948,
+    "currency": "BRL",
+    "payment_method": "credit_card",
+    "processor": "cielo",
+    "status": "approved",
+    "source": "processor"
+  },
+  {
+    "transaction_id": "GHOST-BADPROC-004",
+    "occurred_at": "2026-04-15T05:54:47.00967231Z",
+    "amount_cents": 20485,
+    "currency": "BRL",
+    "payment_method": "boleto",
+    "processor": "rede",
+    "status": "failed",
+    "source": "processor"
+  },
+  {
+    "transaction_id": "HEALTHY-00174",
+    "occurred_at": "2026-04-15T01:32:27.02346438Z",
+    "amount_cents": 4061,
+    "currency": "BRL",
+    "payment_method": "credit_card",
+    "processor": "getnet",
+    "status": "approved",
+    "source": "processor"
+  },
+  {
+    "transaction_id": "ORPHAN-006",
+    "occurred_at": "2026-04-15T01:04:52.27178876Z",
+    "amount_cents": 16890,
+    "currency": "BRL",
+    "payment_method": "pix",
+    "processor": "getnet",
+    "status": "approved",
+    "source": "processor"
+  },
+  {
+    "transaction_id": "HEALTHY-00204",
+    "occurred_at": "2026-04-15T03:12:56.671916113Z",
+    "amount_cents": 36033,
+    "currency": "BRL",
+    "payment_method": "pix",
+    "processor": "getnet",
+    "status": "approved",
+    "source": "merchant_order_system"
+  },
+  {
+    "transaction_id": "DUP-MERCH-002",
+    "occurred_at": "2026-04-15T04:10:12.043470177Z",
+    "amount_cents": 27314,
+    "currency": "BRL",
+    "payment_method": "credit_card",
+    "processor": "stripe_br",
+    "status": "approved",
+    "source": "merchant_order_system"
+  },
+  {
+    "transaction_id": "HEALTHY-00061",
+    "occurred_at": "2026-04-15T05:04:31.88185286Z",
+    "amount_cents": 48224,
+    "currency": "BRL",
+    "payment_method": "credit_card",
+    "processor": "cielo",
+    "status": "approved",
+    "source": "processor"
+  },
+  {
+    "transaction_id": "HEALTHY-00175",
+    "occurred_at": "2026-04-15T00:58:04.998104482Z",
+    "amount_cents": 16907,
+    "currency": "BRL",
+    "payment_method": "credit_card",
+    "processor": "stripe_br",
+    "status": "approved",
+    "source": "merchant_order_system"
+  },
+  {
+    "transaction_id": "HEALTHY-00188",
+    "occurred_at": "2026-04-15T04:51:03.014419869Z",
+    "amount_cents": 17029,
+    "currency": "BRL",
+    "payment_method": "pix",
+    "processor": "cielo",
+    "status": "approved",
+    "source": "merchant_order_system"
+  },
+  {
+    "transaction_id": "DUP-MERCH-001",
+    "occurred_at": "2026-04-15T04:21:41.842412216Z",
+    "amount_cents": 44179,
+    "currency": "BRL",
+    "payment_method": "pix",
+    "processor": "rede",
+    "status": "approved",
+    "source": "processor"
+  },
+  {
+    "transaction_id": "HEALTHY-00050",
+    "occurred_at": "2026-04-15T00:56:27.106383062Z",
+    "amount_cents": 45812,
+    "currency": "BRL",
+    "payment_method": "boleto",
+    "processor": "rede",
+    "status": "approved",
+    "source": "processor"
+  },
+  {
+    "transaction_id": "HEALTHY-00145",
+    "occurred_at": "2026-04-15T05:30:56.993233304Z",
+    "amount_cents": 46746,
+    "currency": "BRL",
+    "payment_method": "pix",
+    "processor": "rede",
+    "status": "approved",
+    "source": "merchant_order_system"
+  },
+  {
+    "transaction_id": "GHOST-NOPROC-003",
+    "occurred_at": "2026-04-15T04:47:13.550141243Z",
+    "amount_cents": 27899,
+    "currency": "BRL",
+    "payment_method": "boleto",
+    "processor": "cielo",
+    "status": "approved",
+    "source": "merchant_order_system"
+  },
+  {
+    "transaction_id": "HEALTHY-00117",
+    "occurred_at": "2026-04-15T02:25:49.062325923Z",
+    "amount_cents": 2329,
+    "currency": "BRL",
+    "payment_method": "credit_card",
+    "processor": "cielo",
+    "status": "approved",
+    "source": "merchant_order_system"
+  },
+  {
+    "transaction_id": "HEALTHY-00035",
+    "occurred_at": "2026-04-15T03:19:00.221835421Z",
+    "amount_cents": 21559,
+    "currency": "BRL",
+    "payment_method": "pix",
+    "processor": "stripe_br",
+    "status": "approved",
+    "source": "processor"
+  },
+  {
+    "transaction_id": "HEALTHY-00092",
+    "occurred_at": "2026-04-15T02:48:00.896505148Z",
+    "amount_cents": 6550,
+    "currency": "BRL",
+    "payment_method": "pix",
+    "processor": "getnet",
+    "status": "approved",
+    "source": "merchant_order_system"
+  },
+  {
+    "transaction_id": "HEALTHY-00205",
+    "occurred_at": "2026-04-15T05:28:22.732369089Z",
+    "amount_cents": 13119,
+    "currency": "BRL",
+    "payment_method": "pix",
+    "processor": "cielo",
+    "status": "approved",
+    "source": "merchant_order_system"
+  },
+  {
+    "transaction_id": "HEALTHY-00001",
+    "occurred_at": "2026-04-15T03:32:47.214237261Z",
+    "amount_cents": 40857,
+    "currency": "BRL",
+    "payment_method": "pix",
+    "processor": "stripe_br",
+    "status": "approved",
+    "source": "processor"
+  },
+  {
+    "transaction_id": "HEALTHY-00053",
+    "occurred_at": "2026-04-15T01:26:55.687531918Z",
+    "amount_cents": 31432,
+    "currency": "BRL",
+    "payment_method": "credit_card",
+    "processor": "rede",
+    "status": "approved",
+    "source": "merchant_order_system"
+  },
+  {
+    "transaction_id": "ORPHAN-010",
+    "occurred_at": "2026-04-15T04:32:08.752544069Z",
+    "amount_cents": 10097,
+    "currency": "BRL",
+    "payment_method": "pix",
+    "processor": "rede",
+    "status": "approved",
+    "source": "processor"
+  },
+  {
+    "transaction_id": "HEALTHY-00140",
+    "occurred_at": "2026-04-15T05:20:54.402175313Z",
+    "amount_cents": 6778,
+    "currency": "BRL",
+    "payment_method": "pix",
+    "processor": "cielo",
+    "status": "approved",
+    "source": "processor"
+  },
+  {
+    "transaction_id": "HEALTHY-00061",
+    "occurred_at": "2026-04-15T05:06:21.88185286Z",
+    "amount_cents": 48224,
+    "currency": "BRL",
+    "payment_method": "credit_card",
+    "processor": "cielo",
+    "status": "approved",
+    "source": "merchant_order_system"
+  },
+  {
+    "transaction_id": "HEALTHY-00009",
+    "occurred_at": "2026-04-15T01:49:12.544653919Z",
+    "amount_cents": 12694,
+    "currency": "BRL",
+    "payment_method": "credit_card",
+    "processor": "cielo",
+    "status": "approved",
+    "source": "processor"
+  },
+  {
+    "transaction_id": "HEALTHY-00128",
+    "occurred_at": "2026-04-15T01:17:33.176657404Z",
+    "amount_cents": 8254,
+    "currency": "BRL",
+    "payment_method": "pix",
+    "processor": "rede",
+    "status": "approved",
+    "source": "processor"
+  },
+  {
+    "transaction_id": "LIMBO-004",
+    "occurred_at": "2026-04-15T04:34:22.889354143Z",
+    "amount_cents": 42081,
+    "currency": "BRL",
+    "payment_method": "pix",
+    "processor": "cielo",
+    "status": "pending",
+    "source": "processor"
+  },
+  {
+    "transaction_id": "HEALTHY-00016",
+    "occurred_at": "2026-04-15T01:21:04.4060227Z",
+    "amount_cents": 40823,
+    "currency": "BRL",
+    "payment_method": "credit_card",
+    "processor": "getnet",
+    "status": "approved",
+    "source": "processor"
+  },
+  {
+    "transaction_id": "HEALTHY-00074",
+    "occurred_at": "2026-04-15T00:04:04.271134316Z",
+    "amount_cents": 27819,
+    "currency": "BRL",
+    "payment_method": "credit_card",
+    "processor": "stripe_br",
+    "status": "approved",
+    "source": "processor"
+  },
+  {
+    "transaction_id": "GHOST-NOPROC-001",
+    "occurred_at": "2026-04-15T02:41:18.752152357Z",
+    "amount_cents": 36528,
+    "currency": "BRL",
+    "payment_method": "credit_card",
+    "processor": "stripe_br",
+    "status": "approved",
+    "source": "merchant_order_system"
+  },
+  {
+    "transaction_id": "HEALTHY-00030",
+    "occurred_at": "2026-04-15T05:50:27.774607409Z",
+    "amount_cents": 1676,
+    "currency": "BRL",
+    "payment_method": "pix",
+    "processor": "getnet",
+    "status": "approved",
+    "source": "processor"
+  },
+  {
+    "transaction_id": "HEALTHY-00101",
+    "occurred_at": "2026-04-15T02:37:07.249998124Z",
+    "amount_cents": 11963,
+    "currency": "BRL",
+    "payment_method": "credit_card",
+    "processor": "cielo",
+    "status": "approved",
+    "source": "merchant_order_system"
+  },
+  {
+    "transaction_id": "DUP-PROC-002",
+    "occurred_at": "2026-04-15T04:22:47.047377831Z",
+    "amount_cents": 9868,
+    "currency": "BRL",
+    "payment_method": "pix",
+    "processor": "stripe_br",
+    "status": "approved",
+    "source": "processor"
+  },
+  {
+    "transaction_id": "HEALTHY-00138",
+    "occurred_at": "2026-04-15T03:28:39.715171953Z",
+    "amount_cents": 39980,
+    "currency": "BRL",
+    "payment_method": "pix",
+    "processor": "rede",
+    "status": "approved",
+    "source": "processor"
+  },
+  {
+    "transaction_id": "HEALTHY-00106",
+    "occurred_at": "2026-04-15T02:57:43.751417765Z",
+    "amount_cents": 16662,
+    "currency": "BRL",
+    "payment_method": "boleto",
+    "processor": "getnet",
+    "status": "approved",
+    "source": "processor"
+  },
+  {
+    "transaction_id": "HEALTHY-00098",
+    "occurred_at": "2026-04-15T02:04:22.322993159Z",
+    "amount_cents": 40710,
+    "currency": "BRL",
+    "payment_method": "boleto",
+    "processor": "stripe_br",
+    "status": "approved",
+    "source": "merchant_order_system"
+  },
+  {
+    "transaction_id": "HEALTHY-00195",
+    "occurred_at": "2026-04-15T04:52:20.048527539Z",
+    "amount_cents": 23926,
+    "currency": "BRL",
+    "payment_method": "pix",
+    "processor": "stripe_br",
+    "status": "approved",
+    "source": "processor"
+  },
+  {
+    "transaction_id": "HEALTHY-00037",
+    "occurred_at": "2026-04-15T00:41:12.884175475Z",
+    "amount_cents": 35569,
+    "currency": "BRL",
+    "payment_method": "boleto",
+    "processor": "rede",
+    "status": "approved",
+    "source": "processor"
+  },
+  {
+    "transaction_id": "HEALTHY-00127",
+    "occurred_at": "2026-04-15T03:03:32.586156506Z",
+    "amount_cents": 2194,
+    "currency": "BRL",
+    "payment_method": "credit_card",
+    "processor": "getnet",
+    "status": "approved",
+    "source": "processor"
+  },
+  {
+    "transaction_id": "HEALTHY-00084",
+    "occurred_at": "2026-04-15T03:26:04.732700351Z",
+    "amount_cents": 38128,
+    "currency": "BRL",
+    "payment_method": "pix",
+    "processor": "getnet",
+    "status": "approved",
+    "source": "merchant_order_system"
+  },
+  {
+    "transaction_id": "ORPHAN-007",
+    "occurred_at": "2026-04-15T03:04:35.351618742Z",
+    "amount_cents": 15363,
+    "currency": "BRL",
+    "payment_method": "credit_card",
+    "processor": "stripe_br",
+    "status": "approved",
+    "source": "processor"
+  },
+  {
+    "transaction_id": "HEALTHY-00002",
+    "occurred_at": "2026-04-15T03:29:27.943501314Z",
+    "amount_cents": 26467,
+    "currency": "BRL",
+    "payment_method": "credit_card",
+    "processor": "stripe_br",
+    "status": "approved",
+    "source": "merchant_order_system"
+  },
+  {
+    "transaction_id": "HEALTHY-00169",
+    "occurred_at": "2026-04-15T05:48:56.835984441Z",
+    "amount_cents": 15752,
+    "currency": "BRL",
+    "payment_method": "credit_card",
+    "processor": "rede",
+    "status": "approved",
+    "source": "merchant_order_system"
+  },
+  {
+    "transaction_id": "LIMBO-001",
+    "occurred_at": "2026-04-15T02:51:45.18685644Z",
+    "amount_cents": 19550,
+    "currency": "BRL",
+    "payment_method": "pix",
+    "processor": "rede",
+    "status": "pending",
+    "source": "processor"
+  },
+  {
+    "transaction_id": "HEALTHY-00072",
+    "occurred_at": "2026-04-15T02:46:04.11720251Z",
+    "amount_cents": 29860,
+    "currency": "BRL",
+    "payment_method": "pix",
+    "processor": "rede",
+    "status": "approved",
+    "source": "processor"
+  },
+  {
+    "transaction_id": "HEALTHY-00025",
+    "occurred_at": "2026-04-15T04:26:56.181686411Z",
+    "amount_cents": 23745,
+    "currency": "BRL",
+    "payment_method": "credit_card",
+    "processor": "getnet",
+    "status": "approved",
+    "source": "merchant_order_system"
+  },
+  {
+    "transaction_id": "HEALTHY-00183",
+    "occurred_at": "2026-04-15T03:52:00.681765397Z",
+    "amount_cents": 12207,
+    "currency": "BRL",
+    "payment_method": "pix",
+    "processor": "getnet",
+    "status": "approved",
+    "source": "merchant_order_system"
+  },
+  {
+    "transaction_id": "HEALTHY-00018",
+    "occurred_at": "2026-04-15T05:45:45.059334249Z",
+    "amount_cents": 46698,
+    "currency": "BRL",
+    "payment_method": "credit_card",
+    "processor": "getnet",
+    "status": "approved",
+    "source": "merchant_order_system"
+  },
+  {
+    "transaction_id": "HEALTHY-00107",
+    "occurred_at": "2026-04-15T04:45:47.224448732Z",
+    "amount_cents": 8842,
+    "currency": "BRL",
+    "payment_method": "pix",
+    "processor": "cielo",
+    "status": "approved",
+    "source": "merchant_order_system"
+  },
+  {
+    "transaction_id": "HEALTHY-00173",
+    "occurred_at": "2026-04-15T03:20:11.02238322Z",
+    "amount_cents": 43013,
+    "currency": "BRL",
+    "payment_method": "credit_card",
+    "processor": "stripe_br",
+    "status": "approved",
+    "source": "processor"
+  },
+  {
+    "transaction_id": "HEALTHY-00194",
+    "occurred_at": "2026-04-15T03:24:17.76854688Z",
+    "amount_cents": 40788,
+    "currency": "BRL",
+    "payment_method": "pix",
+    "processor": "getnet",
+    "status": "approved",
+    "source": "merchant_order_system"
+  },
+  {
+    "transaction_id": "HEALTHY-00109",
+    "occurred_at": "2026-04-15T04:30:22.225083814Z",
+    "amount_cents": 39780,
+    "currency": "BRL",
+    "payment_method": "pix",
+    "processor": "cielo",
+    "status": "approved",
+    "source": "merchant_order_system"
+  },
+  {
+    "transaction_id": "HEALTHY-00153",
+    "occurred_at": "2026-04-15T05:35:33.012626706Z",
+    "amount_cents": 39022,
+    "currency": "BRL",
+    "payment_method": "credit_card",
+    "processor": "cielo",
+    "status": "approved",
+    "source": "processor"
+  },
+  {
+    "transaction_id": "HEALTHY-00168",
+    "occurred_at": "2026-04-15T05:58:30.110649316Z",
+    "amount_cents": 45658,
+    "currency": "BRL",
+    "payment_method": "pix",
+    "processor": "stripe_br",
+    "status": "approved",
+    "source": "processor"
+  },
+  {
+    "transaction_id": "HEALTHY-00129",
+    "occurred_at": "2026-04-15T02:54:09.632674556Z",
+    "amount_cents": 3939,
+    "currency": "BRL",
+    "payment_method": "pix",
+    "processor": "rede",
+    "status": "approved",
+    "source": "merchant_order_system"
+  },
+  {
+    "transaction_id": "HEALTHY-00059",
+    "occurred_at": "2026-04-15T00:46:11.353173172Z",
+    "amount_cents": 3191,
+    "currency": "BRL",
+    "payment_method": "credit_card",
+    "processor": "stripe_br",
+    "status": "approved",
+    "source": "merchant_order_system"
+  },
+  {
+    "transaction_id": "HEALTHY-00168",
+    "occurred_at": "2026-04-15T05:59:14.110649316Z",
+    "amount_cents": 45658,
+    "currency": "BRL",
+    "payment_method": "pix",
+    "processor": "stripe_br",
+    "status": "approved",
+    "source": "merchant_order_system"
+  },
+  {
+    "transaction_id": "HEALTHY-00142",
+    "occurred_at": "2026-04-15T05:46:19.297027029Z",
+    "amount_cents": 23623,
+    "currency": "BRL",
+    "payment_method": "pix",
+    "processor": "getnet",
+    "status": "approved",
+    "source": "merchant_order_system"
+  },
+  {
+    "transaction_id": "HEALTHY-00155",
+    "occurred_at": "2026-04-15T00:39:47.472641761Z",
+    "amount_cents": 32891,
+    "currency": "BRL",
+    "payment_method": "pix",
+    "processor": "rede",
+    "status": "approved",
+    "source": "merchant_order_system"
+  },
+  {
+    "transaction_id": "HEALTHY-00085",
+    "occurred_at": "2026-04-15T02:34:56.132159727Z",
+    "amount_cents": 23480,
+    "currency": "BRL",
+    "payment_method": "credit_card",
+    "processor": "getnet",
+    "status": "approved",
+    "source": "merchant_order_system"
+  },
+  {
+    "transaction_id": "HEALTHY-00036",
+    "occurred_at": "2026-04-15T05:33:55.549054984Z",
+    "amount_cents": 5153,
+    "currency": "BRL",
+    "payment_method": "credit_card",
+    "processor": "stripe_br",
+    "status": "approved",
+    "source": "merchant_order_system"
+  },
+  {
+    "transaction_id": "DUP-MERCH-000",
+    "occurred_at": "2026-04-15T05:40:53.267976308Z",
+    "amount_cents": 5150,
+    "currency": "BRL",
+    "payment_method": "pix",
+    "processor": "rede",
+    "status": "approved",
+    "source": "merchant_order_system"
+  },
+  {
+    "transaction_id": "HEALTHY-00146",
+    "occurred_at": "2026-04-15T02:40:36.547125289Z",
+    "amount_cents": 11515,
+    "currency": "BRL",
+    "payment_method": "pix",
+    "processor": "cielo",
+    "status": "approved",
+    "source": "merchant_order_system"
+  },
+  {
+    "transaction_id": "LIMBO-008",
+    "occurred_at": "2026-04-15T03:31:20.999402262Z",
+    "amount_cents": 20784,
+    "currency": "BRL",
+    "payment_method": "boleto",
+    "processor": "cielo",
+    "status": "pending",
+    "source": "processor"
+  },
+  {
+    "transaction_id": "HEALTHY-00177",
+    "occurred_at": "2026-04-15T02:40:16.909002612Z",
+    "amount_cents": 4028,
+    "currency": "BRL",
+    "payment_method": "credit_card",
+    "processor": "rede",
+    "status": "approved",
+    "source": "merchant_order_system"
+  },
+  {
+    "transaction_id": "HEALTHY-00042",
+    "occurred_at": "2026-04-15T00:49:41.588023718Z",
+    "amount_cents": 43483,
+    "currency": "BRL",
+    "payment_method": "boleto",
+    "processor": "cielo",
+    "status": "approved",
+    "source": "merchant_order_system"
+  },
+  {
+    "transaction_id": "HEALTHY-00185",
+    "occurred_at": "2026-04-15T00:42:53.288396201Z",
+    "amount_cents": 26663,
+    "currency": "BRL",
+    "payment_method": "credit_card",
+    "processor": "rede",
+    "status": "approved",
+    "source": "processor"
+  },
+  {
+    "transaction_id": "HEALTHY-00072",
+    "occurred_at": "2026-04-15T02:46:24.11720251Z",
+    "amount_cents": 29860,
+    "currency": "BRL",
+    "payment_method": "pix",
+    "processor": "rede",
+    "status": "approved",
+    "source": "merchant_order_system"
+  },
+  {
+    "transaction_id": "HEALTHY-00155",
+    "occurred_at": "2026-04-15T00:38:30.472641761Z",
+    "amount_cents": 32891,
+    "currency": "BRL",
+    "payment_method": "pix",
+    "processor": "rede",
+    "status": "approved",
+    "source": "processor"
+  },
+  {
+    "transaction_id": "HEALTHY-00144",
+    "occurred_at": "2026-04-15T04:09:46.992662596Z",
+    "amount_cents": 45124,
+    "currency": "BRL",
+    "payment_method": "boleto",
+    "processor": "cielo",
+    "status": "approved",
+    "source": "processor"
+  },
+  {
+    "transaction_id": "HEALTHY-00056",
+    "occurred_at": "2026-04-15T00:55:56.541496186Z",
+    "amount_cents": 14977,
+    "currency": "BRL",
+    "payment_method": "credit_card",
+    "processor": "rede",
+    "status": "approved",
+    "source": "processor"
+  },
+  {
+    "transaction_id": "HEALTHY-00075",
+    "occurred_at": "2026-04-15T02:19:31.643469527Z",
+    "amount_cents": 29277,
+    "currency": "BRL",
+    "payment_method": "credit_card",
+    "processor": "rede",
+    "status": "approved",
+    "source": "merchant_order_system"
+  },
+  {
+    "transaction_id": "HEALTHY-00039",
+    "occurred_at": "2026-04-15T03:39:44.260098255Z",
+    "amount_cents": 22075,
+    "currency": "BRL",
+    "payment_method": "credit_card",
+    "processor": "stripe_br",
+    "status": "approved",
+    "source": "processor"
+  },
+  {
+    "transaction_id": "HEALTHY-00060",
+    "occurred_at": "2026-04-15T05:40:07.90018386Z",
+    "amount_cents": 17017,
+    "currency": "BRL",
+    "payment_method": "credit_card",
+    "processor": "getnet",
+    "status": "approved",
+    "source": "merchant_order_system"
+  },
+  {
+    "transaction_id": "HEALTHY-00119",
+    "occurred_at": "2026-04-15T00:58:27.491385996Z",
+    "amount_cents": 49075,
+    "currency": "BRL",
+    "payment_method": "pix",
+    "processor": "stripe_br",
+    "status": "approved",
+    "source": "merchant_order_system"
+  },
+  {
+    "transaction_id": "HEALTHY-00045",
+    "occurred_at": "2026-04-15T01:29:13.162544252Z",
+    "amount_cents": 15298,
+    "currency": "BRL",
+    "payment_method": "boleto",
+    "processor": "getnet",
+    "status": "approved",
+    "source": "merchant_order_system"
+  },
+  {
+    "transaction_id": "HEALTHY-00113",
+    "occurred_at": "2026-04-15T00:17:15.561269744Z",
+    "amount_cents": 8534,
+    "currency": "BRL",
+    "payment_method": "pix",
+    "processor": "getnet",
+    "status": "approved",
+    "source": "processor"
+  },
+  {
+    "transaction_id": "HEALTHY-00142",
+    "occurred_at": "2026-04-15T05:45:22.297027029Z",
+    "amount_cents": 23623,
+    "currency": "BRL",
+    "payment_method": "pix",
+    "processor": "getnet",
+    "status": "approved",
+    "source": "processor"
+  },
+  {
+    "transaction_id": "HEALTHY-00103",
+    "occurred_at": "2026-04-15T02:27:34.454243817Z",
+    "amount_cents": 28565,
+    "currency": "BRL",
+    "payment_method": "pix",
+    "processor": "cielo",
+    "status": "approved",
+    "source": "processor"
+  },
+  {
+    "transaction_id": "HEALTHY-00187",
+    "occurred_at": "2026-04-15T00:06:27.429364689Z",
+    "amount_cents": 21986,
+    "currency": "BRL",
+    "payment_method": "credit_card",
+    "processor": "cielo",
+    "status": "approved",
+    "source": "processor"
+  },
+  {
+    "transaction_id": "GHOST-BADPROC-006",
+    "occurred_at": "2026-04-15T00:56:49.528067226Z",
+    "amount_cents": 8418,
+    "currency": "BRL",
+    "payment_method": "pix",
+    "processor": "rede",
+    "status": "approved",
+    "source": "merchant_order_system"
+  },
+  {
+    "transaction_id": "HEALTHY-00105",
+    "occurred_at": "2026-04-15T03:05:44.666203506Z",
+    "amount_cents": 17566,
+    "currency": "BRL",
+    "payment_method": "pix",
+    "processor": "rede",
+    "status": "approved",
+    "source": "processor"
+  },
+  {
+    "transaction_id": "HEALTHY-00131",
+    "occurred_at": "2026-04-15T02:28:28.942329047Z",
+    "amount_cents": 17835,
+    "currency": "BRL",
+    "payment_method": "credit_card",
+    "processor": "rede",
+    "status": "approved",
+    "source": "merchant_order_system"
+  },
+  {
+    "transaction_id": "HEALTHY-00113",
+    "occurred_at": "2026-04-15T00:17:52.561269744Z",
+    "amount_cents": 8534,
+    "currency": "BRL",
+    "payment_method": "pix",
+    "processor": "getnet",
+    "status": "approved",
+    "source": "merchant_order_system"
+  },
+  {
+    "transaction_id": "GHOST-BADPROC-003",
+    "occurred_at": "2026-04-15T00:43:19.781186891Z",
+    "amount_cents": 11938,
+    "currency": "BRL",
+    "payment_method": "pix",
+    "processor": "rede",
+    "status": "approved",
+    "source": "merchant_order_system"
+  },
+  {
+    "transaction_id": "HEALTHY-00184",
+    "occurred_at": "2026-04-15T02:38:51.607232604Z",
+    "amount_cents": 46129,
+    "currency": "BRL",
+    "payment_method": "credit_card",
+    "processor": "rede",
+    "status": "approved",
+    "source": "processor"
+  },
+  {
+    "transaction_id": "HEALTHY-00180",
+    "occurred_at": "2026-04-15T02:52:56.851789435Z",
+    "amount_cents": 49279,
+    "currency": "BRL",
+    "payment_method": "pix",
+    "processor": "cielo",
+    "status": "approved",
+    "source": "processor"
+  },
+  {
+    "transaction_id": "HEALTHY-00032",
+    "occurred_at": "2026-04-15T02:58:25.849876766Z",
+    "amount_cents": 2071,
+    "currency": "BRL",
+    "payment_method": "credit_card",
+    "processor": "stripe_br",
+    "status": "approved",
+    "source": "merchant_order_system"
+  },
+  {
+    "transaction_id": "HEALTHY-00171",
+    "occurred_at": "2026-04-15T01:43:25.163657679Z",
+    "amount_cents": 43796,
+    "currency": "BRL",
+    "payment_method": "credit_card",
+    "processor": "rede",
+    "status": "approved",
+    "source": "processor"
+  },
+  {
+    "transaction_id": "HEALTHY-00088",
+    "occurred_at": "2026-04-15T00:04:09.103200767Z",
+    "amount_cents": 44009,
+    "currency": "BRL",
+    "payment_method": "pix",
+    "processor": "cielo",
+    "status": "approved",
+    "source": "merchant_order_system"
+  },
+  {
+    "transaction_id": "HEALTHY-00112",
+    "occurred_at": "2026-04-15T01:50:27.243848848Z",
+    "amount_cents": 2289,
+    "currency": "BRL",
+    "payment_method": "pix",
+    "processor": "stripe_br",
+    "status": "approved",
+    "source": "merchant_order_system"
+  },
+  {
+    "transaction_id": "HEALTHY-00088",
+    "occurred_at": "2026-04-15T00:02:12.103200767Z",
+    "amount_cents": 44009,
+    "currency": "BRL",
+    "payment_method": "pix",
+    "processor": "cielo",
+    "status": "approved",
+    "source": "processor"
+  },
+  {
+    "transaction_id": "HEALTHY-00016",
+    "occurred_at": "2026-04-15T01:21:31.4060227Z",
+    "amount_cents": 40823,
+    "currency": "BRL",
+    "payment_method": "credit_card",
+    "processor": "getnet",
+    "status": "approved",
+    "source": "merchant_order_system"
+  },
+  {
+    "transaction_id": "HEALTHY-00201",
+    "occurred_at": "2026-04-15T04:26:56.650344842Z",
+    "amount_cents": 35180,
+    "currency": "BRL",
+    "payment_method": "credit_card",
+    "processor": "stripe_br",
+    "status": "approved",
+    "source": "processor"
+  },
+  {
+    "transaction_id": "GHOST-BADPROC-005",
+    "occurred_at": "2026-04-15T00:04:07.395463389Z",
+    "amount_cents": 22450,
+    "currency": "BRL",
+    "payment_method": "credit_card",
+    "processor": "cielo",
+    "status": "declined",
+    "source": "processor"
+  },
+  {
+    "transaction_id": "HEALTHY-00000",
+    "occurred_at": "2026-04-15T00:30:58.231278675Z",
+    "amount_cents": 35487,
+    "currency": "BRL",
+    "payment_method": "pix",
+    "processor": "rede",
+    "status": "approved",
+    "source": "merchant_order_system"
+  },
+  {
+    "transaction_id": "DUP-PROC-000",
+    "occurred_at": "2026-04-15T01:04:04.893198232Z",
+    "amount_cents": 48556,
+    "currency": "BRL",
+    "payment_method": "credit_card",
+    "processor": "cielo",
+    "status": "approved",
+    "source": "processor"
+  },
+  {
+    "transaction_id": "HEALTHY-00014",
+    "occurred_at": "2026-04-15T03:56:11.383394983Z",
+    "amount_cents": 50487,
+    "currency": "BRL",
+    "payment_method": "pix",
+    "processor": "getnet",
+    "status": "approved",
+    "source": "merchant_order_system"
+  },
+  {
+    "transaction_id": "HEALTHY-00112",
+    "occurred_at": "2026-04-15T01:49:03.243848848Z",
+    "amount_cents": 2289,
+    "currency": "BRL",
+    "payment_method": "pix",
+    "processor": "stripe_br",
+    "status": "approved",
+    "source": "processor"
+  },
+  {
+    "transaction_id": "HEALTHY-00083",
+    "occurred_at": "2026-04-15T00:25:58.81748275Z",
+    "amount_cents": 5237,
+    "currency": "BRL",
+    "payment_method": "credit_card",
+    "processor": "rede",
+    "status": "approved",
+    "source": "processor"
+  },
+  {
+    "transaction_id": "HEALTHY-00200",
+    "occurred_at": "2026-04-15T04:05:50.067000974Z",
+    "amount_cents": 22518,
+    "currency": "BRL",
+    "payment_method": "credit_card",
+    "processor": "cielo",
+    "status": "approved",
+    "source": "merchant_order_system"
+  },
+  {
+    "transaction_id": "HEALTHY-00191",
+    "occurred_at": "2026-04-15T02:46:23.591153655Z",
+    "amount_cents": 37902,
+    "currency": "BRL",
+    "payment_method": "credit_card",
+    "processor": "rede",
+    "status": "approved",
+    "source": "merchant_order_system"
+  },
+  {
+    "transaction_id": "HEALTHY-00053",
+    "occurred_at": "2026-04-15T01:25:40.687531918Z",
+    "amount_cents": 31432,
+    "currency": "BRL",
+    "payment_method": "credit_card",
+    "processor": "rede",
+    "status": "approved",
+    "source": "processor"
+  },
+  {
+    "transaction_id": "DUP-PROC-000",
+    "occurred_at": "2026-04-15T01:04:05.893198232Z",
+    "amount_cents": 48556,
+    "currency": "BRL",
+    "payment_method": "credit_card",
+    "processor": "cielo",
+    "status": "approved",
+    "source": "processor"
+  },
+  {
+    "transaction_id": "HEALTHY-00134",
+    "occurred_at": "2026-04-15T02:48:13.574308884Z",
+    "amount_cents": 6850,
+    "currency": "BRL",
+    "payment_method": "credit_card",
+    "processor": "stripe_br",
+    "status": "approved",
+    "source": "processor"
+  },
+  {
+    "transaction_id": "HEALTHY-00071",
+    "occurred_at": "2026-04-15T02:18:23.27037797Z",
+    "amount_cents": 17952,
+    "currency": "BRL",
+    "payment_method": "credit_card",
+    "processor": "stripe_br",
+    "status": "approved",
+    "source": "processor"
+  },
+  {
+    "transaction_id": "HEALTHY-00025",
+    "occurred_at": "2026-04-15T04:25:21.181686411Z",
+    "amount_cents": 23745,
+    "currency": "BRL",
+    "payment_method": "credit_card",
+    "processor": "getnet",
+    "status": "approved",
+    "source": "processor"
+  },
+  {
+    "transaction_id": "HEALTHY-00044",
+    "occurred_at": "2026-04-15T00:37:15.748851792Z",
+    "amount_cents": 3224,
+    "currency": "BRL",
+    "payment_method": "credit_card",
+    "processor": "rede",
+    "status": "approved",
+    "source": "processor"
+  },
+  {
+    "transaction_id": "HEALTHY-00132",
+    "occurred_at": "2026-04-15T01:23:10.660952131Z",
+    "amount_cents": 16040,
+    "currency": "BRL",
+    "payment_method": "credit_card",
+    "processor": "stripe_br",
+    "status": "approved",
+    "source": "merchant_order_system"
+  },
+  {
+    "transaction_id": "HEALTHY-00189",
+    "occurred_at": "2026-04-15T00:42:15.166741009Z",
+    "amount_cents": 18264,
+    "currency": "BRL",
+    "payment_method": "credit_card",
+    "processor": "rede",
+    "status": "approved",
+    "source": "merchant_order_system"
+  },
+  {
+    "transaction_id": "HEALTHY-00002",
+    "occurred_at": "2026-04-15T03:27:54.943501314Z",
+    "amount_cents": 26467,
+    "currency": "BRL",
+    "payment_method": "credit_card",
+    "processor": "stripe_br",
+    "status": "approved",
+    "source": "processor"
+  },
+  {
+    "transaction_id": "HEALTHY-00159",
+    "occurred_at": "2026-04-15T01:38:58.01584112Z",
+    "amount_cents": 10822,
+    "currency": "BRL",
+    "payment_method": "pix",
+    "processor": "getnet",
+    "status": "approved",
+    "source": "merchant_order_system"
+  },
+  {
+    "transaction_id": "DUP-PROC-002",
+    "occurred_at": "2026-04-15T04:22:46.047377831Z",
+    "amount_cents": 9868,
+    "currency": "BRL",
+    "payment_method": "pix",
+    "processor": "stripe_br",
+    "status": "approved",
+    "source": "processor"
+  },
+  {
+    "transaction_id": "HEALTHY-00075",
+    "occurred_at": "2026-04-15T02:18:34.643469527Z",
+    "amount_cents": 29277,
+    "currency": "BRL",
+    "payment_method": "credit_card",
+    "processor": "rede",
+    "status": "approved",
+    "source": "processor"
+  },
+  {
+    "transaction_id": "HEALTHY-00169",
+    "occurred_at": "2026-04-15T05:47:30.835984441Z",
+    "amount_cents": 15752,
+    "currency": "BRL",
+    "payment_method": "credit_card",
+    "processor": "rede",
+    "status": "approved",
+    "source": "processor"
+  },
+  {
+    "transaction_id": "HEALTHY-00094",
+    "occurred_at": "2026-04-15T00:55:01.229645195Z",
+    "amount_cents": 17497,
+    "currency": "BRL",
+    "payment_method": "credit_card",
+    "processor": "stripe_br",
+    "status": "approved",
+    "source": "merchant_order_system"
+  }
+]

@@ -1,0 +1,16 @@
+{
+  "window_from": "2026-04-15T00:00:00Z",
+  "window_to": "2026-04-15T06:00:00Z",
+  "now": "2026-04-22T00:00:00Z",
+  "total_rows": 500,
+  "unique_transaction_ids_in_window": 263,
+  "anomaly_counts": {
+    "duplicate": 8,
+    "ghost": 15,
+    "orphaned": 20,
+    "pending_limbo": 10
+  },
+  "duplicate_extra_rows": 12,
+  "healthy_pairs": 210,
+  "health_score": 0.7832699619771863
+}
