@@ -1,0 +1,19 @@
+.git
+.gitignore
+.cursor
+.idea
+.vscode
+*.db
+*.db-wal
+*.db-shm
+coverage.out
+coverage.html
+README.md
+docs/
+bin/
+.cache
+.DS_Store
+# NOTE: we deliberately do NOT exclude **/*_test.go nor testdata/ so that
+# Dockerfile.test (make qa-docker) can run the suite inside Docker. The
+# server image stage copies only the compiled binary, so test files do not
+# leak into the runtime image.

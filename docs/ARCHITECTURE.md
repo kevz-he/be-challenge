@@ -170,6 +170,42 @@ WHERE t.source = 'processor' AND t.status = 'pending'
 (default 24h pix, 72h boleto). Tests use `clock.Fake` to avoid depending
 on `time.Now()`.
 
+#### Boundary semantics
+
+The cutoff comparison is **strict `<`** (i.e. `now - occurred_at > threshold`):
+
+- A PIX with `now - occurred_at == 24h` (to the nanosecond) does **not**
+  count. Tested by `TestRepository_PendingLimbo_PixExactly24hDoesNotCount`.
+- The same row at `24h + 1ns` does count
+  (`TestRepository_PendingLimbo_PixOneNanoPast24hCounts`). Boleto
+  follows the same rule at 72h.
+- `payment_method='credit_card'` with `pending` status **never** counts,
+  regardless of age (credit-card timeouts are not a Yuno reconciliation
+  signal). Tested by `TestRepository_PendingLimbo_CreditCardNeverCounts`.
+- `source='merchant_order_system'` with `pending` **never** counts —
+  pending limbo is only meaningful on the processor side. Tested by
+  `TestRepository_PendingLimbo_MerchantPendingNeverCounts`.
+
+The strict `<` choice keeps the contract crisp: "the row has been pending
+for *strictly more than* the threshold". Switching to `<=` would shift
+detection one nanosecond earlier, which the spec does not require and
+which would surprise reviewers reading the threshold config.
+
+#### Timestamp serialization
+
+SQLite stores timestamps as TEXT in the canonical fixed-width format
+`2006-01-02T15:04:05.000000000Z` (RFC 3339 with **nine fixed nanosecond
+digits**, always UTC). The fixed width matters: lexicographic comparisons
+(`<`, `<=`, `>=`) are then equivalent to chronological ones across the
+full nanosecond range, including boundary cases like
+`23:59:59.999999999Z` vs `00:00:00.000000000Z` of the next day.
+
+A trimmed-zero format like `.999999999` (Go's default) would break this:
+`Z` (0x5A) sorts after `.` (0x2E), so a row stored as `"…:00Z"` would
+compare *greater* than `"…:00.000000001Z"`, silently flipping window
+boundary tests. We learned this the hard way; see
+`TestRepository_WindowBoundaries_OneNanoOutsideExcluded`.
+
 ## Health score
 
 ```

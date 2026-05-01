@@ -1,0 +1,290 @@
+{
+  "groups": [
+    {
+      "occurrences": 2,
+      "rows": [
+        {
+          "amount_cents": 5150,
+          "currency": "BRL",
+          "occurred_at": "2026-04-15T05:40:53.267976308Z",
+          "payment_method": "pix",
+          "processor": "rede",
+          "reason": "duplicate group of 2",
+          "source": "merchant_order_system",
+          "status": "approved",
+          "transaction_id": "DUP-MERCH-000"
+        },
+        {
+          "amount_cents": 5150,
+          "currency": "BRL",
+          "occurred_at": "2026-04-15T05:40:54.267976308Z",
+          "payment_method": "pix",
+          "processor": "rede",
+          "reason": "duplicate group of 2",
+          "source": "merchant_order_system",
+          "status": "approved",
+          "transaction_id": "DUP-MERCH-000"
+        }
+      ],
+      "source": "merchant_order_system",
+      "transaction_id": "DUP-MERCH-000"
+    },
+    {
+      "occurrences": 2,
+      "rows": [
+        {
+          "amount_cents": 44179,
+          "currency": "BRL",
+          "occurred_at": "2026-04-15T04:21:42.842412216Z",
+          "payment_method": "pix",
+          "processor": "rede",
+          "reason": "duplicate group of 2",
+          "source": "merchant_order_system",
+          "status": "approved",
+          "transaction_id": "DUP-MERCH-001"
+        },
+        {
+          "amount_cents": 44179,
+          "currency": "BRL",
+          "occurred_at": "2026-04-15T04:21:43.842412216Z",
+          "payment_method": "pix",
+          "processor": "rede",
+          "reason": "duplicate group of 2",
+          "source": "merchant_order_system",
+          "status": "approved",
+          "transaction_id": "DUP-MERCH-001"
+        }
+      ],
+      "source": "merchant_order_system",
+      "transaction_id": "DUP-MERCH-001"
+    },
+    {
+      "occurrences": 2,
+      "rows": [
+        {
+          "amount_cents": 27314,
+          "currency": "BRL",
+          "occurred_at": "2026-04-15T04:10:12.043470177Z",
+          "payment_method": "credit_card",
+          "processor": "stripe_br",
+          "reason": "duplicate group of 2",
+          "source": "merchant_order_system",
+          "status": "approved",
+          "transaction_id": "DUP-MERCH-002"
+        },
+        {
+          "amount_cents": 27314,
+          "currency": "BRL",
+          "occurred_at": "2026-04-15T04:10:13.043470177Z",
+          "payment_method": "credit_card",
+          "processor": "stripe_br",
+          "reason": "duplicate group of 2",
+          "source": "merchant_order_system",
+          "status": "approved",
+          "transaction_id": "DUP-MERCH-002"
+        }
+      ],
+      "source": "merchant_order_system",
+      "transaction_id": "DUP-MERCH-002"
+    },
+    {
+      "occurrences": 2,
+      "rows": [
+        {
+          "amount_cents": 20811,
+          "currency": "BRL",
+          "occurred_at": "2026-04-15T00:53:18.459550324Z",
+          "payment_method": "pix",
+          "processor": "rede",
+          "reason": "duplicate group of 2",
+          "source": "merchant_order_system",
+          "status": "approved",
+          "transaction_id": "DUP-MERCH-003"
+        },
+        {
+          "amount_cents": 20811,
+          "currency": "BRL",
+          "occurred_at": "2026-04-15T00:53:19.459550324Z",
+          "payment_method": "pix",
+          "processor": "rede",
+          "reason": "duplicate group of 2",
+          "source": "merchant_order_system",
+          "status": "approved",
+          "transaction_id": "DUP-MERCH-003"
+        }
+      ],
+      "source": "merchant_order_system",
+      "transaction_id": "DUP-MERCH-003"
+    },
+    {
+      "occurrences": 3,
+      "rows": [
+        {
+          "amount_cents": 48556,
+          "currency": "BRL",
+          "occurred_at": "2026-04-15T01:04:04.893198232Z",
+          "payment_method": "credit_card",
+          "processor": "cielo",
+          "reason": "duplicate group of 3",
+          "source": "processor",
+          "status": "approved",
+          "transaction_id": "DUP-PROC-000"
+        },
+        {
+          "amount_cents": 48556,
+          "currency": "BRL",
+          "occurred_at": "2026-04-15T01:04:05.893198232Z",
+          "payment_method": "credit_card",
+          "processor": "cielo",
+          "reason": "duplicate group of 3",
+          "source": "processor",
+          "status": "approved",
+          "transaction_id": "DUP-PROC-000"
+        },
+        {
+          "amount_cents": 48556,
+          "currency": "BRL",
+          "occurred_at": "2026-04-15T01:04:06.893198232Z",
+          "payment_method": "credit_card",
+          "processor": "cielo",
+          "reason": "duplicate group of 3",
+          "source": "processor",
+          "status": "approved",
+          "transaction_id": "DUP-PROC-000"
+        }
+      ],
+      "source": "processor",
+      "transaction_id": "DUP-PROC-000"
+    },
+    {
+      "occurrences": 3,
+      "rows": [
+        {
+          "amount_cents": 23429,
+          "currency": "BRL",
+          "occurred_at": "2026-04-15T01:35:20.445909034Z",
+          "payment_method": "credit_card",
+          "processor": "getnet",
+          "reason": "duplicate group of 3",
+          "source": "processor",
+          "status": "approved",
+          "transaction_id": "DUP-PROC-001"
+        },
+        {
+          "amount_cents": 23429,
+          "currency": "BRL",
+          "occurred_at": "2026-04-15T01:35:21.445909034Z",
+          "payment_method": "credit_card",
+          "processor": "getnet",
+          "reason": "duplicate group of 3",
+          "source": "processor",
+          "status": "approved",
+          "transaction_id": "DUP-PROC-001"
+        },
+        {
+          "amount_cents": 23429,
+          "currency": "BRL",
+          "occurred_at": "2026-04-15T01:35:22.445909034Z",
+          "payment_method": "credit_card",
+          "processor": "getnet",
+          "reason": "duplicate group of 3",
+          "source": "processor",
+          "status": "approved",
+          "transaction_id": "DUP-PROC-001"
+        }
+      ],
+      "source": "processor",
+      "transaction_id": "DUP-PROC-001"
+    },
+    {
+      "occurrences": 3,
+      "rows": [
+        {
+          "amount_cents": 9868,
+          "currency": "BRL",
+          "occurred_at": "2026-04-15T04:22:46.047377831Z",
+          "payment_method": "pix",
+          "processor": "stripe_br",
+          "reason": "duplicate group of 3",
+          "source": "processor",
+          "status": "approved",
+          "transaction_id": "DUP-PROC-002"
+        },
+        {
+          "amount_cents": 9868,
+          "currency": "BRL",
+          "occurred_at": "2026-04-15T04:22:47.047377831Z",
+          "payment_method": "pix",
+          "processor": "stripe_br",
+          "reason": "duplicate group of 3",
+          "source": "processor",
+          "status": "approved",
+          "transaction_id": "DUP-PROC-002"
+        },
+        {
+          "amount_cents": 9868,
+          "currency": "BRL",
+          "occurred_at": "2026-04-15T04:22:48.047377831Z",
+          "payment_method": "pix",
+          "processor": "stripe_br",
+          "reason": "duplicate group of 3",
+          "source": "processor",
+          "status": "approved",
+          "transaction_id": "DUP-PROC-002"
+        }
+      ],
+      "source": "processor",
+      "transaction_id": "DUP-PROC-002"
+    },
+    {
+      "occurrences": 3,
+      "rows": [
+        {
+          "amount_cents": 31836,
+          "currency": "BRL",
+          "occurred_at": "2026-04-15T04:36:40.459226803Z",
+          "payment_method": "credit_card",
+          "processor": "cielo",
+          "reason": "duplicate group of 3",
+          "source": "processor",
+          "status": "approved",
+          "transaction_id": "DUP-PROC-003"
+        },
+        {
+          "amount_cents": 31836,
+          "currency": "BRL",
+          "occurred_at": "2026-04-15T04:36:41.459226803Z",
+          "payment_method": "credit_card",
+          "processor": "cielo",
+          "reason": "duplicate group of 3",
+          "source": "processor",
+          "status": "approved",
+          "transaction_id": "DUP-PROC-003"
+        },
+        {
+          "amount_cents": 31836,
+          "currency": "BRL",
+          "occurred_at": "2026-04-15T04:36:42.459226803Z",
+          "payment_method": "credit_card",
+          "processor": "cielo",
+          "reason": "duplicate group of 3",
+          "source": "processor",
+          "status": "approved",
+          "transaction_id": "DUP-PROC-003"
+        }
+      ],
+      "source": "processor",
+      "transaction_id": "DUP-PROC-003"
+    }
+  ],
+  "items": [],
+  "paging": {
+    "limit": 1000,
+    "offset": 0
+  },
+  "type": "duplicate",
+  "window": {
+    "from": "2026-04-15T00:00:00Z",
+    "to": "2026-04-15T06:00:00Z"
+  }
+}

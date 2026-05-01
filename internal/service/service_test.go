@@ -237,7 +237,7 @@ func TestAnomalies_Summary(t *testing.T) {
 	svc := service.NewAnomaliesService(repo, clk, repository.PendingLimboThresholds{Pix: 24 * time.Hour, Boleto: 72 * time.Hour})
 
 	w := repository.Window{From: &exp.WindowFrom, To: &exp.WindowTo}
-	sum, err := svc.Summary(context.Background(), w)
+	sum, err := svc.Summary(context.Background(), w, "")
 	if err != nil {
 		t.Fatal(err)
 	}

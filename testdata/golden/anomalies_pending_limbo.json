@@ -1,0 +1,123 @@
+{
+  "items": [
+    {
+      "amount_cents": 29144,
+      "currency": "BRL",
+      "occurred_at": "2026-04-15T02:22:39.962983904Z",
+      "payment_method": "pix",
+      "processor": "rede",
+      "reason": "pending pix exceeds 24h0m0s threshold",
+      "source": "processor",
+      "status": "pending",
+      "transaction_id": "LIMBO-000"
+    },
+    {
+      "amount_cents": 19550,
+      "currency": "BRL",
+      "occurred_at": "2026-04-15T02:51:45.18685644Z",
+      "payment_method": "pix",
+      "processor": "rede",
+      "reason": "pending pix exceeds 24h0m0s threshold",
+      "source": "processor",
+      "status": "pending",
+      "transaction_id": "LIMBO-001"
+    },
+    {
+      "amount_cents": 20361,
+      "currency": "BRL",
+      "occurred_at": "2026-04-15T04:59:17.134647103Z",
+      "payment_method": "pix",
+      "processor": "cielo",
+      "reason": "pending pix exceeds 24h0m0s threshold",
+      "source": "processor",
+      "status": "pending",
+      "transaction_id": "LIMBO-002"
+    },
+    {
+      "amount_cents": 36966,
+      "currency": "BRL",
+      "occurred_at": "2026-04-15T01:30:56.528146255Z",
+      "payment_method": "pix",
+      "processor": "stripe_br",
+      "reason": "pending pix exceeds 24h0m0s threshold",
+      "source": "processor",
+      "status": "pending",
+      "transaction_id": "LIMBO-003"
+    },
+    {
+      "amount_cents": 42081,
+      "currency": "BRL",
+      "occurred_at": "2026-04-15T04:34:22.889354143Z",
+      "payment_method": "pix",
+      "processor": "cielo",
+      "reason": "pending pix exceeds 24h0m0s threshold",
+      "source": "processor",
+      "status": "pending",
+      "transaction_id": "LIMBO-004"
+    },
+    {
+      "amount_cents": 3415,
+      "currency": "BRL",
+      "occurred_at": "2026-04-15T02:44:21.557106507Z",
+      "payment_method": "boleto",
+      "processor": "rede",
+      "reason": "pending boleto exceeds 72h0m0s threshold",
+      "source": "processor",
+      "status": "pending",
+      "transaction_id": "LIMBO-005"
+    },
+    {
+      "amount_cents": 7689,
+      "currency": "BRL",
+      "occurred_at": "2026-04-15T05:58:37.872855198Z",
+      "payment_method": "boleto",
+      "processor": "stripe_br",
+      "reason": "pending boleto exceeds 72h0m0s threshold",
+      "source": "processor",
+      "status": "pending",
+      "transaction_id": "LIMBO-006"
+    },
+    {
+      "amount_cents": 10502,
+      "currency": "BRL",
+      "occurred_at": "2026-04-15T03:17:46.27791928Z",
+      "payment_method": "boleto",
+      "processor": "stripe_br",
+      "reason": "pending boleto exceeds 72h0m0s threshold",
+      "source": "processor",
+      "status": "pending",
+      "transaction_id": "LIMBO-007"
+    },
+    {
+      "amount_cents": 20784,
+      "currency": "BRL",
+      "occurred_at": "2026-04-15T03:31:20.999402262Z",
+      "payment_method": "boleto",
+      "processor": "cielo",
+      "reason": "pending boleto exceeds 72h0m0s threshold",
+      "source": "processor",
+      "status": "pending",
+      "transaction_id": "LIMBO-008"
+    },
+    {
+      "amount_cents": 12015,
+      "currency": "BRL",
+      "occurred_at": "2026-04-15T03:33:38.576938689Z",
+      "payment_method": "boleto",
+      "processor": "getnet",
+      "reason": "pending boleto exceeds 72h0m0s threshold",
+      "source": "processor",
+      "status": "pending",
+      "transaction_id": "LIMBO-009"
+    }
+  ],
+  "paging": {
+    "limit": 1000,
+    "offset": 0
+  },
+  "type": "pending_limbo",
+  "window": {
+    "from": "2026-04-15T00:00:00Z",
+    "to": "2026-04-15T06:00:00Z"
+  }
+}

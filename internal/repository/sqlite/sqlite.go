@@ -15,9 +15,13 @@ import (
 var schemaSQL string
 
 // timeFormat is the canonical format we use to serialize timestamps in
-// SQLite. It is RFC3339 with nanoseconds and always UTC, which lets
-// lexicographic comparisons (>=, <=) work correctly.
-const timeFormat = "2006-01-02T15:04:05.999999999Z"
+// SQLite. It is RFC3339 with FIXED nanosecond width and always UTC, which
+// lets lexicographic comparisons (>=, <=, <) work correctly across the full
+// nanosecond range. Using `9` (trimmed-zero) digits would break boundary
+// comparisons because `Z` (0x5A) sorts after `.` (0x2E), so a row stored as
+// "...:00Z" would compare greater than "...:00.000000001Z" — exactly the
+// case we test in TestRepository_WindowBoundaries_*.
+const timeFormat = "2006-01-02T15:04:05.000000000Z"
 
 // Repo is the SQLite implementation of repository.
 type Repo struct {

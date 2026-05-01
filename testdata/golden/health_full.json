@@ -1,0 +1,16 @@
+{
+  "anomaly_counts": {
+    "duplicate": 8,
+    "ghost": 15,
+    "orphaned": 20,
+    "pending_limbo": 10
+  },
+  "duplicate_extra_rows": 12,
+  "score": 0.7832699619771863,
+  "total_rows": 500,
+  "unique_transactions": 263,
+  "window": {
+    "from": "2026-04-15T00:00:00Z",
+    "to": "2026-04-15T06:00:00Z"
+  }
+}

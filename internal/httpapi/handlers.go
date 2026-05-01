@@ -5,6 +5,7 @@ import (
 	"errors"
 	"fmt"
 	"net/http"
+	"strings"
 
 	"github.com/yuno/transaction-health-monitor/internal/domain"
 	"github.com/yuno/transaction-health-monitor/internal/service"
@@ -12,7 +13,14 @@ import (
 
 const maxBodyBytes = 8 << 20 // 8 MiB
 
+// errUnsupportedMediaType is returned when a request body is sent with a
+// non-JSON Content-Type. Mapped to HTTP 415 by respondError.
+var errUnsupportedMediaType = errors.New("unsupported media type")
+
 func decodeJSON(r *http.Request, v any) error {
+	if err := requireJSONContentType(r); err != nil {
+		return err
+	}
 	r.Body = http.MaxBytesReader(nil, r.Body, maxBodyBytes)
 	dec := json.NewDecoder(r.Body)
 	dec.DisallowUnknownFields()
@@ -22,16 +30,13 @@ func decodeJSON(r *http.Request, v any) error {
 	return nil
 }
 
-<<<<<<< Updated upstream
-=======
 // requireJSONContentType returns errUnsupportedMediaType if the request
-// does not declare a JSON Content-Type. Both an empty Content-Type and any
-// non-JSON media type are rejected: ingest endpoints carry a JSON body, so
-// we require the client to be explicit about it (RFC 7807 §3 maps to 415).
+// declares a Content-Type that isn't JSON. Empty Content-Type is tolerated
+// for backward-compatible curl-friendliness.
 func requireJSONContentType(r *http.Request) error {
 	ct := r.Header.Get("Content-Type")
 	if ct == "" {
-		return fmt.Errorf("%w: missing Content-Type, expected application/json", errUnsupportedMediaType)
+		return nil
 	}
 	mt := ct
 	if i := strings.Index(ct, ";"); i >= 0 {
@@ -44,7 +49,6 @@ func requireJSONContentType(r *http.Request) error {
 	return fmt.Errorf("%w: expected application/json, got %q", errUnsupportedMediaType, ct)
 }
 
->>>>>>> Stashed changes
 func ingestSingleHandler(svc *service.IngestService) http.HandlerFunc {
 	return func(w http.ResponseWriter, r *http.Request) {
 		var tx domain.Transaction
@@ -117,7 +121,12 @@ func anomaliesHandler(svc *service.AnomaliesService) http.HandlerFunc {
 		}
 		typeStr := r.URL.Query().Get("type")
 		if typeStr == "" {
-			sum, err := svc.Summary(r.Context(), win)
+			bd, err := parseBreakdown(r)
+			if err != nil {
+				respondError(w, r, err)
+				return
+			}
+			sum, err := svc.Summary(r.Context(), win, bd)
 			if err != nil {
 				respondError(w, r, err)
 				return

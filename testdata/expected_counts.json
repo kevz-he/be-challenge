@@ -12,5 +12,69 @@
   },
   "duplicate_extra_rows": 12,
   "healthy_pairs": 210,
-  "health_score": 0.7832699619771863
+  "health_score": 0.7832699619771863,
+  "expected_health_score": 0.7832699619771863,
+  "ids": {
+    "orphaned": [
+      "ORPHAN-000",
+      "ORPHAN-001",
+      "ORPHAN-002",
+      "ORPHAN-003",
+      "ORPHAN-004",
+      "ORPHAN-005",
+      "ORPHAN-006",
+      "ORPHAN-007",
+      "ORPHAN-008",
+      "ORPHAN-009",
+      "ORPHAN-010",
+      "ORPHAN-011",
+      "ORPHAN-012",
+      "ORPHAN-013",
+      "ORPHAN-014",
+      "ORPHAN-015",
+      "ORPHAN-016",
+      "ORPHAN-017",
+      "ORPHAN-018",
+      "ORPHAN-019"
+    ],
+    "ghost": [
+      "GHOST-BADPROC-000",
+      "GHOST-BADPROC-001",
+      "GHOST-BADPROC-002",
+      "GHOST-BADPROC-003",
+      "GHOST-BADPROC-004",
+      "GHOST-BADPROC-005",
+      "GHOST-BADPROC-006",
+      "GHOST-NOPROC-000",
+      "GHOST-NOPROC-001",
+      "GHOST-NOPROC-002",
+      "GHOST-NOPROC-003",
+      "GHOST-NOPROC-004",
+      "GHOST-NOPROC-005",
+      "GHOST-NOPROC-006",
+      "GHOST-NOPROC-007"
+    ],
+    "duplicate": [
+      "DUP-MERCH-000",
+      "DUP-MERCH-001",
+      "DUP-MERCH-002",
+      "DUP-MERCH-003",
+      "DUP-PROC-000",
+      "DUP-PROC-001",
+      "DUP-PROC-002",
+      "DUP-PROC-003"
+    ],
+    "pending_limbo": [
+      "LIMBO-000",
+      "LIMBO-001",
+      "LIMBO-002",
+      "LIMBO-003",
+      "LIMBO-004",
+      "LIMBO-005",
+      "LIMBO-006",
+      "LIMBO-007",
+      "LIMBO-008",
+      "LIMBO-009"
+    ]
+  }
 }

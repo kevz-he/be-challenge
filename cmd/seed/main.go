@@ -41,6 +41,17 @@ const (
 
 var Processors = []string{"stripe_br", "cielo", "rede", "getnet"}
 
+// AnomalyIDs holds the deterministic transaction_id sets per anomaly type
+// produced by the seed. Tests use these to assert set equality, not just
+// counts: it's the difference between "we found 20 orphans" and "we found
+// EXACTLY these 20 orphans and no others".
+type AnomalyIDs struct {
+	Orphaned     []string `json:"orphaned"`
+	Ghost        []string `json:"ghost"`
+	Duplicate    []string `json:"duplicate"`
+	PendingLimbo []string `json:"pending_limbo"`
+}
+
 type ExpectedCounts struct {
 	WindowFrom           time.Time      `json:"window_from"`
 	WindowTo             time.Time      `json:"window_to"`
@@ -51,6 +62,11 @@ type ExpectedCounts struct {
 	DuplicateExtraRows   int            `json:"duplicate_extra_rows"`
 	HealthyPairs         int            `json:"healthy_pairs"`
 	HealthScore          float64        `json:"health_score"`
+	// ExpectedHealthScore mirrors HealthScore. The duplicated key matches the
+	// extended-oracle format documented in docs/ARCHITECTURE.md so reviewers
+	// using verify.sh can grep either name.
+	ExpectedHealthScore float64    `json:"expected_health_score"`
+	IDs                 AnomalyIDs `json:"ids"`
 }
 
 func main() {
@@ -68,8 +84,16 @@ func run(args []string, stdout, stderr io.Writer) error {
 	outFlag := fs.String("out", "testdata/transactions.json", "output path for transactions JSON array")
 	expectedFlag := fs.String("expected", "testdata/expected_counts.json", "output path for expected counts oracle")
 	ingestURL := fs.String("ingest-url", "", "if set, POST {\"transactions\":[...]} to this URL")
+	sentinel := fs.String("sentinel", "", "if set, skip if file exists; create it after a successful ingest")
 	if err := fs.Parse(args); err != nil {
 		return err
+	}
+
+	if *sentinel != "" {
+		if _, err := os.Stat(*sentinel); err == nil {
+			fmt.Fprintf(stdout, "sentinel %s exists, skipping seed\n", *sentinel)
+			return nil
+		}
 	}
 
 	if *totalFlag < 500 {
@@ -124,7 +148,22 @@ func run(args []string, stdout, stderr io.Writer) error {
 		}
 		fmt.Fprintf(stdout, "ingested %d transactions to %s\n", len(txs), *ingestURL)
 	}
+
+	if *sentinel != "" {
+		if err := writeSentinel(*sentinel); err != nil {
+			return fmt.Errorf("write sentinel: %w", err)
+		}
+	}
 	return nil
+}
+
+func writeSentinel(path string) error {
+	if dir := filepath.Dir(path); dir != "" && dir != "." {
+		if err := os.MkdirAll(dir, 0o755); err != nil {
+			return err
+		}
+	}
+	return os.WriteFile(path, []byte(time.Now().UTC().Format(time.RFC3339)+"\n"), 0o644)
 }
 
 func generate(rng *rand.Rand, healthyPairs int, windowStart, windowEnd time.Time) []domain.Transaction {
@@ -336,6 +375,8 @@ func buildExpected(txs []domain.Transaction, windowFrom, windowTo, now time.Time
 		score = 1
 	}
 
+	ids := buildExpectedIDs()
+
 	return ExpectedCounts{
 		WindowFrom:           windowFrom,
 		WindowTo:             windowTo,
@@ -348,10 +389,48 @@ func buildExpected(txs []domain.Transaction, windowFrom, windowTo, now time.Time
 			"duplicate":     NumDupGroupsLg + NumDupGroupsSm,
 			"pending_limbo": NumPendingLimbo,
 		},
-		DuplicateExtraRows: dupExtra,
-		HealthyPairs:       healthyPairs,
-		HealthScore:        score,
+		DuplicateExtraRows:  dupExtra,
+		HealthyPairs:        healthyPairs,
+		HealthScore:         score,
+		ExpectedHealthScore: score,
+		IDs:                 ids,
 	}
+}
+
+// buildExpectedIDs returns the deterministic transaction_id sets per anomaly
+// type produced by the generator. Keep this in sync with generate(): the
+// constants and ID prefixes are the contract that lets the oracle assert
+// "exactly these IDs and no others".
+func buildExpectedIDs() AnomalyIDs {
+	out := AnomalyIDs{
+		Orphaned:     make([]string, 0, NumOrphaned),
+		Ghost:        make([]string, 0, NumGhostNoProc+NumGhostBadProc),
+		Duplicate:    make([]string, 0, NumDupGroupsLg+NumDupGroupsSm),
+		PendingLimbo: make([]string, 0, NumPendingLimbo),
+	}
+	for i := 0; i < NumOrphaned; i++ {
+		out.Orphaned = append(out.Orphaned, fmt.Sprintf("ORPHAN-%03d", i))
+	}
+	for i := 0; i < NumGhostNoProc; i++ {
+		out.Ghost = append(out.Ghost, fmt.Sprintf("GHOST-NOPROC-%03d", i))
+	}
+	for i := 0; i < NumGhostBadProc; i++ {
+		out.Ghost = append(out.Ghost, fmt.Sprintf("GHOST-BADPROC-%03d", i))
+	}
+	for i := 0; i < NumDupGroupsLg; i++ {
+		out.Duplicate = append(out.Duplicate, fmt.Sprintf("DUP-PROC-%03d", i))
+	}
+	for i := 0; i < NumDupGroupsSm; i++ {
+		out.Duplicate = append(out.Duplicate, fmt.Sprintf("DUP-MERCH-%03d", i))
+	}
+	for i := 0; i < NumPendingLimbo; i++ {
+		out.PendingLimbo = append(out.PendingLimbo, fmt.Sprintf("LIMBO-%03d", i))
+	}
+	sort.Strings(out.Orphaned)
+	sort.Strings(out.Ghost)
+	sort.Strings(out.Duplicate)
+	sort.Strings(out.PendingLimbo)
+	return out
 }
 
 func writeJSONFile(path string, v any) error {

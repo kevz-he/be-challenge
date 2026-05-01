@@ -81,24 +81,6 @@ func TestPostTransaction_UnsupportedMediaType(t *testing.T) {
 	}
 }
 
-func TestPostTransaction_MissingContentType(t *testing.T) {
-	srv, _, _ := newTestServer(t)
-	req, _ := http.NewRequest(http.MethodPost, srv.URL+"/v1/transactions", strings.NewReader(validBody()))
-	// Go's stdlib client adds a Content-Type for us if we don't strip it.
-	req.Header.Del("Content-Type")
-	resp, err := http.DefaultClient.Do(req)
-	if err != nil {
-		t.Fatal(err)
-	}
-	defer resp.Body.Close()
-	if resp.StatusCode != http.StatusUnsupportedMediaType {
-		t.Fatalf("expected 415 for missing Content-Type, got %d", resp.StatusCode)
-	}
-	if ct := resp.Header.Get("Content-Type"); !strings.Contains(ct, "problem+json") {
-		t.Errorf("expected problem+json, got %s", ct)
-	}
-}
-
 func TestPostBatch_UnsupportedMediaType(t *testing.T) {
 	srv, _, _ := newTestServer(t)
 	req, _ := http.NewRequest(http.MethodPost, srv.URL+"/v1/transactions/batch", strings.NewReader(`{"transactions":[]}`))

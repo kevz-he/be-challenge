@@ -10,18 +10,48 @@ when configurable thresholds are crossed.
 - **Money:** `int64` cents. Currency is always `BRL`.
 - **Clock:** `clock.Clock` interface with `Real` and `Fake` (tests never call `time.Now()` directly).
 
-## Quickstart in under 60 seconds
+## Quickstart with Docker (≈ 30 seconds, the recommended path)
 
 ```bash
-# 1. build and generate deterministic fixtures + counts oracle
-make seed
+docker compose up --build      # boots API + auto-seeds it
+bash docs/examples/verify.sh   # diff every count and ID set vs the oracle
+```
 
-# 2. run the server (listens on :8080, local SQLite database at yuno.db)
-make run
+`docker compose up` starts two services:
+
+- `api` — distroless static image (`gcr.io/distroless/static-debian12:nonroot`),
+  exposes `:8080`, persists SQLite (WAL) under the `yuno-data` volume,
+  reports health via the `cmd/healthcheck` Go binary baked into the image.
+- `seeder` — same Docker context, `target=seeder`. Waits for the API to be
+  healthy, runs `cmd/seed --seed=42 --total=500 --ingest-url=http://api:8080/...`
+  exactly once, then writes `/data/.seeded` so re-runs are no-ops. Reset with:
+
+```bash
+make docker-reset    # = docker compose down -v
+```
+
+Then any of the following works against the running API:
+
+```bash
+curl -s http://localhost:8080/v1/health | jq
+curl -s 'http://localhost:8080/v1/anomalies?type=orphaned' | jq
+make verify           # docs/examples/verify.sh — fails if any count or ID differs
+make demo-curls       # docs/examples/curl.sh — exercises every endpoint
+```
+
+To run the full Go test suite inside Docker (no local Go required):
+
+```bash
+make qa-docker        # docker build -f Dockerfile.test --target test .
+```
+
+## Quickstart with local Go (alternative)
+
+```bash
+make seed             # writes testdata/transactions.json + expected_counts.json
+make run              # listens on :8080, uses ./yuno.db
 # in another terminal:
-
-# 3. ingest the seed batch and hit every endpoint
-make demo-curls
+make demo-curls       # ingests + hits every endpoint
 ```
 
 `make demo-curls` runs `docs/examples/curl.sh`, which is read-only on
@@ -130,7 +160,9 @@ Liveness; if the DB answers `Ping` it returns `{"status": "ok"}`.
 
 `make seed` generates `testdata/transactions.json` (>=500 transactions, 6h
 window, 60/30/10 mix of credit_card/pix/boleto, 4 processors) and
-`testdata/expected_counts.json` with the canonical counts:
+`testdata/expected_counts.json`. The oracle is **set-equality strong**:
+it commits both the counts and the exact `transaction_id`s injected per
+anomaly type, so tests can assert "exactly these IDs and no others":
 
 ```json
 {
@@ -143,27 +175,57 @@ window, 60/30/10 mix of credit_card/pix/boleto, 4 processors) and
     "orphaned": 20, "ghost": 15, "duplicate": 8, "pending_limbo": 10
   },
   "duplicate_extra_rows": 12,
-  "health_score": 0.7833
+  "health_score": 0.7833,
+  "expected_health_score": 0.7833,
+  "ids": {
+    "orphaned":      ["ORPHAN-000", "ORPHAN-001", "..."],
+    "ghost":         ["GHOST-NOPROC-000", "GHOST-BADPROC-000", "..."],
+    "duplicate":     ["DUP-PROC-000", "DUP-MERCH-000", "..."],
+    "pending_limbo": ["LIMBO-000", "LIMBO-001", "..."]
+  }
 }
 ```
 
 The generator injects **exactly** 20 orphaned, 15 ghost, 8 duplicate
-groups and 10 pending limbo (5 pix > 24h, 5 boleto > 72h). The expected
-file is the ground truth and is asserted against the SQLite repository,
-the fake, and the service in their integration tests.
+groups and 10 pending limbo (5 pix > 24h, 5 boleto > 72h). The committed
+oracle is the ground truth used by the SQLite integration tests, the
+HTTP golden tests, the e2e test, and `verify.sh`.
 
 ## Tests
 
 ```bash
-make test          # go test ./...
-make test-race     # go test -race ./...
-make lint          # go vet + gofmt -l
+make test          # unit + integration, race detector on
+make test-cover    # writes coverage.out and prints `go tool cover -func` summary
+make test-e2e      # build tag e2e, full HTTP flow against the seed dataset
+make qa            # fmt-check + vet + test + test-e2e (full local QA gate)
+make qa-docker     # the same suite inside Docker (no local Go required)
 ```
 
-The SQLite integration tests run against `:memory:` and reuse
-`testdata/transactions.json` + `testdata/expected_counts.json` as the
-oracle. If the seed is missing, the integration tests are skipped with a
-clear message.
+Coverage targets (rule of thumb, not enforced):
+
+| Package                          | Target |
+|----------------------------------|--------|
+| `internal/service`               | ≥ 90%  |
+| `internal/repository/sqlite`     | ≥ 80%  |
+| `internal/httpapi`               | ≥ 75%  |
+| Global                           | ≥ 80%  |
+
+Golden response snapshots live in `testdata/golden/*.json`. Regenerate them with:
+
+```bash
+go test ./internal/httpapi -run TestHTTP_GoldenResponses -update
+```
+
+## Verifying every Core Requirement
+
+| Core Requirement                        | Command                                 |
+|-----------------------------------------|-----------------------------------------|
+| "Ingest test data"                      | `docker compose up` (auto-seeds 500+ rows) |
+| "Query health metrics"                  | `curl /v1/health`                       |
+| "Query anomaly details"                 | `curl /v1/anomalies?type=orphaned` etc. |
+| "Filter by time window"                 | `?from=…&to=…` on every analytic route  |
+| "Counts + IDs match the oracle"         | `make verify` (fails on any mismatch)   |
+| "Full reset"                            | `make docker-reset`                     |
 
 ## Detailed design
 

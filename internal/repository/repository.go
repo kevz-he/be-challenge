@@ -44,10 +44,10 @@ func (f AnomalyFilter) Validate() error {
 
 // DuplicateGroup represents a (transaction_id, source) group with N>1 occurrences.
 type DuplicateGroup struct {
-	TransactionID string
-	Source        domain.Source
-	Occurrences   int
-	Rows          []domain.AnomalyDetail
+	TransactionID string                 `json:"transaction_id"`
+	Source        domain.Source          `json:"source"`
+	Occurrences   int                    `json:"occurrences"`
+	Rows          []domain.AnomalyDetail `json:"rows"`
 }
 
 // CountsByKey is a grouped map used for breakdowns (processor, payment_method, etc).

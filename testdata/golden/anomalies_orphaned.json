@@ -1,0 +1,233 @@
+{
+  "items": [
+    {
+      "amount_cents": 40154,
+      "currency": "BRL",
+      "occurred_at": "2026-04-15T01:10:36.774884573Z",
+      "payment_method": "credit_card",
+      "processor": "stripe_br",
+      "reason": "no merchant order found",
+      "source": "processor",
+      "status": "approved",
+      "transaction_id": "ORPHAN-000"
+    },
+    {
+      "amount_cents": 29062,
+      "currency": "BRL",
+      "occurred_at": "2026-04-15T04:34:37.128925612Z",
+      "payment_method": "credit_card",
+      "processor": "cielo",
+      "reason": "no merchant order found",
+      "source": "processor",
+      "status": "approved",
+      "transaction_id": "ORPHAN-001"
+    },
+    {
+      "amount_cents": 23087,
+      "currency": "BRL",
+      "occurred_at": "2026-04-15T04:39:31.861298657Z",
+      "payment_method": "pix",
+      "processor": "rede",
+      "reason": "no merchant order found",
+      "source": "processor",
+      "status": "approved",
+      "transaction_id": "ORPHAN-002"
+    },
+    {
+      "amount_cents": 12802,
+      "currency": "BRL",
+      "occurred_at": "2026-04-15T00:34:35.949459679Z",
+      "payment_method": "credit_card",
+      "processor": "stripe_br",
+      "reason": "no merchant order found",
+      "source": "processor",
+      "status": "approved",
+      "transaction_id": "ORPHAN-003"
+    },
+    {
+      "amount_cents": 8183,
+      "currency": "BRL",
+      "occurred_at": "2026-04-15T04:22:17.329922378Z",
+      "payment_method": "boleto",
+      "processor": "getnet",
+      "reason": "no merchant order found",
+      "source": "processor",
+      "status": "approved",
+      "transaction_id": "ORPHAN-004"
+    },
+    {
+      "amount_cents": 38153,
+      "currency": "BRL",
+      "occurred_at": "2026-04-15T01:49:53.425671216Z",
+      "payment_method": "credit_card",
+      "processor": "stripe_br",
+      "reason": "no merchant order found",
+      "source": "processor",
+      "status": "approved",
+      "transaction_id": "ORPHAN-005"
+    },
+    {
+      "amount_cents": 16890,
+      "currency": "BRL",
+      "occurred_at": "2026-04-15T01:04:52.27178876Z",
+      "payment_method": "pix",
+      "processor": "getnet",
+      "reason": "no merchant order found",
+      "source": "processor",
+      "status": "approved",
+      "transaction_id": "ORPHAN-006"
+    },
+    {
+      "amount_cents": 15363,
+      "currency": "BRL",
+      "occurred_at": "2026-04-15T03:04:35.351618742Z",
+      "payment_method": "credit_card",
+      "processor": "stripe_br",
+      "reason": "no merchant order found",
+      "source": "processor",
+      "status": "approved",
+      "transaction_id": "ORPHAN-007"
+    },
+    {
+      "amount_cents": 16681,
+      "currency": "BRL",
+      "occurred_at": "2026-04-15T05:30:16.34516583Z",
+      "payment_method": "credit_card",
+      "processor": "rede",
+      "reason": "no merchant order found",
+      "source": "processor",
+      "status": "approved",
+      "transaction_id": "ORPHAN-008"
+    },
+    {
+      "amount_cents": 35713,
+      "currency": "BRL",
+      "occurred_at": "2026-04-15T01:51:18.836316077Z",
+      "payment_method": "credit_card",
+      "processor": "cielo",
+      "reason": "no merchant order found",
+      "source": "processor",
+      "status": "approved",
+      "transaction_id": "ORPHAN-009"
+    },
+    {
+      "amount_cents": 10097,
+      "currency": "BRL",
+      "occurred_at": "2026-04-15T04:32:08.752544069Z",
+      "payment_method": "pix",
+      "processor": "rede",
+      "reason": "no merchant order found",
+      "source": "processor",
+      "status": "approved",
+      "transaction_id": "ORPHAN-010"
+    },
+    {
+      "amount_cents": 20231,
+      "currency": "BRL",
+      "occurred_at": "2026-04-15T00:24:29.075604887Z",
+      "payment_method": "credit_card",
+      "processor": "rede",
+      "reason": "no merchant order found",
+      "source": "processor",
+      "status": "approved",
+      "transaction_id": "ORPHAN-011"
+    },
+    {
+      "amount_cents": 29330,
+      "currency": "BRL",
+      "occurred_at": "2026-04-15T00:11:49.474588052Z",
+      "payment_method": "boleto",
+      "processor": "stripe_br",
+      "reason": "no merchant order found",
+      "source": "processor",
+      "status": "approved",
+      "transaction_id": "ORPHAN-012"
+    },
+    {
+      "amount_cents": 46737,
+      "currency": "BRL",
+      "occurred_at": "2026-04-15T00:26:12.224329501Z",
+      "payment_method": "credit_card",
+      "processor": "cielo",
+      "reason": "no merchant order found",
+      "source": "processor",
+      "status": "approved",
+      "transaction_id": "ORPHAN-013"
+    },
+    {
+      "amount_cents": 8402,
+      "currency": "BRL",
+      "occurred_at": "2026-04-15T00:42:07.780130873Z",
+      "payment_method": "boleto",
+      "processor": "getnet",
+      "reason": "no merchant order found",
+      "source": "processor",
+      "status": "approved",
+      "transaction_id": "ORPHAN-014"
+    },
+    {
+      "amount_cents": 29046,
+      "currency": "BRL",
+      "occurred_at": "2026-04-15T04:41:06.973328763Z",
+      "payment_method": "credit_card",
+      "processor": "cielo",
+      "reason": "no merchant order found",
+      "source": "processor",
+      "status": "approved",
+      "transaction_id": "ORPHAN-015"
+    },
+    {
+      "amount_cents": 13506,
+      "currency": "BRL",
+      "occurred_at": "2026-04-15T03:03:40.07962107Z",
+      "payment_method": "credit_card",
+      "processor": "getnet",
+      "reason": "no merchant order found",
+      "source": "processor",
+      "status": "approved",
+      "transaction_id": "ORPHAN-016"
+    },
+    {
+      "amount_cents": 23582,
+      "currency": "BRL",
+      "occurred_at": "2026-04-15T03:41:53.147895187Z",
+      "payment_method": "credit_card",
+      "processor": "stripe_br",
+      "reason": "no merchant order found",
+      "source": "processor",
+      "status": "approved",
+      "transaction_id": "ORPHAN-017"
+    },
+    {
+      "amount_cents": 24774,
+      "currency": "BRL",
+      "occurred_at": "2026-04-15T01:34:09.868833301Z",
+      "payment_method": "credit_card",
+      "processor": "rede",
+      "reason": "no merchant order found",
+      "source": "processor",
+      "status": "approved",
+      "transaction_id": "ORPHAN-018"
+    },
+    {
+      "amount_cents": 49276,
+      "currency": "BRL",
+      "occurred_at": "2026-04-15T02:17:09.494968648Z",
+      "payment_method": "credit_card",
+      "processor": "rede",
+      "reason": "no merchant order found",
+      "source": "processor",
+      "status": "approved",
+      "transaction_id": "ORPHAN-019"
+    }
+  ],
+  "paging": {
+    "limit": 1000,
+    "offset": 0
+  },
+  "type": "orphaned",
+  "window": {
+    "from": "2026-04-15T00:00:00Z",
+    "to": "2026-04-15T06:00:00Z"
+  }
+}

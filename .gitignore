@@ -1,5 +1,8 @@
 # Binaries
 /bin/
+/seed
+/server
+/healthcheck
 *.exe
 *.exe~
 *.dll

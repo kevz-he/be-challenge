@@ -1,0 +1,55 @@
+# Single-command demo: `docker compose up --build` boots the API and runs
+# the seeder once against it. Subsequent `up` calls reuse the volume and
+# the seeder no-ops (sentinel /data/.seeded). Reset with `make docker-reset`
+# (= docker compose down -v).
+services:
+  api:
+    build:
+      context: .
+      target: server
+      args:
+        TARGET: server
+    container_name: yuno-api
+    ports:
+      - "8080:8080"
+    environment:
+      PORT: "8080"
+      SQLITE_DSN: "file:/data/yuno.db?_pragma=journal_mode(WAL)"
+      PIX_PENDING_THRESHOLD: "24h"
+      BOLETO_PENDING_THRESHOLD: "72h"
+      LOG_LEVEL: "info"
+    volumes:
+      - yuno-data:/data
+    healthcheck:
+      test: ["CMD", "/healthcheck"]
+      interval: 2s
+      timeout: 2s
+      retries: 30
+      start_period: 1s
+
+  seeder:
+    build:
+      context: .
+      target: seeder
+      args:
+        TARGET: seed
+    container_name: yuno-seeder
+    depends_on:
+      api:
+        condition: service_healthy
+    volumes:
+      - yuno-data:/data
+    environment:
+      INGEST_URL: "http://api:8080/v1/transactions/batch"
+    # cmd/seed handles the sentinel itself so we don't need a shell.
+    command:
+      - "--seed=42"
+      - "--total=500"
+      - "--out=/tmp/transactions.json"
+      - "--expected=/tmp/expected_counts.json"
+      - "--ingest-url=http://api:8080/v1/transactions/batch"
+      - "--sentinel=/data/.seeded"
+    restart: "no"
+
+volumes:
+  yuno-data:

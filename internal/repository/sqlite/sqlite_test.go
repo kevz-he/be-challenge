@@ -15,14 +15,16 @@ import (
 )
 
 type expectedOracle struct {
-	WindowFrom           time.Time      `json:"window_from"`
-	WindowTo             time.Time      `json:"window_to"`
-	Now                  time.Time      `json:"now"`
-	TotalRows            int            `json:"total_rows"`
-	UniqueTransactionIDs int            `json:"unique_transaction_ids_in_window"`
-	AnomalyCounts        map[string]int `json:"anomaly_counts"`
-	DuplicateExtraRows   int            `json:"duplicate_extra_rows"`
-	HealthScore          float64        `json:"health_score"`
+	WindowFrom           time.Time           `json:"window_from"`
+	WindowTo             time.Time           `json:"window_to"`
+	Now                  time.Time           `json:"now"`
+	TotalRows            int                 `json:"total_rows"`
+	UniqueTransactionIDs int                 `json:"unique_transaction_ids_in_window"`
+	AnomalyCounts        map[string]int      `json:"anomaly_counts"`
+	DuplicateExtraRows   int                 `json:"duplicate_extra_rows"`
+	HealthScore          float64             `json:"health_score"`
+	ExpectedHealthScore  float64             `json:"expected_health_score"`
+	IDs                  map[string][]string `json:"ids"`
 }
 
 func repoRoot(t *testing.T) string {

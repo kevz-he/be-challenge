@@ -36,6 +36,8 @@ type AnomalySummary struct {
 	DuplicateExtraRows int                               `json:"duplicate_extra_rows"`
 	Samples            map[string][]domain.AnomalyDetail `json:"samples"`
 	Window             WindowDTO                         `json:"window"`
+	Breakdown          map[string]map[string]int         `json:"breakdown,omitempty"`
+	BreakdownBy        string                            `json:"breakdown_by,omitempty"`
 }
 
 type WindowDTO struct {
@@ -116,8 +118,9 @@ func (s *AnomaliesService) List(ctx context.Context, q AnomalyQuery) (AnomalyLis
 }
 
 // Summary returns the counts and a sample (5) per type. Useful for the
-// /v1/anomalies endpoint without ?type.
-func (s *AnomaliesService) Summary(ctx context.Context, w repository.Window) (AnomalySummary, error) {
+// /v1/anomalies endpoint without ?type. When breakdown is "processor" or
+// "payment_method" the response also includes per-key counts.
+func (s *AnomaliesService) Summary(ctx context.Context, w repository.Window, breakdown string) (AnomalySummary, error) {
 	if err := w.Validate(); err != nil {
 		return AnomalySummary{}, err
 	}
@@ -155,7 +158,7 @@ func (s *AnomaliesService) Summary(ctx context.Context, w repository.Window) (An
 		}
 	}
 
-	return AnomalySummary{
+	out := AnomalySummary{
 		Counts: map[string]int{
 			"orphaned":      counts.Orphaned,
 			"ghost":         counts.Ghost,
@@ -170,7 +173,41 @@ func (s *AnomaliesService) Summary(ctx context.Context, w repository.Window) (An
 			"pending_limbo": ensureSlice(limbo),
 		},
 		Window: WindowDTO{From: w.From, To: w.To},
-	}, nil
+	}
+
+	switch breakdown {
+	case "":
+	case "processor":
+		bd, err := s.repo.CountsByProcessor(ctx, w, now, s.thresholds)
+		if err != nil {
+			return AnomalySummary{}, err
+		}
+		out.Breakdown = toBreakdownCounts(bd)
+		out.BreakdownBy = "processor"
+	case "payment_method":
+		bd, err := s.repo.CountsByPaymentMethod(ctx, w, now, s.thresholds)
+		if err != nil {
+			return AnomalySummary{}, err
+		}
+		out.Breakdown = toBreakdownCounts(bd)
+		out.BreakdownBy = "payment_method"
+	default:
+		return AnomalySummary{}, fmt.Errorf("%w: invalid breakdown %q", domain.ErrInvalidInput, breakdown)
+	}
+	return out, nil
+}
+
+func toBreakdownCounts(in map[string]repository.Counts) map[string]map[string]int {
+	out := make(map[string]map[string]int, len(in))
+	for k, c := range in {
+		out[k] = map[string]int{
+			"orphaned":      c.Orphaned,
+			"ghost":         c.Ghost,
+			"duplicate":     c.DuplicateGroups,
+			"pending_limbo": c.PendingLimbo,
+		}
+	}
+	return out
 }
 
 func ensureSlice(s []domain.AnomalyDetail) []domain.AnomalyDetail {

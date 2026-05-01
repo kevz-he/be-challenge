@@ -64,6 +64,8 @@ func respondProblem(w http.ResponseWriter, r *http.Request, status int, title, d
 
 func respondError(w http.ResponseWriter, r *http.Request, err error) {
 	switch {
+	case errors.Is(err, errUnsupportedMediaType):
+		respondProblem(w, r, http.StatusUnsupportedMediaType, "Unsupported media type", err.Error(), nil)
 	case errors.Is(err, domain.ErrInvalidWindow):
 		respondProblem(w, r, http.StatusUnprocessableEntity, "Invalid time window", err.Error(), nil)
 	case errors.Is(err, domain.ErrInvalidInput):
