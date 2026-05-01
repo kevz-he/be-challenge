@@ -50,14 +50,15 @@ domain  ←  service  ←  repository (interface + sqlite impl)  ←  httpapi
 - `internal/service` — business logic; depends on `Repository` interface only. Files: `ingest.go`, `anomalies.go`, `health.go`, `alerts.go`.
 - `internal/httpapi` — chi server, handlers, DTOs, error rendering.
 - `cmd/server` — entrypoint, wiring, graceful shutdown.
-- `cmd/seed` — deterministic test-data generator + ground-truth oracle writer.
 - `cmd/healthcheck` — tiny binary used by Docker healthcheck (distroless has no shell).
+- `test/seed` — deterministic test-data generator + ground-truth oracle writer. Lives under `test/` (not `cmd/`) because it's a tool that exists to support the test/oracle workflow, not a production command. Built into the seeder Docker image via `APP_PKG=./test/seed`.
 
 ### Project layout
 
 ```
 yuno/
-├── cmd/{server,seed,healthcheck}/main.go
+├── cmd/{server,healthcheck}/main.go
+├── test/seed/main.go              # generator + oracle writer (test-only, not a prod cmd)
 ├── internal/
 │   ├── domain/
 │   ├── clock/
@@ -204,7 +205,7 @@ WHERE source = 'processor'
 
 ## 9. Test data and ground-truth oracle
 
-### `cmd/seed`
+### `test/seed`
 
 Deterministic generator with flags `--seed`, `--total>=500`, `--out`, `--ingest-url`. With `--seed=42`:
 
@@ -241,7 +242,7 @@ Format includes counts **and IDs** so tests assert set equality, not just number
 }
 ```
 
-`cmd/seed` writes this file alongside `transactions.json`. Both files are committed.
+`test/seed` writes this file alongside `transactions.json`. Both files are committed.
 
 ---
 
@@ -312,7 +313,7 @@ No GitHub Actions. The reviewer runs `make qa` locally or through Docker.
 - WAL-mode SQLite persisted in a named volume.
 
 ### Key decisions
-- Multi-stage `Dockerfile` with `ARG TARGET` so the same Dockerfile builds `cmd/server`, `cmd/seed`, and `cmd/healthcheck`.
+- Multi-stage `Dockerfile` with `ARG APP_PKG` so the same Dockerfile builds `cmd/server` (default) or `test/seed` (seeder image), plus `cmd/healthcheck` baked into both.
 - Healthcheck uses a tiny `cmd/healthcheck` Go binary (distroless lacks `wget`/`curl`).
 - `seeder` service waits for `api` healthy, runs once, exits 0.
 - `.dockerignore` excludes `.git`, `.cursor`, `*.db`, `coverage.out`, `docs/`, `README.md`, `**/*_test.go`. **`testdata/` is kept** so the seeder image bundles it. `go build` ignores `_test.go` automatically.
@@ -324,7 +325,7 @@ No GitHub Actions. The reviewer runs `make qa` locally or through Docker.
 ```
 services:
   api:     distroless static, port 8080, volume /data, healthcheck via /healthcheck binary
-  seeder:  same image w/ TARGET=seed, depends_on api healthy, runs cmd/seed --ingest-url, restart: "no"
+  seeder:  same image w/ APP_PKG=./test/seed, depends_on api healthy, runs seed --ingest-url, restart: "no"
 volumes:
   yuno-data
 ```

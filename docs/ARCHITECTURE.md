@@ -296,6 +296,6 @@ row by row.
   alters the counts breaks these tests.
 - **HTTP (httpapi):** `httptest.NewServer` with real services on top of
   the fake repo. Cover 200/201/400/422 + `Content-Type: problem+json`.
-- **Seed (cmd/seed):** verifies that the injected anomalies are
+- **Seed (test/seed):** verifies that the injected anomalies are
   detectable with trivial queries in plain Go (independent of the "real"
   detection), guaranteeing the oracle does not drift from the generator.

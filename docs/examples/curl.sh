@@ -2,7 +2,7 @@
 # End-to-end demo for the Yuno Transaction Health Monitor.
 #
 # Hits every endpoint against a server that has already been seeded
-# (e.g. by `docker compose up`, which runs cmd/seed via the seeder
+# (e.g. by `docker compose up`, which runs test/seed via the seeder
 # service). It is intentionally read-only on the oracle window so it
 # can be re-run any number of times without invalidating the counts
 # asserted by `verify.sh` and the committed `expected_counts.json`.

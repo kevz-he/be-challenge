@@ -2,7 +2,7 @@
 
 GO            ?= go
 SERVER_PKG    := ./cmd/server
-SEED_PKG      := ./cmd/seed
+SEED_PKG      := ./test/seed
 HEALTH_PKG    := ./cmd/healthcheck
 BIN_DIR       := bin
 SERVER_BIN    := $(BIN_DIR)/server

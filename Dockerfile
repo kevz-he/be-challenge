@@ -3,9 +3,10 @@
 # Multi-stage build:
 #   builder → distroless static (server, seed and healthcheck binaries)
 #
-# A single Dockerfile is reused for both the API server and the seeder via
-# the TARGET build-arg ("server" or "seed"). The healthcheck binary is
-# always copied so the container can self-report health without a shell.
+# A single Dockerfile is reused for both the API server and the seeder.
+# The seeder binary lives under ./test/seed because it's a test-data
+# generator, not a production command. The healthcheck binary is always
+# copied so the container can self-report health without a shell.
 
 ARG GO_VERSION=1.25
 
@@ -16,8 +17,10 @@ COPY go.mod go.sum ./
 RUN go mod download
 COPY . .
 
-ARG TARGET=server
-RUN CGO_ENABLED=0 GOOS=linux go build -trimpath -ldflags="-s -w" -o /out/app ./cmd/${TARGET}
+# APP_PKG selects which Go package becomes /out/app. Defaults to the API
+# server; the seeder stage overrides it to ./test/seed.
+ARG APP_PKG=./cmd/server
+RUN CGO_ENABLED=0 GOOS=linux go build -trimpath -ldflags="-s -w" -o /out/app ${APP_PKG}
 RUN CGO_ENABLED=0 GOOS=linux go build -trimpath -ldflags="-s -w" -o /out/healthcheck ./cmd/healthcheck
 
 # The seeder needs the seed dataset at runtime; we stage it here and the

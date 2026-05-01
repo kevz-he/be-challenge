@@ -1,0 +1,78 @@
+{
+  "transactions": [
+    {
+      "transaction_id": "demo-orphan-1",
+      "occurred_at": "2026-05-01T10:00:00Z",
+      "amount_cents": 1000,
+      "currency": "BRL",
+      "payment_method": "credit_card",
+      "processor": "stripe_br",
+      "status": "approved",
+      "source": "processor"
+    },
+
+    {
+      "transaction_id": "demo-ghost-1",
+      "occurred_at": "2026-05-01T10:05:00Z",
+      "amount_cents": 2000,
+      "currency": "BRL",
+      "payment_method": "credit_card",
+      "processor": "cielo",
+      "status": "approved",
+      "source": "merchant_order_system"
+    },
+
+    {
+      "transaction_id": "demo-dup-1",
+      "occurred_at": "2026-05-01T10:10:00Z",
+      "amount_cents": 3000,
+      "currency": "BRL",
+      "payment_method": "credit_card",
+      "processor": "rede",
+      "status": "approved",
+      "source": "processor"
+    },
+    {
+      "transaction_id": "demo-dup-1",
+      "occurred_at": "2026-05-01T10:10:01Z",
+      "amount_cents": 3000,
+      "currency": "BRL",
+      "payment_method": "credit_card",
+      "processor": "rede",
+      "status": "approved",
+      "source": "processor"
+    },
+
+    {
+      "transaction_id": "demo-limbo-pix-1",
+      "occurred_at": "2026-05-01T10:15:00Z",
+      "amount_cents": 5000,
+      "currency": "BRL",
+      "payment_method": "pix",
+      "processor": "stripe_br",
+      "status": "pending",
+      "source": "processor"
+    },
+
+    {
+      "transaction_id": "demo-healthy-1",
+      "occurred_at": "2026-05-01T10:20:00Z",
+      "amount_cents": 7000,
+      "currency": "BRL",
+      "payment_method": "credit_card",
+      "processor": "getnet",
+      "status": "approved",
+      "source": "processor"
+    },
+    {
+      "transaction_id": "demo-healthy-1",
+      "occurred_at": "2026-05-01T10:20:05Z",
+      "amount_cents": 7000,
+      "currency": "BRL",
+      "payment_method": "credit_card",
+      "processor": "getnet",
+      "status": "approved",
+      "source": "merchant_order_system"
+    }
+  ]
+}

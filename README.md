@@ -23,7 +23,7 @@ bash docs/examples/verify.sh   # diff every count and ID set vs the oracle
   exposes `:8080`, persists SQLite (WAL) under the `yuno-data` volume,
   reports health via the `cmd/healthcheck` Go binary baked into the image.
 - `seeder` — same Docker context, `target=seeder`. Waits for the API to be
-  healthy, runs `cmd/seed --seed=42 --total=500 --ingest-url=http://api:8080/...`
+  healthy, runs `test/seed --seed=42 --total=500 --ingest-url=http://api:8080/...`
   exactly once, then writes `/data/.seeded` so re-runs are no-ops. Reset with:
 
 ```bash
@@ -53,6 +53,77 @@ make run              # listens on :8080, uses ./yuno.db
 # in another terminal:
 make demo-curls       # ingests + hits every endpoint
 ```
+
+## One-shot Python demo (`scripts/run_demo.py`)
+
+Production-like end-to-end checker. **Stdlib only** (Python 3.9+, no
+`pip install`). By default it drives **docker compose** exactly the way
+a reviewer would:
+
+```bash
+python3 scripts/run_demo.py
+# ALL GREEN — 22/22 checks passed
+```
+
+The default flow:
+
+1. `docker compose down -v` (reset any prior volume).
+2. `docker compose up -d --build api` — boots **only** the API service.
+   The bundled `seeder` is intentionally skipped so this script owns the
+   ingest and the oracle stays in sync.
+3. Polls `/healthz` until the container's healthcheck reports healthy.
+4. Bulk-ingests `testdata/transactions.json` via
+   `POST /v1/transactions/batch` (in batches of `--batch-size`, default 1000).
+5. Runs 22 assertions against `testdata/expected_counts.json`:
+   - Counts of all four anomaly kinds (`/v1/health` + `/v1/anomalies` summary).
+   - Health score within `1e-6` of the oracle.
+   - ID-set equality for `orphaned`, `ghost`, `pending_limbo` (`items[]`)
+     and `duplicate` (`groups[]`).
+   - `/v1/alerts` returns the expected shape.
+   - Error responses: `422` (inverted window) and `400` (invalid type).
+   - Stretch breakdowns (`processor`, `payment_method`).
+6. `docker compose down -v` (cleanup). Skip with `--keep`.
+
+Exit code is `0` only when **all 22 checks pass**. On failure the
+script tails `docker compose logs api` automatically.
+
+### Other modes
+
+```bash
+python3 scripts/run_demo.py --keep                       # leave docker up after the run
+python3 scripts/run_demo.py --mode local                 # spawn `go run ./cmd/server` instead
+python3 scripts/run_demo.py --base http://localhost:8080 # external server, no boot/teardown
+```
+
+### Giant dataset (10 000 transactions)
+
+The seed is parameterized; the same oracle scheme works at any size:
+
+```bash
+go run ./test/seed --seed=42 --total=10000 \
+  --out=testdata/transactions.json \
+  --expected=testdata/expected_counts.json
+
+python3 scripts/run_demo.py            # picks up the new dataset automatically
+```
+
+Anomaly counts stay constant by construction (20 / 15 / 8 / 10); only
+the healthy-pair denominator and `expected_health_score` move (e.g.
+`0.7833` at 500 rows → `0.9886` at 10 000 rows). The script reads
+both numbers from `testdata/expected_counts.json`, so no flag changes
+are needed.
+
+### Flags
+
+| Flag              | Default                          | Purpose                                              |
+| ----------------- | -------------------------------- | ---------------------------------------------------- |
+| `--mode`          | `docker`                         | `docker` (production-like) or `local` (`go run`)     |
+| `--base URL`      | unset                            | Point at an existing server (skips boot + teardown)  |
+| `--keep`          | off                              | Do not tear down docker / local server after the run |
+| `--tx-file PATH`  | `testdata/transactions.json`     | Override input dataset                               |
+| `--expected PATH` | `testdata/expected_counts.json`  | Override oracle                                      |
+| `--db-file PATH`  | `demo.db`                        | SQLite path when `--mode local`                      |
+| `--batch-size N`  | `1000`                           | Rows per `POST /v1/transactions/batch` call          |
 
 `make demo-curls` runs `docs/examples/curl.sh`, which is read-only on
 the oracle window so it can be re-run safely against an already seeded
@@ -225,6 +296,7 @@ go test ./internal/httpapi -run TestHTTP_GoldenResponses -update
 | "Query anomaly details"                 | `curl /v1/anomalies?type=orphaned` etc. |
 | "Filter by time window"                 | `?from=…&to=…` on every analytic route  |
 | "Counts + IDs match the oracle"         | `make verify` (fails on any mismatch)   |
+| "End-to-end demo with a single command" | `python3 scripts/run_demo.py`           |
 | "Full reset"                            | `make docker-reset`                     |
 
 ## Detailed design
@@ -242,7 +314,8 @@ See [`docs/ARCHITECTURE.md`](docs/ARCHITECTURE.md) for:
 
 ```
 cmd/server/        # API entrypoint
-cmd/seed/          # deterministic generator + oracle
+cmd/healthcheck/   # tiny binary used by the Docker healthcheck
+test/seed/         # deterministic test-data generator + oracle (not a prod cmd)
 internal/domain/   # pure types + validation + errors
 internal/clock/    # Clock interface (Real + Fake)
 internal/config/

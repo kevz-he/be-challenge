@@ -12,7 +12,7 @@ import (
 
 // TestRepository_OracleMatchesExpectedCountsAndIDs is the most important
 // integration test: it asserts that, for the deterministic seed dataset, the
-// repository returns EXACTLY the transaction_id sets injected by cmd/seed —
+// repository returns EXACTLY the transaction_id sets injected by test/seed —
 // not just the right cardinality. This single test guards the
 // functional+accuracy points of the rubric.
 func TestRepository_OracleMatchesExpectedCountsAndIDs(t *testing.T) {

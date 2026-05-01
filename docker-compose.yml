@@ -8,7 +8,7 @@ services:
       context: .
       target: server
       args:
-        TARGET: server
+        APP_PKG: ./cmd/server
     container_name: yuno-api
     ports:
       - "8080:8080"
@@ -32,7 +32,7 @@ services:
       context: .
       target: seeder
       args:
-        TARGET: seed
+        APP_PKG: ./test/seed
     container_name: yuno-seeder
     depends_on:
       api:
@@ -41,7 +41,7 @@ services:
       - yuno-data:/data
     environment:
       INGEST_URL: "http://api:8080/v1/transactions/batch"
-    # cmd/seed handles the sentinel itself so we don't need a shell.
+    # test/seed handles the sentinel itself so we don't need a shell.
     command:
       - "--seed=42"
       - "--total=500"
